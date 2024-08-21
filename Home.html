@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>my website</title>
+
+  <style>
+    #loadingSpinner {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+        }
+  </style>
+ 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="design.css">
+    
+</head>  
+  
+<body>
+  
+   <audio id="music" src="music.mp3" autoplay muted loop></audio>
+  <button id="playbutton" onclick="playAudio()" >playmusic</button>
+  <div id="content"></div>
+
+  <div id="loadingSpinner">Loading...</div>
+  
+<div id="amaya"><a class="homelink" href="Home.html"><img id="home" src="home3.png"></a>
+  <a class="homelink" href="Home.html"><h1 id="hometitle">AmayaSteelBarTrading</h1></a><img id="menupicture" src="menu3.png" onclick="toggleMenu()">
+</div>
+
+  <div id="menu">
+    <nav>
+    
+  
+          <div class="sub-menu-wrap" id="submenu">
+            <div class="sub-menu">
+              <a href="Anglebar.html" class="sub-menu-link">
+                <p>AngleBar</p>
+                <span>></span>
+              </a>
+              <a href="Flatbar.html" class="sub-menu-link">
+                <p>FlatBar</p>
+                <span>></span>
+              </a>
+            <a href="Squarebar.html" class="sub-menu-link">
+                <p>SquareBar</p>
+                <span>></span>
+              </a>
+            <a href="Roundbar.html" class="sub-menu-link">
+                <p>RoundBar</p>
+                <span>></span>
+              </a>
+              
+              <a href="GISquaretube.html" class="sub-menu-link">
+                <p>GISquareTube</p>
+                <span>></span>
+              </a>
+              
+              <a href="GalvanizedPlate.html" class="sub-menu-link">
+                <p>Galvanized Plate</p>
+                <span>></span>
+              </a>
+              
+              <a href="MildSteelPlate.html" class="sub-menu-link">
+                <p>Mild Steel Plate</p>
+                <span>></span>
+              </a>
+
+              <a href="BiCpurlins.html" class="sub-menu-link">
+                <p>BiCpurlins</p>
+                <span>></span>
+              </a>
+              
+              <a href="GiCpurlins.html" class="sub-menu-link">
+                <p>GiCpurlins</p>
+                <span>></span>
+              </a>
+
+              <a href="BiExpandedMetal.html" class="sub-menu-link">
+                <p>BiExpandedMetal</p>
+                <span>></span>
+              </a>
+
+              <a href="BiPerforated.html" class="sub-menu-link">
+                <p>BiPerforated</p>
+                <span>></span>
+              </a>
+
+              <a href="BiPipe.html" class="sub-menu-link">
+                <p>BiPipe</p>
+                <span>></span>
+              </a>
+
+              <a href="BiSquaretube.html" class="sub-menu-link">
+                <p>BiSquaretube</p>
+                <span>></span>
+              </a>
+
+              <a href="BoxGutter.html" class="sub-menu-link">
+                <p>BoxGutter</p>
+                <span>></span>
+              </a>
+              
+              <a href="LFlashing.html" class="sub-menu-link">
+                <p>LFlashing</p>
+                <span>></span>
+              </a>
+              
+              <a href="RegularFlashing.html" class="sub-menu-link">
+                <p>RegularFlashing</p>
+                <span>></span>
+              </a>
+              
+              <a href="RidgeRoll.html" class="sub-menu-link">
+                <p>RidgeRoll</p>
+                <span>></span>
+              </a>
+              
+              <a href="WallFlashing.html" class="sub-menu-link">
+                <p>WallFlashing</p>
+                <span>></span>
+              </a>
+              
+              <a href="CarryingChannel.html" class="sub-menu-link">
+                <p>CarryingChannel</p>
+                <span>></span>
+              </a>
+              
+              <a href="MetalFurring.html" class="sub-menu-link">
+                <p>MetalFurring</p>
+                <span>></span>
+              </a>
+              
+              <a href="MetalStud.html" class="sub-menu-link">
+                <p>MetalStud</p>
+                <span>></span>
+              </a>
+              
+              <a href="WallAngle.html" class="sub-menu-link">
+                <p>WallAngle</p>
+                <span>></span>
+              </a>
+              
+              <a href="SteelDeck.html" class="sub-menu-link">
+                <p>SteelDeck</p>
+                <span>></span>
+              </a>
+                           
+              <a href="Channel.html" class="sub-menu-link">
+                <p>Channel</p>
+                <span>></span>
+              </a>
+             
+              
+              <a href="CheckeredPlate.html" class="sub-menu-link">
+                <p>CheckeredPlate</p>
+                <span>></span>
+              </a>
+              
+              <a href="ChickenWire.html" class="sub-menu-link">
+                <p>ChickenWire</p>
+                <span>></span>
+              </a>
+
+              
+              <a href="ColorSheet.html" class="sub-menu-link">
+                <p>ColorSheet</p>
+                <span>></span>
+              </a>
+              
+              <a href="SlottedAngle.html" class="sub-menu-link">
+                <p>SlottedAngle</p>
+                <span>></span>
+              </a>
+              
+              <a href="CycloneWire.html" class="sub-menu-link">
+                <p>CycloneWire</p>
+                <span>></span>
+              </a>
+              
+              <a href="Deformedbar.html" class="sub-menu-link">
+                <p>Deformedbar</p>
+                <span>></span>
+              </a>
+              
+              <a href="GiCorrugated.html" class="sub-menu-link">
+                <p>GiCorrugated</p>
+                <span>></span>
+              </a>
+              
+              <a href="LongspanRibtype.html" class="sub-menu-link">
+                <p>LongspanRibtype</p>
+                <span>></span>
+              </a>
+              
+              
+              <a href="LongspanCorrugated.html" class="sub-menu-link">
+                <p>LongspanCorrugated</p>
+                <span>></span>
+              </a>
+              
+              <a href="GiPipe.html" class="sub-menu-link">
+                <p>GiPipe</p>
+                <span>></span>
+              </a>
+              
+              <a href="ZBar.html" class="sub-menu-link">
+                <p>ZBar</p>
+                <span>></span>
+              </a>
+              
+              <a href="IBar.html" class="sub-menu-link">
+                <p>IBar</p>
+                <span>></span>
+              </a>
+              
+              <a href="Tbar.html" class="sub-menu-link">
+                <p>TBar</p>
+                <span>></span>
+              </a>
+            
+              <a href="Phenolic.html" class="sub-menu-link">
+                <p>Phenolic</p>
+                <span>></span>
+              </a>
+              
+              <a href="Plywood.html" class="sub-menu-link">
+                <p>Plywood</p>
+                <span>></span>
+              </a>
+              
+              <a href="FicemBoard.html" class="sub-menu-link">
+                <p>FicemBoard</p>
+                <span>></span>
+              </a>
+              
+              <a href="Shafting.html" class="sub-menu-link">
+                <p>Shafting</p>
+                <span>></span>
+              </a>
+              
+              <a href="ThreadedBar.html" class="sub-menu-link">
+                <p>ThreadedBar</p>
+                <span>></span>
+              </a>
+              
+              <a href="StainlessSheet.html" class="sub-menu-link">
+                <p>StainlessSheet</p>
+                <span>></span>
+              </a>
+              
+              
+              <a href="BarbedWire.html" class="sub-menu-link">
+                <p>BarbedWire</p>
+                <span>></span>
+              </a>
+              
+            </div>
+          </div>
+        </nav>
+  </div>
+
+<div id="mainContent">
+<div class="SteelProduct">
+  Steel Products
+  </div>
+<div class="slider">
+  <div class="list">
+
+    <div class="item active" >
+      
+      <img src="https://i.ibb.co/n0QSw8k/anglebar.jpg" alt="anglebar.png">
+      <div class="content">
+        <h2>AngleBar</h2>
+        <p>An angle bar, also known as an angle iron or L-bracket, is a finished metal part shaped like an L with perpendicular legs. These legs may be equal or unequal in length. Angle bars are typically manufactured through hot rolling using either carbon steel or high-strength, low-alloy steel.</p>
+        <a href="Anglebar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+      </div>
+    </div>
+
+   <div class="item">
+      <img src="https://i.ibb.co/WsV0pmM/flatbar.jpg" alt="flatbar.png">
+      <div class="content">
+        <h2>FlatBar</h2>
+        <p>Flat bar typically refers to a long, rectangular piece of metal with a flat surface. Its commonly used in construction, manufacturing, and crafting for various purposes like support, framing, and reinforcement.</p>
+        <a href="Flatbar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+      </div>
+    </div>
+    
+
+   <div class="item">
+        <img src="https://i.ibb.co/0Y8vLQ3/squarebar.jpg" alt="squarebar.png">
+         <div class="content">
+          <h2>SquareBar</h2>
+        <p>square bar is a solid steel bar with a square cross-section. It has four equal sides and a smooth surface. These bars are usually manufactured from low-carbon steel, making them cost-effective while maintaining satisfactory strength and ductility.</p>
+           <a href="Squarebar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+      </div>
+    </div> 
+    
+
+   <div class="item">
+        <img src="https://i.ibb.co/3BqLHr3/RoundBar.jpg" alt="RoundBar.png">
+        <div class="content">
+          <h2>RoundBar</h2>
+        <p>Roundbar, also known as round bar or rod, is a solid cylindrical piece of metal that is commonly used in various construction, manufacturing, and engineering applications. It is typically made from materials such as steel, stainless steel, aluminum, or brass.</p>
+          <a href="Roundbar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+      </div>
+    </div> 
+    
+    <div class="item">      
+        <img src="https://i.ibb.co/9V5qstZ/Deformed-Bar.jpg" alt="DeformedBar.png">
+        <div class="content">
+          <h2>DeformedBar</h2>
+        <p>A deformed bar, also known as a rebar, is a type of steel bar with surface irregularities created to improve its bond with concrete. These deformations provide better anchoring within the concrete, enhancing its structural integrity in construction projects like buildings, bridges, and highways.</p>
+          <a href="Deformedbar.html" class="seemore"><button class="sliderbutton">See More</button>
+</a>
+      </div>
+    </div> 
+    
+
+    <div class="item">
+        <img src="https://i.ibb.co/VtXHsn9/channelbar.jpg" alt="channelbar.png">
+        <div class="content">
+          <h2>ChannelBar</h2>
+        <p>Channel bars are long pieces of metal in the shape of a letter U or letter C, consisting of a wide, flat strip with flanges on either side that form right angles. They got their name from the channel or pathway in between the two flanges and are also known as heavy-duty purlins.</p>
+          <a href="Channel.html" class="seemore"><button class="sliderbutton">See More</button>
+</a>
+      </div>
+    </div>
+    
+    <div class="item">
+        <img src="https://i.ibb.co/9yNvVMG/images.jpg" alt="Gisquaretube.png">
+        <div class="content">
+          <h2>GiSquareTube</h2>
+        <p>GI square tube, also known as galvanized iron square tubing, is a type of tubular steel that has been coated with a layer of zinc to prevent rusting and corrosion. This type of tubing is widely used in construction, industrial, and commercial applications due to its durability and resistance to environmental elements.</p>
+          <a href="GISquaretube.html" class="seemore"><button class="sliderbutton">See More</button>
+</a>
+      </div>
+    </div>
+    
+    <div class="item">
+        <img src="https://i.ibb.co/b7sLNkd/images-3.jpg" alt="GalvanizedPlate.png">
+        <div class="content">
+          <h2>Galvanized Plate</h2>
+        <p>A galvanized metal Plate is a steel or iron plate that has been coated with a layer of zinc to protect it from corrosion.</p>
+          <a href="GalvanizedPlate.html" class="seemore"><button class="sliderbutton">See More</button>
+</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/BChXPb0/ms-plate.jpg" alt="msplate.png">
+      <div class="content">
+        <h2>Mild Steel Plate</h2>
+      <p>Mild steel, also known as low-carbon steel, is one of the most widely used forms of steel.</p>
+        <a href="MildSteelPlate.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+  </div>
+
+  <div class="item">
+    <img src="https://i.ibb.co/yWpPHkS/Bi-Cpurlins.jpg" alt="BiCpurlins.png">
+    <div class="content">
+      <h2>Bi C-Purlins</h2>
+    <p>Black iron C-purlins are structural elements made from untreated steel, commonly used in construction for roofing and wall support</p>
+      <a href="BiCpurlins.html" class="seemore"><button class="sliderbutton">See More</button></a>
+  </div>
+</div>
+    
+    <div class="item">
+    <img src="https://i.ibb.co/8DfmWj3/Gi-Cpurlins.jpg" alt="GiCpurlins.png">
+    <div class="content">
+      <h2>GiCpurlins</h2>
+    <p>Galvanized C-purlins are structural components used in construction, made from steel that has been coated with zinc to prevent rust and corrosion. The C shape of these purlins provides strong support and is commonly used in various building applications.</p>
+     <a href="GiCpurlins.html" class="seemore"><button class="sliderbutton">See More</button></a>
+  </div>
+</div>
+    
+    
+    
+    <div class="item">
+    <img src="https://i.ibb.co/GRMXnY3/Bi-Expanded-Metal.jpg" alt="BiExpandedMetal.png">
+    <div class="content">
+      <h2>BiExpandedMetal</h2>
+    <p>Biexpanded metal, also known as double expanded metal, refers to a type of metal mesh that has been processed twice through an expanding machine. The process involves cutting and stretching the metal to create a mesh pattern with larger, more open spaces than standard expanded metal. This type of mesh is often used in applications where enhanced airflow, visibility, or drainage is required, while still providing a sturdy and durable structure. Biexpanded metal is commonly used in construction, filtration, and architectural applications.</p>
+    <a href="BiExpandedMetal.html" class="seemore"><button class="sliderbutton">See More</button></a>
+  </div>
+</div>
+    
+    <div class="item">
+    <img src="https://i.ibb.co/H2TQjLV/Bi-Perforated.jpg" alt="BiPerforated.png">
+    <div class="content">
+      <h2>BiPerforatedSheets</h2>
+    <p>Bi perforated sheets are metal sheets that have been perforated with two different patterns of holes or two sets of holes at different intervals. This dual perforation can enhance the sheets aesthetic appeal, functionality, or performance in specific applications. For example, one pattern might provide structural support, while the other pattern offers better airflow or filtration capabilities. These sheets are used in various industries, including construction, architecture, filtration, and acoustics, where the combination of hole patterns can meet specific design or functional requirements.</p>
+    <a href="BiPerforated.html" class="seemore"><button class="sliderbutton">See More</button></a>
+  </div>
+</div>
+    
+    <div class="item">
+    <img src="https://i.ibb.co/br07CCh/Bipipe.jpg" alt="Bipipe.png">
+    <div class="content">
+      <h2>BiPipe</h2>
+    <p>Black iron pipe, also known as black steel pipe, is a type of steel pipe with a dark, matte finish due to iron oxide on its surface, commonly used for gas lines and plumbing due to its strength and corrosion resistance.</p>
+    <a href="BiPipe.html" class="seemore"><button class="sliderbutton">See More</button></a>
+  </div>
+</div>
+
+<div class="item">
+  <img src="https://i.ibb.co/SwrTVFb/Bi-Squaretube.jpg" alt="BiSquaretube.png">
+  <div class="content">
+    <h2>BiSquaretube</h2>
+  <p>Black iron square tubing, also known as black steel square tubing, is a hollow, square-shaped metal tube with a dark, matte finish due to the iron oxide on its surface. It’s made from mild steel and is known for its strength and durability. This type of tubing is commonly used in construction, manufacturing, and automotive industries because of its impact resistance and versatility.</p>
+  <a href="BiSquaretube.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+
+<div class="item">
+  <img src="https://i.ibb.co/RNYKgjV/Box-Gutter.jpg" alt="BoxGutter.png">
+  <div class="content">
+    <h2>BoxGutter</h2>
+  <p>A box gutter is a type of rain gutter, typically rectangular in shape, that is used to collect and channel water away from a buildings roof. It is often integrated into the roof design and can be hidden from view, blending seamlessly with the roofline.</p>  
+  <a href="BoxGutter.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/QDG8QHm/Lflashing.jpg" alt="Lflashing.png">
+  <div class="content">
+    <h2>Lflashing</h2>
+  <p>L flashing, also known as L-shaped flashing, is a type of building material used to prevent water from penetrating the joints of a building.This flashing is commonly used around windows, doors, and roof edges to divert water away from these areas and prevent leaks.</p>
+   <a href="Lflashing.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/mNzFNTs/Regular-Flashing.jpg" alt="RegularFlashing.png">
+  <div class="content">
+    <h2>RegularFlashing</h2>
+  <p>Regular flashing refers to a material, usually metal , installed around areas of a building where the roof meets a vertical surface or at joints to prevent water infiltration. It is commonly used around chimneys, skylights, roof valleys, and along the edges of roofs. Flashing helps direct water away from vulnerable areas, thus preventing leaks and potential damage to the structure.</p>
+  <a href="RegularFlashing.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/CPVSwcY/Ridgeroll.jpg" alt="Ridgeroll.png">
+  <div class="content">
+    <h2>Ridgeroll</h2>
+  <p>Ridge roll, also known as ridge cap or ridge roll flashing, is a type of flashing installed along the ridges of a roof. Its primary function is to cover the gap between roof slopes at the ridge to prevent water, snow, and debris from entering the roof while allowing proper ventilation. Ridge rolls are essential for maintaining the integrity of the roof structure and ensuring it remains weatherproof.</p>
+  <a href="Ridgeroll.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/3WbsGM8/Wall-Flashing.jpg" alt="WallFlashing.png">
+  <div class="content">
+    <h2>WallFlashing</h2>
+  <p>Wall flashing is a type of flashing used to prevent water from penetrating the junctions where a wall intersects with other building elements, such as roofs, windows, doors, and chimneys. It is typically installed in areas where there is a potential for water infiltration due to the intersection of different surfaces. Wall flashing directs water away from these junctions and ensures it flows down and out of the building, thus preventing leaks and water damage.</p>
+  <a href="WallFlashing.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/Pz2B9vD/Carrying-Channel.jpg" alt="CarryingChannel.png">
+  <div class="content">
+    <h2>CarryingChannel</h2>
+  <p>A carrying channel, also known as a furring channel or hat channel, is a type of metal framing component used in construction. It is typically used to provide support for ceiling systems, wall systems, and other structures.</p>
+  <a href="CarryingChannel.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/dts7RH1/Metal-Furring.jpg" alt="MetalFurring.png">
+  <div class="content">
+    <h2>MetalFurring</h2>
+  <p>Metal furring is a construction technique where thin metal strips or channels are used to create a framework. This framework helps to level out surfaces and provides a base for attaching materials like drywall or plasterboard. It’s commonly used in walls and ceilings to ensure a smooth, even finish and can also help with fire resistance and sound proofing.</p>
+  <a href="MetalFurring.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+
+<div class="item">
+  <img src="https://i.ibb.co/kHsWDp0/Metal-Stud.jpg" alt="MetalStud.png">
+  <div class="content">
+    <h2>MetalStud</h2>
+  <p>A metal stud is a type of framing used in building construction. Its made from metal, usually steel, and is used to create the skeleton of walls and ceilings. Metal studs are strong, lightweight, and resistant to things like fire, moisture, and pests. They provide a solid structure for attaching drywall and other materials, making them a popular choice in both homes and commercial buildings.</p>
+  <a href="MetalStud.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+
+<div class="item">
+  <img src="https://i.ibb.co/kQ58jBx/Wall-Angle.jpg" alt="WallAngle.png">
+  <div class="content">
+    <h2>WallAngle</h2>
+  <p>A wall angle is the angle formed where a wall meets a horizontal surface, like the floor or ceiling. It’s important in construction to ensure everything is level and properly aligned. This helps when installing things like fixtures, paneling, or support structures to make sure they fit correctly and look good.</p>
+  <a href="WallAngle.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+
+<div class="item">
+  <img src="https://i.ibb.co/gSrKj3T/Steel-Deck.jpg" alt="SteelDeck.png">
+  <div class="content">
+    <h2>SteelDeck</h2>
+  <p> A steel deck is a construction material made from corrugated steel sheets. These sheets are strong and lightweight, and they’re used to support concrete floors or roofs. The wavy, corrugated design makes the steel even stronger, allowing it to hold up heavy loads with less material. Steel decks are popular in commercial buildings and multi-story structures because they provide a solid base for concrete and help speed up construction. They are also durable and fire-resistant.</p>
+  <a href="SteelDeck.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+
+<div class="item">
+  <img src="https://i.ibb.co/8Dxg1yb/Checkeredplate.jpg" alt="CheckeredPlate.png">
+  <div class="content">
+    <h2>CheckeredPlate</h2>
+  <p>A checkered plate is a type of metal sheet that has a pattern of raised shapes, like diamonds or lines, on one side. This textured surface helps prevent slipping, making it ideal for places where safety and traction are important, such as stairs, walkways, and industrial floors. It’s also used in vehicles and equipment to provide a sturdy, non-slip surface.</p>
+  <a href="CheckeredPlate.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/qWZ5Yx2/Chicken-Wire.jpg" alt="ChickenWire.png">
+  <div class="content">
+    <h2>ChickenWire</h2>
+  <p>Chicken wire, also known as poultry netting or hexagonal wire netting, is a type of mesh made from thin, flexible, galvanized steel wire with hexagonal gaps. It is commonly used to build inexpensive fencing and enclosures to confine chickens or other small livestock. It is also used in various DIY projects, gardening, and even in construction as a reinforcement material for plaster or stucco.</p>  
+  <a href="ChickenWire.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/q9zvZL9/Colored-Sheet.webp" alt="ColoredSheet.png">
+  <div class="content">
+    <h2>ColoredSheet</h2>
+  <p>Colored plain sheet typically refers to plain sheets of metal that are coated with a colored finish. These sheets are often made of materials such as steel, aluminum, or other metals, and are used in various applications like roofing, cladding, and decorative purposes. The color coating provides not only aesthetic appeal but also protection against corrosion and weathering.</p>
+  <a href="ColoredSheet.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/ys9DyyX/Slotted-Angle.jpg" alt="SlottedAngle.png">
+  <div class="content">
+    <h2>SlottedAngle</h2>
+  <p>Slotted angle is a versatile structural system made from steel or other metals, featuring regularly spaced slots along its length. These slots allow for easy assembly and adjustment using nuts and bolts, making it popular for constructing shelving, racks, frames, and other storage solutions. The system is highly customizable, enabling users to create various configurations to suit specific needs.</p>
+  <a href="SlottedAngle.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/6J2Mft2/Cyclone-Wire.jpg" alt="CycloneWire.png">
+  <div class="content">
+    <h2>CycloneWire</h2>
+  <p>Cyclone wire, also known as chain-link fencing or wire mesh, is a type of woven fence typically made from galvanized or coated steel wire. It forms a diamond-shaped pattern, providing a strong and durable barrier commonly used for security, enclosing property, sports fields, industrial areas, and more. The wire is twisted and linked together to create a flexible yet sturdy fence that is resistant to weather and wear.</p>
+  <a href="CycloneWire.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+    <div class="item">
+  <img src="https://i.ibb.co/NrQ14Pz/Gi-Corrugated.jpg" alt="GiCorrugated.png">
+  <div class="content">
+    <h2>GiCorrugated</h2>
+  <p>GI corrugated sheets are galvanized iron sheets that have been corrugated, or shaped into a wavy pattern, to increase their strength and rigidity. The galvanization process involves coating the iron or steel with a layer of zinc to protect it from corrosion. These sheets are widely used for roofing and siding in residential, commercial, and industrial buildings due to their durability, weather resistance, and cost-effectiveness.</p>
+  <a href="GiCorrugated.html" class="seemore"><button class="sliderbutton">See More</button></a>
+</div>
+</div>
+    
+<div class="item">
+      <img src="https://i.ibb.co/x7VG5vX/longspanribtype.jpg" alt="Longspanribtype.png">
+      <div class="content">
+        <h2>Longspanribtype</h2>
+      <p>The Longspan rib type, or Long Span Rib Roof, is a type of roofing made from galvanized steel. Its designed with a ribbed pattern that provides strength and durability. This roofing style is popular for covering large areas like warehouses and gymnasiums because it can span long distances without needing many supports. It’s also cost-effective since it uses fewer materials to cover a given area. Overall, its a strong, durable, and economical choice for roofing large buildings.</p>
+      <a href="Longspanribtype.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/RpQxzry/Longspan-Corrugated.jpg" alt="LongspanCorrugated.png">
+      <div class="content">
+        <h2>LongspanCorrugated</h2>
+      <p>Longspan Corrugated roofing is a type of roofing material made from galvanized steel. It has a wavy, corrugated design that makes it strong and flexible. This design helps it handle strong winds and makes it suitable for large buildings like warehouses and factories. It’s also cost-effective because it can cover large areas with fewer materials. Overall, it’s a durable and economical choice for roofing big structures.</p>
+      <a href="LongspanCorrugated.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/yn2cymn/Gipipe.webp" alt="Gipipe.png">
+      <div class="content">
+        <h2>GiPipe</h2>
+      <p>A GI pipe, or Galvanized Iron pipe, is a steel pipe coated with a layer of zinc to prevent rusting. This zinc coating makes the pipe durable and long-lasting. GI pipes are commonly used in plumbing, water supply systems, construction, and agriculture because they are strong and resistant to corrosion.</p>
+      <a href="GiPipe.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/CWXhpww/Tbar.jpg" alt="Ibar.png">
+      <div class="content">
+        <h2>Ibar</h2>
+      <p>An I-bar is a type of metal bar that has a cross-section shaped like the letter “I.” It’s similar to an I-beam but usually smaller. These bars are used in construction because their shape gives them a lot of strength, allowing them to support heavy loads efficiently. They’re often used in frameworks and other structural applications where strong support is needed.</p>
+      <a href="Ibar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/61Cy1Zg/Tbar.png"  alt="Tbar.png">
+      <div class="content">
+        <h2>Tbar</h2>
+      <p>A T-bar is a metal bar with a cross-section shaped like the letter “T.” Its used in construction and engineering because its shape provides good strength and stability. T-bars are often made from steel or aluminum, making them durable and resistant to corrosion. They are commonly used in frameworks, supports, and various structural applications.</p>
+      <a href="Tbar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/c2DGCsD/ZBar.png"  alt="ZBar.png">
+      <div class="content">
+        <h2>ZBar</h2>
+      <p>Z-Bars are versatile metal profiles shaped like the letter Z, commonly used in construction and manufacturing for their strength and durability. They are ideal for applications such as framing, insulation reinforcement, and mounting signs or cabinets.</p>
+      <a href="ZBar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+    <div class="item">
+      <img src="https://i.ibb.co/8YTq01Q/Phenolic.jpg" alt="Phenolic.png">
+      <div class="content">
+        <h2>Phenolic</h2>
+      <p>A phenolic board is a strong and durable material made by layering paper or fabric with synthetic resin. These boards are highly resistant to moisture, making them perfect for use in areas like bathrooms and kitchens. They are commonly used for flooring, walls, furniture, and cabinetry due to their robustness and longevity.</p>
+      <a href="Phenolic.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+
+
+    <div class="item">
+      <img src="https://i.ibb.co/4mcRXWp/Ficem-Board.jpg" alt="FicemBoard.png">
+      <div class="content">
+        <h2>FicemBoard</h2>
+      <p>FicemBoard, or fiber cement board, is a sturdy building material made from a mix of cement and cellulose fibers. It’s known for its strength and durability, as well as its resistance to moisture, fire, and termites. This makes it a popular choice for walls, ceilings, and partitions in construction projects.</p>
+      <a href="FicemBoard.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    <div class="item">
+      <img src="https://i.ibb.co/68kzKjQ/Plywood.jpg" alt="Plywood.png">
+      <div class="content">
+        <h2>Plywood</h2>
+      <p>Plywood is an engineered wood product made by gluing together thin layers of wood veneer, with the grain of each layer running perpendicular to the previous one. This cross-grain configuration improves the strength and stability of the plywood, making it less prone to warping and splitting compared to solid wood. Plywood is commonly used in construction, furniture making, and as a general-purpose building material due to its versatility, strength, and resistance to shrinkage and expansion.</p>
+      <a href="Plywood.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    <div class="item">
+      <img src="https://i.ibb.co/0G7gLNz/Shafting.jpg" alt="Shafting.png">
+      <div class="content">
+        <h2>Shafting</h2>
+      <p>Shafting refers to the material or components used to make shafts, which are long, cylindrical pieces used to transmit motion and torque in machinery. Shafts are essential components in various mechanical systems, such as motors, engines, and gearboxes, where they connect different parts and facilitate the transfer of power.</p>
+      <a href="Shafting.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    <div class="item">
+      <img src="https://i.ibb.co/1vCLrH3/Threaded-Bar.jpg" alt="ThreadedBar.png">
+      <div class="content">
+        <h2>ThreadedBar</h2>
+      <p>A threaded bar, also known as a threaded rod, is a long, straight metal bar with threads cut into it along its entire length. The threading allows for nuts and other fasteners to be screwed onto the rod, enabling it to be used in various construction and mechanical applications. Threaded bars are often used for securing objects together, providing structural support, or in assembly and maintenance projects where adjustable and secure fastening is required.</p>      
+      <a href="ThreadedBar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    <div class="item">
+      <img src="https://i.ibb.co/sjHny2X/Steel-Matting.jpg" alt="SteelMatting.png">
+      <div class="content">
+        <h2>SteelMatting</h2>
+      <p>Steel matting, also known as welded wire mesh or reinforcing mesh, is a type of material used in construction and industrial applications. It consists of a grid of parallel longitudinal wires welded to cross wires at regular intervals, creating a mesh pattern. This structure provides high strength and rigidity, making it suitable for reinforcing concrete structures, building fences, and various other applications where stability and durability are essential.</p>      
+      <a href="SteelMatting.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    <div class="item">
+      <img src="https://i.ibb.co/THtBbDv/Stainless-Sheet.jpg" alt="StainlessSheet.png">
+      <div class="content">
+        <h2>StainlessSheet</h2>
+      <p>A stainless sheet, or stainless steel sheet, is a flat piece of stainless steel that is typically available in various thicknesses and dimensions. Stainless steel sheets are known for their excellent corrosion resistance, strength, and aesthetic appeal. They are widely used in various industries, including construction, automotive, aerospace, and manufacturing, for applications such as countertops, appliances, architectural cladding, and more. The sheets come in different finishes, such as brushed, polished, and matte, to suit different functional and decorative needs. </p>
+      <a href="StainlessSheet.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    <div class="item">
+      <img src="https://i.ibb.co/9vSVn19/Barbed-Wire.jpg" alt="BarbedWire.png">
+      <div class="content">
+        <h2>BarbedWire</h2>
+      <p>Barbed wire is a type of fencing material constructed with sharp edges or points arranged at intervals along the strands. It consists of two or more twisted strands of wire with barbs (sharp points) spaced at regular intervals. Barbed wire is commonly used for agricultural fencing, security fencing, and other applications where controlling livestock movement or preventing unauthorized access is necessary. The sharp barbs act as a deterrent to animals and people, making it an effective and cost-efficient fencing solution.</p>
+      <a href="BarbedWire.html" class="seemore"><button class="sliderbutton">See More</button></a>
+    </div>
+    </div>
+    
+    </div>
+
+      <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+        
+        <div class="thumbnail">
+          <div class="item active">
+            <img src="https://i.ibb.co/n0QSw8k/anglebar.jpg" alt="anglebar.png">
+            <div class="content">AngleBar
+            </div>
+          </div>
+          
+          <div class="item">
+            <img src="https://i.ibb.co/WsV0pmM/flatbar.jpg" alt="flatbar.png">
+            <div class="content">FlatBar
+            </div>
+          </div>
+          
+          <div class="item">
+            <img src="https://i.ibb.co/0Y8vLQ3/squarebar.jpg" alt="squarebar.png">
+            <div class="content">SquareBar
+            </div>
+          </div>
+          
+          <div class="item">
+            <img src="https://i.ibb.co/3BqLHr3/RoundBar.jpg" alt="RoundBar.png">
+            <div class="content">RoundBar
+            </div>
+          </div>
+          
+          <div class="item">
+           <img src="https://i.ibb.co/9V5qstZ/Deformed-Bar.jpg" alt="DeformedBar.png">
+          <div class="content">DeformedBar
+          </div>
+          </div>
+          
+          <div class="item">
+          <img src="https://i.ibb.co/VtXHsn9/channelbar.jpg" alt="channelbar.png">
+          <div class="content">ChannelBar
+          </div>
+          </div>
+          
+          <div class="item">
+           <img src="https://i.ibb.co/9yNvVMG/images.jpg" alt="Gisquaretube.png">
+          <div class="content">GiSquareTube
+          </div>
+          </div>
+          
+            <div class="item">
+           <img src="https://i.ibb.co/b7sLNkd/images-3.jpg" alt="GalvanizedPlate.png">
+          <div class="content">Galvanized Plate
+          </div>
+          </div>
+          
+          <div class="item">
+            <img src="https://i.ibb.co/BChXPb0/ms-plate.jpg" alt="msplate.png">
+           <div class="content">Mild Steel Plate
+           </div>
+           </div>
+          
+          <div class="item">
+           <img src="https://i.ibb.co/yWpPHkS/Bi-Cpurlins.jpg" alt="BiCpurlins.png">
+           <div class="content">Bi C-Purlins
+           </div>
+           </div>
+          
+          <div class="item">
+           <img src="https://i.ibb.co/8DfmWj3/Gi-Cpurlins.jpg" alt="GiCpurlins.png">
+
+           <div class="content">GiCpurlins
+           </div>
+           </div>
+          
+          <div class="item">
+           <img src="https://i.ibb.co/GRMXnY3/Bi-Expanded-Metal.jpg" alt="BiExpandedMetal.png">
+           <div class="content">BiExpandedMetal
+           </div>
+           </div>
+          
+          <div class="item">
+           <img src="https://i.ibb.co/H2TQjLV/Bi-Perforated.jpg" alt="BiPerforated.png">
+           <div class="content">BiPerforatedSheets
+           </div>
+           </div>
+          
+          <div class="item">
+            <img src="https://i.ibb.co/br07CCh/Bipipe.jpg" alt="Bipipe.png">
+            <div class="content">BiPipe
+            </div>
+            </div>
+
+            <div class="item">
+              <img src="https://i.ibb.co/SwrTVFb/Bi-Squaretube.jpg" alt="BiSquaretube.png">
+              <div class="content">BiSquaretube
+              </div>
+              </div>
+          
+          <div class="item">
+              <img src="https://i.ibb.co/RNYKgjV/Box-Gutter.jpg" alt="BoxGutter.png">
+              <div class="content">BoxGutter
+              </div>
+              </div>
+          
+          <div class="item">
+              <img src="https://i.ibb.co/QDG8QHm/Lflashing.jpg" alt="Lflashing.png">
+              <div class="content">Lflashing
+              </div>
+              </div>
+          
+          <div class="item">
+              <img src="https://i.ibb.co/mNzFNTs/Regular-Flashing.jpg" alt="RegularFlashing.png">
+              <div class="content">RegularFlashing
+              </div>
+              </div>
+          
+          <div class="item">
+              <img src="https://i.ibb.co/CPVSwcY/Ridgeroll.jpg" alt="Ridgeroll.png">
+              <div class="content">Ridgeroll
+              </div>
+              </div>
+          
+          <div class="item">
+              <img src="https://i.ibb.co/3WbsGM8/Wall-Flashing.jpg" alt="WallFlashing.png">
+              <div class="content">WallFlashing
+              </div>
+              </div>
+          
+          
+         <div class="item">
+              <img src="https://i.ibb.co/Pz2B9vD/Carrying-Channel.jpg" alt="CarryingChannel.png">
+              <div class="content">CarryingChannel
+              </div>
+              </div>
+                  
+          <div class="item">
+                <img src="https://i.ibb.co/dts7RH1/Metal-Furring.jpg" alt="MetalFurring.png">
+                <div class="content">MetalFurring
+                </div>
+                </div>
+
+                <div class="item">
+                  <img src="https://i.ibb.co/kHsWDp0/Metal-Stud.jpg" alt="MetalStud.png">
+                  <div class="content">MetalStud
+                  </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="https://i.ibb.co/kQ58jBx/Wall-Angle.jpg" alt="WallAngle.png">
+                    <div class="content">WallAngle
+                    </div>
+                    </div>
+
+                    <div class="item">
+                      <img src="https://i.ibb.co/gSrKj3T/Steel-Deck.jpg" alt="SteelDeck.png">
+                      <div class="content">SteelDeck
+                      </div>
+                      </div>
+
+                      <div class="item">
+                        <img src="https://i.ibb.co/8Dxg1yb/Checkeredplate.jpg" alt="CheckeredPlate.png">
+                        <div class="content">CheckeredPlate
+                        </div>
+                        </div>
+          
+                       <div class="item">
+                        <img src="https://i.ibb.co/qWZ5Yx2/Chicken-Wire.jpg" alt="ChickenWire.png">
+                        <div class="content">ChickenWire
+                        </div>
+                        </div>
+          
+                        <div class="item">
+                        <img src="https://i.ibb.co/q9zvZL9/Colored-Sheet.webp" alt="ColoredSheet.png">
+                        <div class="content">ColoredSheet
+                        </div>
+                        </div>
+          
+                        <div class="item">
+                        <img src="https://i.ibb.co/ys9DyyX/Slotted-Angle.jpg" alt="SlottedAngle.png">
+                        <div class="content">SlottedAngle
+                        </div>
+                        </div>
+          
+                        <div class="item">
+                        <img src="https://i.ibb.co/6J2Mft2/Cyclone-Wire.jpg" alt="CycloneWire.png">
+                        <div class="content">CycloneWire
+                        </div>
+                        </div>
+          
+                        <div class="item">
+                        <img src="https://i.ibb.co/NrQ14Pz/Gi-Corrugated.jpg" alt="GiCorrugated.png">
+                        <div class="content">GiCorrugated
+                        </div>
+                        </div>
+          
+                             <div class="item">
+                              <img src="https://i.ibb.co/x7VG5vX/longspanribtype.jpg" alt="Longspanribtype.png">
+                              <div class="content">Longspanribtype
+                              </div>
+                              </div>
+                              
+                              <div class="item">
+                                <img src="https://i.ibb.co/RpQxzry/Longspan-Corrugated.jpg" alt="LongspanCorrugated.png">
+                                <div class="content">LongspanCorrugated
+                                </div>
+                                </div>
+
+                                <div class="item">
+                                  <img src="https://i.ibb.co/yn2cymn/Gipipe.webp" alt="Gipipe.png">
+                                  <div class="content">GiPipe
+                                  </div>
+                                  </div>
+
+                                  <div class="item">
+                                    <img src="https://i.ibb.co/CWXhpww/Tbar.jpg" alt="Ibar.png">
+                                    <div class="content">Ibar
+                                    </div>
+                                    </div>
+
+                                    <div class="item">
+                                      <img src="https://i.ibb.co/61Cy1Zg/Tbar.png" alt="Tbar.png">
+                                      <div class="content">Tbar
+                                      </div>
+                                      </div>
+
+                                      <div class="item">
+                                        <img src="https://i.ibb.co/c2DGCsD/ZBar.png" alt="ZBar.png">
+                                        <div class="content">ZBar
+                                        </div>
+                                        </div>
+
+                                        <div class="item">
+                                          <img src="https://i.ibb.co/8YTq01Q/Phenolic.jpg" alt="Phenolic.png">
+                                          <div class="content">Phenolic
+                                          </div>
+                                          </div>
+              
+                                          <div class="item">
+                                            <img src="https://i.ibb.co/4mcRXWp/Ficem-Board.jpg" alt="FicemBoard.png">
+                                            <div class="content">FicemBoard
+                                            </div>
+                                            </div>
+          
+                                            <div class="item">
+                                            <img src="https://i.ibb.co/68kzKjQ/Plywood.jpg" alt="Plywood.png">
+                                            <div class="content">Plywood
+                                            </div>
+                                            </div>
+          
+                                             <div class="item">
+                                            <img src="https://i.ibb.co/0G7gLNz/Shafting.jpg" alt="Shafting.png">
+
+                                            <div class="content">Shafting
+                                            </div>
+                                            </div>
+          
+                                            <div class="item">
+                                            <img src="https://i.ibb.co/1vCLrH3/Threaded-Bar.jpg" alt="ThreadedBar.png">
+                                            <div class="content">ThreadedBar
+                                            </div>
+                                            </div>
+          
+                                            <div class="item">
+                                            <img src="https://i.ibb.co/sjHny2X/Steel-Matting.jpg" alt="SteelMatting.png">
+                                            <div class="content">SteelMatting
+                                            </div>
+                                            </div>
+          
+                                            <div class="item">
+                                            <img src="https://i.ibb.co/THtBbDv/Stainless-Sheet.jpg" alt="StainlessSheet.png">
+                                            <div class="content">StainlessSheet
+                                            </div>
+                                            </div>
+          
+                                            <div class="item">
+                                            <img src="https://i.ibb.co/9vSVn19/Barbed-Wire.jpg" alt="BarbedWire.png">
+                                            <div class="content">BarbedWire
+                                            </div>
+                                            </div>
+          
+          
+    </div>
+  </div>
+    
+    
+</div>
+  
+  
+  <script>
+    let submenu=document.getElementById("submenu");
+      function toggleMenu(){
+        submenu.classList.toggle("open-menu");
+      }
+    </script>
+        
+        <div id="background">
+          <div class="contactus">
+            <div class="title">
+            <h2>Get in touch</h2>
+            </div>
+          </div>
+          <div class="box">
+            <!--Form-->
+            <div class="contact form">
+              <h3>Send a Message</h3>
+              <form action="https://formsubmit.co/shi.jessicadan@gmail.com" target="_blank" method="POST" onsubmit="clearForm()">
+                
+                <div class="formbox">
+                  
+                  <div class="row50">
+                    <div class="inputbox">
+                      <span>Name</span>
+                      <input id="Name" type="text" name="name" placeholder="john">
+                    </div>
+                    <div class="inputbox">
+                      <span>Company Name</span>
+                      <input id="Company Name" type="text" name="Company name" placeholder="ABC">
+                    </div>
+                  </div>
+                  
+                  <div class="row50">
+                    <div class="inputbox">
+                      <span>Email</span>
+                      <input id="Email" type="text" name="Email" placeholder="johndoe@gmail.com">
+                    </div>
+                    <div class="inputbox">
+                      <span>Mobile Number
+                      </span>
+                      <input id="Mobile Number" type="text" name="cellphone Number" placeholder="+91 987 654 3210">
+                    </div>
+                  </div>
+                  
+                  <div class="row100">
+                    <div class="inputbox">
+                      <span>Inquiry</span>
+                      <textarea id="Inquiry" name="Inquiry" placeholder="write your message here"></textarea>
+                       </div>
+                  </div>
+                  
+                  <div class="row100">
+                    <div class="inputbox">
+                      <input type="submit" value="Send">
+                       </div>
+                  </div>
+                  
+                  
+                  
+                </div>
+              </form>
+            </div>
+            <!--info Box-->
+            <div class="contact info">
+              <h3>Contact Info</h3>
+              <div class="infobox">
+              <div>
+                <span><ion-icon name="location"></ion-icon></span>
+                <p>240-A, 8th Avenue, corner 2nd Street, Caloocan, 1403 Metro Manila</p>
+              </div>
+              <div>
+                <span><ion-icon name="mail"></ion-icon></span>
+                <a href="mailto:amayasteelg9@gmail.com">amayasteelg9@gmail.com</a>
+                  </div>
+              <div>
+                <span><ion-icon name="call"></ion-icon></span>
+                <a href="tel:+639279443685">+639279443685</a>
+                  </div>
+                <!--social media link-->
+                <ul class="sci">
+                  <li><a href="https://www.facebook.com/amayasteeltrading/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                  <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                  <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                  <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
+                </div>
+              
+            </div>
+            <!--map-->
+            <div class="contact map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.1286946149103!2d120.98344507110046!3d14.648635175906877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b5d5a05626bf%3A0xde3945a081bf2a49!2sAmaya%20Steel%20Bars%20Trading!5e0!3m2!1sen!2sph!4v1716594592488!5m2!1sen!2sph"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+             <div class="aboutus">
+          <h1>About Us</h1>
+          <span>We offer brand new metal products and metal scrap at competitive prices, catering to a wide range of customers. </span>
+        </div>
+            
+          </div>
+        </div>
+    
+    
+
+  <script>
+        
+        
+
+        
+          // Function to save input values to localStorage
+                function saveInput() {
+                    const input1Value = document.getElementById('Name').value;
+                    const input2Value = document.getElementById('Company Name').value;
+                    const input3Value = document.getElementById('Email').value;
+                    const input4Value = document.getElementById('Mobile Number').value;
+                    const input5Value = document.getElementById('Inquiry').value;
+                    localStorage.setItem('Name', input1Value);
+                    localStorage.setItem('Company Name', input2Value);
+                    localStorage.setItem('Email', input3Value);
+                    localStorage.setItem('Mobile Number', input4Value);
+                    localStorage.setItem('Inquiry', input5Value);
+                }
+        
+                // Function to load input values from localStorage
+                function loadInput() {
+                    const input1Value = localStorage.getItem('Name');
+                    const input2Value = localStorage.getItem('Company Name');
+                    const input3Value = localStorage.getItem('Email');
+                    const input4Value = localStorage.getItem('Mobile Number');
+                    const input5Value = localStorage.getItem('Inquiry');
+                    if (input1Value !== null) {
+                        document.getElementById('Name').value = input1Value;
+                    }
+                    if (input2Value !== null) {
+                        document.getElementById('Company Name').value = input2Value;
+                    }
+                    if (input3Value !== null) {
+                        document.getElementById('Email').value = input3Value;
+                    }
+                    if (input4Value !== null) {
+                        document.getElementById('Mobile Number').value = input4Value;
+                    }
+                    if (input5Value !== null) {
+                        document.getElementById('Inquiry').value = input5Value;
+                    }
+                  
+                }
+        
+        
+        function clearForm() {
+    setTimeout(function() {
+      document.getElementById("Name").value = "";
+      document.getElementById("Company Name").value = "";
+      document.getElementById("Email").value = "";
+      document.getElementById("Mobile Number").value = "";
+      document.getElementById("Inquiry").value = "";
+            saveInput();
+    }, 100);  // Slight delay to allow the form to submit before clearing
+                
+  }
+        
+               // Load the input values when the page is loaded
+                
+                  window.onload = function() {
+                    
+                    loadInput();
+                    
+                }
+        
+                // Save the input values when the user types in the input fields
+                document.getElementById('Name').addEventListener('input', saveInput);
+                document.getElementById('Company Name').addEventListener('input', saveInput);
+                document.getElementById('Email').addEventListener('input', saveInput);
+                document.getElementById('Mobile Number').addEventListener('input', saveInput);
+                document.getElementById('Inquiry').addEventListener('input', saveInput);
+  
+               //play music
+ document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('music');
+    audio.play().then(() => {
+        console.log('Autoplay started.');
+        audio.muted = false;
+    }).catch(error => {
+        console.error('Autoplay was prevented:', error);
+        document.getElementById('playbutton').style.display = 'block';
+
+        // Add click event listener to the document
+        document.addEventListener('click', playOnInteraction);
+    });
+    document.querySelectorAll('.sub-menu-link').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            navigateTo(this.getAttribute('href'));
+        });
+    });
+    document.querySelectorAll('.homelink').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            navigateTo(this.getAttribute('href'));
+        });
+    });
+   document.querySelectorAll('.seemore').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            navigateTo(this.getAttribute('href'));
+        });
+    });
+
+    document.querySelectorAll('.similarproduct').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            navigateTo(this.getAttribute('href'));
+        });
+    });
+    
+});
+
+function playAudio() {
+    const audio = document.getElementById('music');
+    audio.play().catch(error => {
+        console.error('Playback failed:', error);
+    });
+}
+
+function playOnInteraction() {
+    const audio = document.getElementById('music');
+    audio.play().then(() => {
+        audio.muted = false;
+        console.log('Playback started by user interaction.');
+        // Remove the event listener after playback starts
+        document.removeEventListener('click', playOnInteraction);
+        document.getElementById('playButton').style.display = 'none';
+    }).catch(error => {
+        console.error('Playback failed:', error);
+    });
+}
+
+        function disableNavigation() {
+          document.querySelectorAll('.sub-menu-link').forEach(link => {
+                link.style.pointerEvents = 'none'; // Disable clicks
+            });
+
+            document.querySelectorAll('.homelink').forEach(link => {
+                link.style.pointerEvents = 'none'; // Disable clicks
+            });
+
+            document.querySelectorAll('.seemore').forEach(link => {
+                link.style.pointerEvents = 'none'; // Disable clicks
+            });
+
+            document.querySelectorAll('.similarproduct').forEach(link => {
+                link.style.pointerEvents = 'none'; // Disable clicks
+            });
+        }
+
+        function enableNavigation() {
+          document.querySelectorAll('.sub-menu-link').forEach(link => {
+                link.style.pointerEvents = 'auto'; // Enable clicks
+            });
+
+            document.querySelectorAll('.homelink').forEach(link => {
+                link.style.pointerEvents = 'auto'; // Enable clicks
+            });
+
+            document.querySelectorAll('.seemore').forEach(link => {
+                link.style.pointerEvents = 'auto'; // Enable clicks
+            });
+
+            document.querySelectorAll('.similarproduct').forEach(link => {
+                link.style.pointerEvents = 'auto'; // Enable clicks
+            });
+        }
+
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+
+// Refresh page handler
+window.addEventListener('load', function() {
+    const lastPage = localStorage.getItem('lastPage');
+    if (lastPage && lastPage !== 'Home.html') {
+        navigateTo(lastPage, false);
+    } else {
+        navigateTo('Home.html', false);
+    }
+});
+
+function navigateTo(page, addToHistory = true) {
+    const contentDiv = document.getElementById('content');
+    const mainContentDiv = document.getElementById('mainContent');
+    const submenu = document.getElementById('submenu');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+
+    disableNavigation(); // Disable navigation links
+    loadingSpinner.style.display = 'block'; // Show loading spinner
+
+    /* Close the submenu if it's open */
+    if (submenu.classList.contains('open-menu')) {
+        submenu.classList.remove('open-menu');
+    }
+
+    if (page === 'Home.html') {
+        // Show the main content and clear dynamic content
+        mainContentDiv.style.display = 'block';
+        contentDiv.innerHTML = '';  // Clear existing content
+        loadingSpinner.style.display = 'none'; // Hide loading spinner
+        enableNavigation(); // Enable navigation links
+        window.scrollTo(0, 0);  // Scroll to the top
+
+        if (addToHistory && history.state?.page !== 'Home.html') {
+            history.pushState({ page: 'home' }, null, 'Home.html');
+        }
+        
+        // Store the last viewed page in localStorage
+        localStorage.setItem('lastPage', page);
+
+        return;
+    }
+
+    // Hide the main content and load the dynamic content
+    mainContentDiv.style.display = 'none';
+    contentDiv.innerHTML = '';  // Clear existing content
+    fetch(page)
+        .then(response => response.text())
+        .then(html => {
+            // Create a temporary DOM element to extract scripts
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+
+            // Extract and execute scripts
+            const scripts = tempDiv.querySelectorAll('script');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.textContent = script.textContent;
+                document.head.appendChild(newScript).parentNode.removeChild(newScript);
+            });
+
+            // Set the innerHTML excluding scripts
+            contentDiv.innerHTML = tempDiv.innerHTML;
+            window.scrollTo(0, 0);  // Scroll to the top
+
+            enableNavigation(); // Enable navigation links
+            loadingSpinner.style.display = 'none'; // Hide loading spinner
+
+            if (addToHistory && history.state?.page !== page) {
+                // Update the state and URL but keep it as 'Home.html'
+                history.pushState({ page }, null, 'Home.html');
+            }
+            
+            // Store the last viewed page in localStorage
+            localStorage.setItem('lastPage', page);
+
+            document.querySelectorAll('.similarproduct').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    navigateTo(this.getAttribute('href'));
+                });
+            });
+
+            // Ensure the window prompt function is available
+            if (typeof promptFunction === 'function') {
+                promptFunction();
+            } else {
+                console.error('promptFunction is not defined');
+            }
+
+        })
+        .catch(error => {
+            console.error('Error loading page:', error);
+            enableNavigation(); // Enable navigation links
+            loadingSpinner.style.display = 'none'; // Hide loading spinner
+        });
+}
+        
+        // Attach debounced click event listeners to navigation links
+       document.querySelectorAll('.sub-menu-link').forEach(link => {
+            link.addEventListener('click', debounce(function(event) {
+                event.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }, 300)); // 300ms debounce time
+        });
+
+
+        document.querySelectorAll('.homelink').forEach(link => {
+            link.addEventListener('click', debounce(function(event) {
+                event.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }, 300)); // 300ms debounce time
+        });
+
+        document.querySelectorAll('.seemore').forEach(link => {
+            link.addEventListener('click', debounce(function(event) {
+                event.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }, 300)); // 300ms debounce time
+        });
+        
+          
+        document.querySelectorAll('.similarproduct').forEach(link => {
+            link.addEventListener('click', debounce(function(event) {
+                event.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }, 300)); // 300ms debounce time
+        });
+
+        
+// Popstate handler for navigating back/forward in history
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.page) {
+        // If the state is 'home', load 'Home.html' content, otherwise load the dynamic page
+        if (event.state.page === 'home') {
+            // Handle 'Home.html'
+            navigateTo('Home.html', false);
+        } else {
+            // Handle other pages
+            navigateTo(event.state.page, false);
+        }
+    }
+});
+        
+        window.onload = function() {
+    if (!sessionStorage.getItem('titleClicked')) {
+        // Simulate a click on the title
+        document.getElementById('hometitle').click();
+        // Set the session storage flag so this only happens once per session
+        sessionStorage.setItem('titleClicked', 'true');
+    }
+               loadInput();
+                saveInput();
+};
+            
+      
+        </script>
+
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.addEventListener('keydown', event => {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+      event.preventDefault();
+    }
+  });
+</script>
+
+
+<script>
+  // Example with Next.js
+export async function getServerSideProps() {
+  // Fetch data from an API
+  const res = await fetch('https://api.example.com/data');
+  const data = await res.json();
+  return { props: { data } };
+}
+
+</script>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+<script src="function.js"></script>
+ 
+</body>
+</html>
