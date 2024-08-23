@@ -234,7 +234,7 @@ color:white;
  position:fixed;
  top: 0;
  width: 100%;
- height: 17%;
+ height: 7vw;
  z-index: 3000;
 display: grid;
 grid-template-areas: "home hometitle menupicture";
