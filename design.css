@@ -220,17 +220,18 @@ body {
 }
 
 #amaya{
- text-align:center;
-color:white;
- background-color:darkblue;
- position:fixed;
- top: 0;
-  left:0;
-  right:0;
-  display: flex;
-  justify-content: space-between;
-  padding: 0.8rem 2rem;
- z-index: 3000;
+text-align: center;
+    color: white;
+    background-color: darkblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    height: 16%;
+    z-index: 3000;
 } 
 #amaya a{
   text-decoration: none;
