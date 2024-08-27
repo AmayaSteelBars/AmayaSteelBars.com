@@ -217,6 +217,10 @@ body {
     height: 100px;
     
     margin-top: -2%;
+
+  @media only screen and (max-width:1500px){
+  margin-top:0%
+}
 }
 
 #amaya{
@@ -232,6 +236,10 @@ text-align: center;
     padding: 1rem 2rem;
     height: 16%;
     z-index: 3000;
+@media only screen and (max-width:1500px){
+  height:9%
+}
+  
 } 
 #amaya a{
   text-decoration: none;
