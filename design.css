@@ -133,10 +133,9 @@ body {
   gap: 10px;
   width: 100%;
   height: 250px;
-  padding: 0 50px;
+  padding: 0 10px;
   box-sizing: border-box;
   overflow: auto;
-  justify-content: center;
 }
 
 .thumbnail::-webkit-scrollbar {
