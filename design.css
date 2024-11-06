@@ -325,6 +325,23 @@ nav ul li a{
   font-weight:600;
 }
 
+.Steel{
+  grid-area: steel;
+}
+
+.hardware{
+  grid-area:hardware;
+}
+
+.product{
+position:relative;
+display: grid;
+grid-template-columns: 2fr 2fr;
+grid-template-areas:
+"steel hardware" ;
+}
+
+
 .SteelProduct{
   position: static;
   top: 15%;
