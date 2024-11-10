@@ -1,11 +1,17 @@
 let items= document.querySelectorAll('.slider .list .item');
+let items2= document.querySelectorAll('.slider2 .list2 .item2');
 let next= document.getElementById("next");
+let next2= document.getElementById("next2");
 let prev =document.getElementById("prev");
+let prev2 =document.getElementById("prev2");
 let thumbnails= document.querySelectorAll(".thumbnail .item");
+let thumbnails2= document.querySelectorAll(".thumbnail2 .item2");
 
 //config param
 let countitem= items.length;
+let countitem2= items2.length;
 let itemactive= 0;
+let item2active= 0;
 //event next click
 next.onclick=function(){
     itemactive=itemactive + 1;
@@ -14,6 +20,15 @@ next.onclick=function(){
     }
     showslider();
 }
+
+next2.onclick=function(){
+    item2active=item2active + 1;
+    if(item2active >= countitem2){
+        item2active=0;
+    }
+    showslider2();
+}
+
 
 //event prev click
 prev.onclick=function(){
@@ -24,9 +39,21 @@ prev.onclick=function(){
     showslider();
 }
 
+prev2.onclick=function(){
+    item2active= item2active -1;
+    if(item2active < 0){
+        item2active=countitem2 - 1;
+    }
+    showslider2();
+}
+
 //auto slider
 let refreshinterval = setInterval(() =>{
     next.click();
+},5000);
+
+let refreshinterval2 = setInterval(() =>{
+    next2.click();
 },5000);
 
 function showslider(){
@@ -37,12 +64,29 @@ function showslider(){
     thumbnailactiveold.classList.remove("active");
 
     //active new item
-    items[itemactive].classList.add("active");
-    thumbnails[itemactive].classList.add("active");
+    items[item2active].classList.add("active");
+    thumbnails[item2active].classList.add("active");
 
     clearInterval(refreshinterval);
     refreshinterval = setInterval(() =>{
         next.click();
+    },5000)
+}
+
+function showslider2(){
+    //remove item active old
+    let itemactiveold2= document.querySelector(".slider2 .list2 .item2.active");
+    let thumbnailactiveold2= document.querySelector(".thumbnail2 .item2.active");
+    itemactiveold2.classList.remove("active");
+    thumbnailactiveold2.classList.remove("active");
+
+    //active new item
+    items2[itemactive].classList.add("active");
+    thumbnails2[itemactive].classList.add("active");
+
+    clearInterval(refreshinterval2);
+    refreshinterval2 = setInterval(() =>{
+        next2.click();
     },5000)
 }
 
@@ -54,7 +98,12 @@ thumbnails.forEach((thumbnail,index)=>{
     })
 })
 
-
+thumbnails2.forEach((thumbnail2,index)=>{
+    thumbnail2.addEventListener("click",()=>{
+        item2active=index;
+        showslider2();
+    })
+})
 
 
 

@@ -578,7 +578,7 @@
         </nav>
   </div>
 
-<div class="Allcontent">
+
 
 <div id="mainContent">
 <div class="SteelProduct">
@@ -1290,8 +1290,62 @@
     
     
 </div>
-  
-        
+
+<div class="mainContent2">
+<div class="HardwareProduct">
+  Hardware Product
+</div>
+
+  <div class="slider2">
+    <div class="list2">
+
+      <div class="item2 active" >
+      
+        <img src="anglebar.png" alt="https://i.ibb.co/n0QSw8k/anglebar.jpg">
+        <div class="content2">
+          <h2>AngleBar</h2>
+          <p>An angle bar, also known as an angle iron or L-bracket, is a finished metal part shaped like an L with perpendicular legs. These legs may be equal or unequal in length. Angle bars are typically manufactured through hot rolling using either carbon steel or high-strength, low-alloy steel.</p>
+          <a href="Anglebar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+        </div>
+      </div>
+
+
+      <div class="item2">
+        <img src="flatbar.png" alt="https://i.ibb.co/WsV0pmM/flatbar.jpg">
+        <div class="content2">
+          <h2>FlatBar</h2>
+          <p>Flat bar typically refers to a long, rectangular piece of metal with a flat surface. Its commonly used in construction, manufacturing, and crafting for various purposes like support, framing, and reinforcement.</p>
+          <a href="Flatbar.html" class="seemore"><button class="sliderbutton">See More</button></a>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="arrows2">
+        <button id="prev2"><</button>
+        <button id="next2">></button>
+      </div>
+
+
+      <div class="thumbnail2">
+
+        <div class="item2 active">
+          <img src="anglebar.png" alt="https://i.ibb.co/n0QSw8k/anglebar.jpg">
+          <div class="content2">AngleBar
+          </div>
+        </div>
+
+
+        <div class="item2">
+          <img src="flatbar.png" alt="https://i.ibb.co/WsV0pmM/flatbar.jpg">
+          <div class="content2">FlatBar
+          </div>
+        </div>
+
+  </div>
+</div>
+
+
         <div id="background">
           <div class="contactus">
             <div class="title">
@@ -1386,7 +1440,7 @@
           </div>
         </div>
     
-    </div>
+    
 
   <script>
 
@@ -1588,6 +1642,7 @@ window.addEventListener('load', function() {
 function navigateTo(page, addToHistory = true) {
     const contentDiv = document.getElementById('content');
     const mainContentDiv = document.getElementById('mainContent');
+    const mainContentDiv2 = document.getElementById('mainContent2');
     const submenu = document.getElementById('submenu');
     const loadingSpinner = document.getElementById('loadingSpinner');
 
@@ -1602,6 +1657,7 @@ function navigateTo(page, addToHistory = true) {
     if (page === 'Home.html') {
         // Show the main content and clear dynamic content
         mainContentDiv.style.display = 'block';
+        mainContentDiv2.style.display = 'block';
         contentDiv.innerHTML = '';  // Clear existing content
         loadingSpinner.style.display = 'none'; // Hide loading spinner
         enableNavigation(); // Enable navigation links
@@ -1619,6 +1675,7 @@ function navigateTo(page, addToHistory = true) {
 
     // Hide the main content and load the dynamic content
     mainContentDiv.style.display = 'none';
+    mainContentDiv2.style.display = 'none';
     contentDiv.innerHTML = '';  // Clear existing content
     fetch(page)
         .then(response => response.text())
