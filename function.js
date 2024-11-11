@@ -64,8 +64,8 @@ function showslider(){
     thumbnailactiveold.classList.remove("active");
 
     //active new item
-    items[item2active].classList.add("active");
-    thumbnails[item2active].classList.add("active");
+    items[itemactive].classList.add("active");
+    thumbnails[itemactive].classList.add("active");
 
     clearInterval(refreshinterval);
     refreshinterval = setInterval(() =>{
@@ -81,8 +81,8 @@ function showslider2(){
     thumbnailactiveold2.classList.remove("active");
 
     //active new item
-    items2[itemactive].classList.add("active");
-    thumbnails2[itemactive].classList.add("active");
+    items2[item2active].classList.add("active");
+    thumbnails2[item2active].classList.add("active");
 
     clearInterval(refreshinterval2);
     refreshinterval2 = setInterval(() =>{
