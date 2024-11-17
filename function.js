@@ -54,7 +54,7 @@ let refreshinterval = setInterval(() =>{
 
 let refreshinterval2 = setInterval(() =>{
     next2.click();
-},5000);
+},5500);
 
 function showslider(){
     //remove item active old
