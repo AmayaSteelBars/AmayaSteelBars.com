@@ -130,8 +130,12 @@
         cursor: pointer;
       }
   
+  #pic1{
+    margin-left:18%;
+  }
+
   #pic2{
-    margin-left:15%;
+    margin-left:0%;
   }
   
   #pic3{
@@ -139,7 +143,7 @@
   }
   
   #pic4{
-    margin-left:25%;
+    margin-left:6%;
   }
   
       .Product_Picture div h1{
@@ -226,7 +230,7 @@
         margin-left:7%;
       }
       #pic3{
-        margin-left:10%;
+        margin-left:26%;
       }
       #pic4{
         margin-left:9%;
@@ -249,7 +253,7 @@
     
     
       <div class="ProductName">
-        <b>Common Nail</b>
+        <b>Concrete Nail</b>
         </div>
       
     <div class="ProductGroup">
@@ -257,14 +261,14 @@
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Commonnails.png">
+          <img  src="Concretenails.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>Common nails are versatile fasteners widely used in construction and woodworking. They feature a flat head, smooth shank, and sharp point, making them easy to drive into wood and other materials. These nails are typically used for framing, carpentry, and structural work where strong, durable fastening is needed. Available in various lengths and thicknesses, common nails are usually made of steel, though stainless steel versions are also available for added corrosion resistance. Their design and strength make them a staple in many building projects, providing reliable and straightforward fastening solutions.</p>
+          <p>Concrete nails are tough, hardened steel nails designed specifically for use in concrete and masonry. They have a thick, sturdy shaft and a sharp point, which allows them to penetrate hard surfaces without bending or breaking. These nails are commonly used in construction to attach wood framing to concrete slabs or to secure fixtures to brick or masonry walls. Their durability and strength make them ideal for projects that involve securing materials to hard surfaces.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>1inch,1-1/2inch,2inch,3inch </p>
+          <p>1inch,1-1/2inch,2inch,2-1/2inch,3inch,4inch </p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -276,23 +280,23 @@
     
         <div class="Product_Picture">
           <div>
-          <a href="Plywood.html" class="similarproduct"><img id="pic1" src="Plywood.png" alt="https://i.ibb.co/68kzKjQ/Plywood.jpg" >
-          <h1>Plywood</h1></a>
+          <a href="Commonnails.html" class="similarproduct"><img id="pic1" src="Commonnails.png" alt="#" >
+          <h1>Common Nails</h1></a>
         </div>
     
         <div>
-          <a href="Concretenails.html" class="similarproduct"><img id="pic2" src="Concretenails.png" alt="https://i.ibb.co/ygWZspJ/Concretenails.jpg" >
-          <h1>Concrete Nails</h1></a>
+          <a href="Logscrew.html" class="similarproduct"><img id="pic2" src="Logscrew.png" alt="https://i.ibb.co/kKJGTSJ/Logscrew.jpg" >
+          <h1>LogScrew</h1></a>
         </div>
     
         <div>
-          <a href="Woodtextscrew.html" class="similarproduct"><img id="pic3" src="Woodtextscrew.png" alt="https://i.ibb.co/Ny3DtY0/Woodtextscrew.jpg" >
-          <h1>Wood Text Screw</h1></a>
+          <a href="Expansionshield.html" class="similarproduct"><img id="pic3" src="Expansionshield.png" alt="https://i.ibb.co/wKxX7vY/Expansionshield.jpg" >
+          <h1>ExpansionShield</h1></a>
         </div>
     
         <div>
-          <a href="Roofingnail.html" class="similarproduct"><img id="pic4" src="Roofingnail.png" alt="https://i.ibb.co/Jrb2D8G/Roofingnail.jpg" >
-          <h1>Roofing Nail</h1></a>
+          <a href="Dynabolt.html" class="similarproduct"><img id="pic4" src="Dynabolt.png" alt="https://i.ibb.co/cxpdw6x/Dynabolt.jpg" >
+          <h1>Dyna Bolt</h1></a>
         </div>
     
         </div>
@@ -305,12 +309,12 @@
         const storage = [];
         const textarea = document.getElementById("Inquiry");
         document.getElementById('NewProduct').addEventListener('click', function() {
-      let FirstInput = prompt("Please enter the length of the common Nail(1inch,1-1/2inch,2inch,3inch ):");
+      let FirstInput = prompt("Please enter the length of the common Nail(1inch,1-1/2inch,2inch,2-1/2inch,3inch,4inch):");
       
       
   
       if (FirstInput !== null) {
-          const newText = `Common Nail ${FirstInput} `;
+          const newText = `Concrete Nail ${FirstInput} `;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
