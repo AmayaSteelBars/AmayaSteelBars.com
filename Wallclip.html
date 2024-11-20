@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AmayaSteelBarTrading</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+  <style>
+  
+   *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    
+    
+           .ProductName{
+          color:white;
+          font-size:50px;
+          font-family:"Montserrat",Sans-serif;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+          margin-top: 5%;
+        }
+  
+        .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 17%;;
+        }
+  
+        .BrandNew img{
+          width: 245px;
+      height: 100px;
+        }
+  
+      .Product{
+        grid-area: Product;
+      }
+  
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+  
+      .ProductDetailstitle{
+        grid-area: ProductDetailstitle;
+        padding: 0px 0px 10px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+       
+      }
+  
+      .Detailstitle{
+        color: darkblue;
+        font-size: 50px;
+      }
+      
+      .Description{
+        grid-area: Description;
+      font-size: 34px;
+      color: dodgerblue;
+      padding: 0px 0px 50px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      
+      }
+  
+      .Description h1 b{
+        margin-left: 33%;
+        color: darkblue;
+      }
+      .Description h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description p{
+        margin-left: 91px;
+      }
+      #measurement1{
+        margin-left:29%;
+      }
+  
+      .Description button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      height: 20%;
+      margin-bottom:10%;
+      }
+  
+      .Description button img{
+        width: 75px;
+      height: 56px;
+      margin-right: 32px;
+      }
+  
+      .Description button:hover{
+        color: grey;
+      }
+  
+  
+      
+  
+  
+  
+      .Product_Picture{
+        grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
+        display: grid;
+        grid-gap:3%;
+        overflow-x:auto;
+      
+      }
+  
+     .Product_Picture div a img{
+        width: 200px;
+        height: 200px;
+        margin-left: 2%;
+        cursor: pointer;
+      }
+  
+#pic1{
+    margin-left:12%;
+}
+
+  #pic2{
+    margin-left:15%;
+  }
+  
+  #pic3{
+    margin-left:24%;
+  }
+  
+  #pic4{
+    margin-left:0;
+  }
+  
+      .Product_Picture div h1{
+        font-size: 50px;
+        color: darkblue;
+        
+      }
+  
+      .ProductGroup{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "BrandNew"
+    "Product"
+    "Description"
+    "ProductDetailstitle"
+    "Product_Picture"  ;
+    grid-gap:20px;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom:20px;
+  }
+    
+    @media screen and (max-width: 1024px) {
+      .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 0%;
+        }
+      
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+     
+      .Description h1 b{
+        margin-left: 25%;
+        color: darkblue;
+      }
+      
+      .Description button{
+        height:15%
+      }
+      
+      .Cutsize{
+          grid-area: Cutsize;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 10%;
+        
+        }
+      .Product2 img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+      
+      .Description2 h1 b{
+        margin-left: 24%;
+      }
+        
+    
+        
+        .Product_Picture div a img{
+        
+       margin-left:15%;
+        
+        
+      }
+      .Product_Picture div h1{
+        
+        padding-left: 8%;
+      }
+      
+      #pic1{
+        margin-left:15%
+;
+      }
+      
+      #pic2{
+        margin-left:25%
+      }
+      #pic3{
+        margin-left:15%;
+      }
+      #pic4{
+        margin-left:10%;
+      }
+      
+      #measurement1{
+        margin-left:22%;
+      }
+      }
+      </style>
+
+  </head>  
+    
+  <body>
+    
+  
+    <div class="SteelProduct">
+      <b>Hardware Products</b>
+      </div>
+    
+    
+      <div class="ProductName">
+        <b>Wall Clip</b>
+        </div>
+      
+    <div class="ProductGroup">
+        <div class="BrandNew">
+          <b><img src="new.png">BrandNew</b>
+        </div>
+        <div class="Product">
+          <img  src="Wallclip.png">
+        </div>
+    
+        <div class="Description">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p>A wall clip, often referred to as a “W-clip,” is a vital component used in ceiling installations involving metal furring. It serves to attach the metal furring channels securely to the walls, ensuring the ceiling framework is both stable and level.</p>
+          <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
+          <p>5cm x 5cm x 3cm(0.25mm)</p>
+          <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+      
+
+     
+        <div class="ProductDetailstitle">
+           <div class="Detailstitle"><b>Similar Product</b></div>
+        </div>
+    
+        <div class="Product_Picture">
+          <div>
+          <a href="MetalStud.html" class="similarproduct"><img id="pic1" src="MetalStud.png" alt="https://i.ibb.co/kHsWDp0/Metal-Stud.jpg" >
+          <h1>MetalStud</h1></a>
+        </div>
+    
+        <div>
+          <a href="MetalFurring.html" class="similarproduct"><img id="pic2" src="MetalFurring.png" alt="https://i.ibb.co/dts7RH1/Metal-Furring.jpg" >
+          <h1>MetalFurring</h1></a>
+        </div>
+    
+        <div>
+          <a href="WallAngle.html" class="similarproduct"><img id="pic3" src="WallAngle.png" alt="https://i.ibb.co/kQ58jBx/Wall-Angle.jpg" >
+          <h1>WallAngle</h1></a>
+        </div>
+    
+        <div>
+          <a href="BlindRivets.html" class="similarproduct"><img id="pic4" src="BlindRivets.png" alt="https://i.ibb.co/yqjRQJg/Blind-Rivets.jpg" >
+          <h1>Blind Rivets</h1></a>
+        </div>
+    
+        </div>
+      </div>
+  
+    
+    
+    <script>
+                 function promptFunction() {
+        const storage = [];
+        const textarea = document.getElementById("Inquiry");
+        document.getElementById('NewProduct').addEventListener('click', function() {
+      let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Wall Clip`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+      })
+                   
+  }
+            </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<link rel="stylesheet" href="design.css">
+
+</body>
+</html>
