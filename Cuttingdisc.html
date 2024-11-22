@@ -168,6 +168,74 @@
     background-color: white;
     margin-bottom:20px;
   }
+
+  .Inquirepic{
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+    width: 75%;
+    height: 50%;
+    left: 13%;
+    top: 21%;
+    z-index: 999999;
+    display: grid;
+    grid-template-columns: 1fr;
+grid-template-rows: auto auto;
+grid-template-areas: "Selectitem"
+  "inquiryitem";
+display: block;
+  }
+
+  .Selectitem{
+    color: darkblue;
+    margin-left: 21%;
+    grid-area: Selectitem;
+    font-size: 40px;
+  }
+
+  .inquiryitem{
+    grid-template-areas: "Inquire1" "Inquire2" "Inquire3" "Inquire4";
+        display: grid;
+        grid-gap:3%;
+        grid-area: inquiryitem;
+  }
+
+  .Inquire1{
+    grid-area: Inquire1;
+  }
+
+  .Inquire2{
+    grid-area: Inquire2;
+  }
+
+  .Inquire3{
+    grid-area: Inquire3;
+  }
+
+  .Inquire4{
+    grid-area: Inquire4;
+  }
+
+  #picture1{
+    width: 70%;
+    height: 100%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 100%;
+  }
+
+  #picture3{
+    width: 70%;
+    height: 100%;
+  }
+
+  #picture4{
+    width: 70%;
+    height: 100%;
+  }
+  
     
     @media screen and (max-width: 1024px) {
       .BrandNew{
@@ -274,7 +342,33 @@
         </div>
       
 <div class="Inquirepic">
-  
+  <div class="Selectitem">
+    Select the Inquiry product
+  </div>
+
+  <div class="inquiryitem">
+<div class="Inquire1">
+  <img id="picture1" src="Cuttingdisc.png">
+  <h1>Light</h1>
+</div>
+
+<div class="Inquire2">
+  <img id="picture2" src="">
+  <h1>Light</h1>
+</div>
+
+<div class="Inquire3">
+  <img id="picture3" src="">
+  <h1>Light</h1>
+</div>
+
+<div class="Inquire4">
+  <img id="picture4" src="">
+  <h1>Light</h1>
+</div>
+
+</div>
+
 </div>
      
         <div class="ProductDetailstitle">
