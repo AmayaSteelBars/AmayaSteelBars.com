@@ -180,7 +180,7 @@
     z-index: 999999;
     display: grid;
     grid-template-columns: 1fr;
-grid-template-rows: auto auto;
+grid-template-rows: 1fr 2fr;
 grid-template-areas: "Selectitem"
   "inquiryitem";
 display: block;
@@ -194,10 +194,11 @@ display: block;
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1" "Inquire2" "Inquire3" "Inquire4";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
+        overflow-x:auto;
   }
 
   .Inquire1{
@@ -214,6 +215,14 @@ display: block;
 
   .Inquire4{
     grid-area: Inquire4;
+  }
+  
+.Inquire5{
+    grid-area: Inquire5;
+  }
+  
+.Inquire6{
+    grid-area: Inquire6;
   }
 
   #picture1{
@@ -232,6 +241,16 @@ display: block;
   }
 
   #picture4{
+    width: 70%;
+    height: 100%;
+  }
+  
+#picture5{
+    width: 70%;
+    height: 100%;
+  }
+  
+#picture6{
     width: 70%;
     height: 100%;
   }
@@ -308,6 +327,11 @@ display: block;
       #measurement1{
         margin-left:22%;
       }
+      
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6";
+    
+  }
       }
       </style>
 
@@ -348,23 +372,33 @@ display: block;
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Cuttingdisc.png">
+  <img id="picture1" src="Light.png">
   <h1>Light</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="">
-  <h1>Light</h1>
+  <img id="picture2" src="Nice9.png">
+  <h1>Nice9</h1>
 </div>
 
 <div class="Inquire3">
-  <img id="picture3" src="">
-  <h1>Light</h1>
+  <img id="picture3" src="Domore4.png">
+  <h1>Domore 4inch</h1>
 </div>
 
 <div class="Inquire4">
-  <img id="picture4" src="">
-  <h1>Light</h1>
+  <img id="picture4" src="Tailin.png">
+  <h1>Tailin</h1>
+</div>
+
+<div class="Inquire5">
+  <img id="picture5" src="Tyrolit.png">
+  <h1>Tyrolit</h1>
+</div>
+
+<div class="Inquire6">
+  <img id="picture6" src="Domore14.png">
+  <h1>Domore 14inch</h1>
 </div>
 
 </div>
