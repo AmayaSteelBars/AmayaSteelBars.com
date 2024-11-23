@@ -172,23 +172,21 @@
   .Inquirepic{
     position: fixed;
     border-radius: 10px;
-    background-color: white;
+    background-color: grey;
     width: 75%;
-    height: 50%;
+    height: 39%;
     left: 13%;
     top: 21%;
     z-index: 999999;
     display: grid;
-    grid-template-columns: 1fr;
-grid-template-rows: 1fr 2fr;
 grid-template-areas: "Selectitem"
   "inquiryitem";
-display: block;
+display: none;
   }
 
   .Selectitem{
     color: darkblue;
-    margin-left: 21%;
+    margin-left: 24%;
     grid-area: Selectitem;
     font-size: 40px;
   }
@@ -198,61 +196,78 @@ display: block;
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
-        overflow-x:auto;
+      
+  }
+
+  .inquiryitem h1{
+    color:black;
+    margin-left: 5%;
   }
 
   .Inquire1{
     grid-area: Inquire1;
+    cursor: pointer;
+    margin-left: 9%;
   }
 
   .Inquire2{
     grid-area: Inquire2;
+    cursor: pointer;
+    margin-left: 9%;
   }
 
   .Inquire3{
     grid-area: Inquire3;
+    cursor: pointer;
+    margin-left: 9%;
   }
 
   .Inquire4{
     grid-area: Inquire4;
+    cursor: pointer;
+    margin-left: 9%
   }
   
 .Inquire5{
     grid-area: Inquire5;
+    cursor: pointer;
+    margin-left: 9%
   }
   
 .Inquire6{
     grid-area: Inquire6;
+    cursor: pointer;
+    margin-left: 9%
   }
 
   #picture1{
     width: 70%;
-    height: 100%;
+    height: 70%;
   }
 
   #picture2{
     width: 70%;
-    height: 100%;
+    height: 70%;
   }
 
   #picture3{
     width: 70%;
-    height: 100%;
+    height: 70%;
   }
 
   #picture4{
     width: 70%;
-    height: 100%;
+    height: 70%;
   }
   
 #picture5{
     width: 70%;
-    height: 100%;
+    height: 70%;
   }
   
 #picture6{
     width: 70%;
-    height: 100%;
+    height: 70%;
   }
   
     
@@ -327,6 +342,10 @@ display: block;
       #measurement1{
         margin-left:22%;
       }
+
+      .Inquirepic{
+        height: 41%;
+      }
       
   .inquiryitem{
     grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6";
@@ -383,7 +402,7 @@ display: block;
 
 <div class="Inquire3">
   <img id="picture3" src="Domore4.png">
-  <h1>Domore 4inch</h1>
+  <h1>Domore 4</h1>
 </div>
 
 <div class="Inquire4">
@@ -398,7 +417,7 @@ display: block;
 
 <div class="Inquire6">
   <img id="picture6" src="Domore14.png">
-  <h1>Domore 14inch</h1>
+  <h1>Domore 14</h1>
 </div>
 
 </div>
@@ -439,8 +458,15 @@ display: block;
                  function promptFunction() {
         const storage = [];
         const textarea = document.getElementById("Inquiry");
+        
         document.getElementById('NewProduct').addEventListener('click', function() {
-      let FirstInput = 1;
+          var Inquirepic = document.querySelector(".Inquirepic");
+          if (Inquirepic.style.display === 'none' || Inquirepic.style.display === '') { 
+            Inquirepic.style.display = 'block'; } 
+          else { 
+            Inquirepic.style.display = 'none'; }
+      /*
+          let FirstInput = 1;
       
       
   
@@ -461,8 +487,15 @@ display: block;
       } else {
           alert("❌No input provided.");
       }
+    */
       })
-                   
+/*
+      document.addEventListener('click', function(event) { 
+        var Inquirepic = document.querySelector(".Inquirepic");
+        var NewProduct = document.getElementById('NewProduct'); 
+        if (Inquirepic.style.display === 'block' && !Inquirepic.contains(event.target) && !NewProduct.contains(event.target)) { 
+          Inquirepic.style.display = 'none'; } });
+                   */
   }
             </script>
 
