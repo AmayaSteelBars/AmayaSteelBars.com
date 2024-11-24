@@ -172,17 +172,40 @@
   .Inquirepic{
     position: fixed;
     border-radius: 10px;
-    background-color: grey;
+    background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
     width: 75%;
     height: 39%;
-    left: 13%;
-    top: 21%;
+    left: 50%;
+    top: 50%;
     z-index: 999999;
     display: grid;
 grid-template-areas: "Selectitem"
   "inquiryitem";
-display: none;
+
   }
+
+  .Inquirepic.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+  #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
 
   .Selectitem{
     color: darkblue;
@@ -384,7 +407,7 @@ display: none;
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
-<div class="Inquirepic">
+<div id="Inquirepic" class="Inquirepic">
   <div class="Selectitem">
     Select the Inquiry product
   </div>
@@ -452,19 +475,26 @@ display: none;
         </div>
       </div>
   
-    
+      <div id="overlay"></div>
     
     <script>
                  function promptFunction() {
         const storage = [];
         const textarea = document.getElementById("Inquiry");
+
+  
         
         document.getElementById('NewProduct').addEventListener('click', function() {
           var Inquirepic = document.querySelector(".Inquirepic");
-          if (Inquirepic.style.display === 'none' || Inquirepic.style.display === '') { 
-            Inquirepic.style.display = 'block'; } 
-          else { 
-            Inquirepic.style.display = 'none'; }
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('Inquirepic')) {
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+          }
+          else{
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
       /*
           let FirstInput = 1;
       
@@ -489,13 +519,19 @@ display: none;
       }
     */
       })
-/*
-      document.addEventListener('click', function(event) { 
+
+      document.getElementById('overlay').addEventListener('click', function() {
         var Inquirepic = document.querySelector(".Inquirepic");
-        var NewProduct = document.getElementById('NewProduct'); 
-        if (Inquirepic.style.display === 'block' && !Inquirepic.contains(event.target) && !NewProduct.contains(event.target)) { 
-          Inquirepic.style.display = 'none'; } });
-                   */
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('active')) {
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+          else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+      })
   }
             </script>
 
