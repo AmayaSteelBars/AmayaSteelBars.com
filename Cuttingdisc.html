@@ -495,13 +495,30 @@ grid-template-areas: "Selectitem"
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
           }
-      /*
+      
+        })
+    
+
+      document.getElementById('overlay').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('active')) {
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+          else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+      })
+
+      document.querySelector('.Inquire1').addEventListener('click', function() {
           let FirstInput = 1;
       
       
   
       if (FirstInput !== null) {
-          const newText = `Slotted Angle Foot`;
+          const newText = `Light Cutting disc`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -517,21 +534,134 @@ grid-template-areas: "Selectitem"
       } else {
           alert("❌No input provided.");
       }
-    */
+    
       })
 
-      document.getElementById('overlay').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-          if (Inquirepic.classList.contains('active')) {
-            Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-          else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
+      document.querySelector('.Inquire2').addEventListener('click', function() {
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Nice9 Cutting disc`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+    
       })
+
+      document.querySelector('.Inquire3').addEventListener('click', function() {
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Domore 4inch Cutting disc`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire4').addEventListener('click', function() {
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Tailin Cutting disc`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire5').addEventListener('click', function() {
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Tyrolit Cutting disc`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire6').addEventListener('click', function() {
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Domore 14inch Cutting disc`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
   }
             </script>
 
