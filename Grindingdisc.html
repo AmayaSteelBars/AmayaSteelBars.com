@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 39%;
+    height: 50%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -211,13 +211,13 @@ grid-template-areas: "Selectitem"
 
   .Selectitem{
     color: darkblue;
-    margin-left: 24%;
+    margin-left: 27%;
     grid-area: Selectitem;
     font-size: 40px;
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6";
+    grid-template-areas: "Inquire1 Inquire2 ";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
@@ -226,44 +226,21 @@ grid-template-areas: "Selectitem"
 
   .inquiryitem h1{
     color:black;
-    margin-left: 5%;
+    margin-left: 0%;
   }
 
   .Inquire1{
     grid-area: Inquire1;
     cursor: pointer;
-    margin-left: 9%;
+    margin-left: 16%;
   }
 
   .Inquire2{
     grid-area: Inquire2;
     cursor: pointer;
-    margin-left: 9%;
+    margin-left: 4%;
   }
 
-  .Inquire3{
-    grid-area: Inquire3;
-    cursor: pointer;
-    margin-left: 9%;
-  }
-
-  .Inquire4{
-    grid-area: Inquire4;
-    cursor: pointer;
-    margin-left: 9%
-  }
-  
-.Inquire5{
-    grid-area: Inquire5;
-    cursor: pointer;
-    margin-left: 9%
-  }
-  
-.Inquire6{
-    grid-area: Inquire6;
-    cursor: pointer;
-    margin-left: 9%
-  }
 
   #picture1{
     width: 70%;
@@ -275,25 +252,6 @@ grid-template-areas: "Selectitem"
     height: 70%;
   }
 
-  #picture3{
-    width: 70%;
-    height: 70%;
-  }
-
-  #picture4{
-    width: 70%;
-    height: 70%;
-  }
-  
-#picture5{
-    width: 70%;
-    height: 70%;
-  }
-  
-#picture6{
-    width: 70%;
-    height: 70%;
-  }
   
     
     @media screen and (max-width: 1024px) {
@@ -315,12 +273,12 @@ grid-template-areas: "Selectitem"
       }
      
       .Description h1 b{
-        margin-left: 20%;
+        margin-left: 25%;
         color: darkblue;
       }
       
       .Description button{
-        height:5%
+        height:13%
       }
       
       .Cutsize{
@@ -369,20 +327,28 @@ grid-template-areas: "Selectitem"
       }
       
       #measurement1{
-        margin-left:15%;
+        margin-left:22%;
       }
 
   .Selectitem{
-    margin-left: 15%;
+    margin-left: 18%;
     
   }
 
       .Inquirepic{
-        height: 41%;
+        height: 18%;
+      }
+
+      .Inquire1{
+        margin-left: 9%;
+      }
+
+      .Inquire2{
+        margin-left: 0%;
       }
       
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6";
+    grid-template-areas: "Inquire1 Inquire2" ;
     
   }
       }
@@ -434,25 +400,6 @@ grid-template-areas: "Selectitem"
   <h1>Tyrolit Grinding Disc</h1>
 </div>
 
-<div class="Inquire3">
-  <img id="picture3" src="Domore4.png">
-  <h1>Domore 4</h1>
-</div>
-
-<div class="Inquire4">
-  <img id="picture4" src="Tailin.png">
-  <h1>Tailin</h1>
-</div>
-
-<div class="Inquire5">
-  <img id="picture5" src="Tyrolit.png">
-  <h1>Tyrolit</h1>
-</div>
-
-<div class="Inquire6">
-  <img id="picture6" src="Domore14.png">
-  <h1>Domore 14</h1>
-</div>
 
 </div>
 
@@ -464,8 +411,8 @@ grid-template-areas: "Selectitem"
     
         <div class="Product_Picture">
           <div>
-          <a href="Grindingdisc.html" class="similarproduct"><img id="pic1" src="Grindingdisc.png" alt="https://i.ibb.co/MP6KbSZ/Grindingdisc.jpg" >
-          <h1>Grinding Disc</h1></a>
+          <a href="Cuttingdisc.html" class="similarproduct"><img id="pic1" src="Cuttingdisc.png" alt="https://i.ibb.co/kH34j5c/Cuttingdisc.jpg" >
+          <h1>Cutting Disc</h1></a>
         </div>
     
         <div>
@@ -533,7 +480,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Light Cutting disc`;
+          const newText = `Domore Grinding Disc`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -570,7 +517,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Nice9 Cutting disc`;
+          const newText = `Tyrolit Grinding Disc`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -599,159 +546,7 @@ else{
     
       })
 
-      document.querySelector('.Inquire3').addEventListener('click', function() {
-        
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Domore 4inch Cutting disc`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-
-      document.querySelector('.Inquire4').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Tailin Cutting disc`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-
-      document.querySelector('.Inquire5').addEventListener('click', function() {
-        
-         var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Tyrolit Cutting disc`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-
-      document.querySelector('.Inquire6').addEventListener('click', function() {
-        
-var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Domore 14inch Cutting disc`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
+     
 
   }
             </script>
