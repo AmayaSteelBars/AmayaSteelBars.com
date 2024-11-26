@@ -137,11 +137,11 @@
 }
 
   #pic2{
-    margin-left:15%;
+    margin-left:0%;
   }
   
   #pic3{
-    margin-left:7%;
+    margin-left:0%;
   }
   
   #pic4{
@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 39%;
+    height: 57%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -259,11 +259,7 @@ grid-template-areas: "Selectitem"
     margin-left: 9%
   }
   
-.Inquire6{
-    grid-area: Inquire6;
-    cursor: pointer;
-    margin-left: 9%
-  }
+
 
   #picture1{
     width: 70%;
@@ -290,11 +286,7 @@ grid-template-areas: "Selectitem"
     height: 70%;
   }
   
-#picture6{
-    width: 70%;
-    height: 70%;
-  }
-  
+
     
     @media screen and (max-width: 1024px) {
       .SteelProduct{
@@ -320,7 +312,7 @@ grid-template-areas: "Selectitem"
       }
       
       .Description button{
-        height:5%
+        height:11%
       }
       
       .Cutsize{
@@ -365,7 +357,7 @@ grid-template-areas: "Selectitem"
         margin-left:7%;
       }
       #pic4{
-        margin-left:25%;
+        margin-left:11%;
       }
       
       #measurement1{
@@ -378,7 +370,7 @@ grid-template-areas: "Selectitem"
   }
 
       .Inquirepic{
-        height: 41%;
+        height: 70%;
       }
       
   .inquiryitem{
@@ -425,34 +417,31 @@ grid-template-areas: "Selectitem"
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Light.png">
-  <h1>Light</h1>
+  <img id="picture1" src="36.png">
+  <h1>#36 SandPaper</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Nice9.png">
-  <h1>Nice9</h1>
+  <img id="picture2" src="80.png">
+  <h1>#80 SandPaper</h1>
 </div>
 
 <div class="Inquire3">
-  <img id="picture3" src="Domore4.png">
-  <h1>Domore 4</h1>
+  <img id="picture3" src="120.png">
+  <h1>#120 SandPaper</h1>
 </div>
 
 <div class="Inquire4">
-  <img id="picture4" src="Tailin.png">
-  <h1>Tailin</h1>
+  <img id="picture4" src="220.png">
+  <h1>#220 SandPaper</h1>
 </div>
 
 <div class="Inquire5">
-  <img id="picture5" src="Tyrolit.png">
-  <h1>Tyrolit</h1>
+  <img id="picture5" src="400.png">
+  <h1>#400 SandPaper</h1>
 </div>
 
-<div class="Inquire6">
-  <img id="picture6" src="Domore14.png">
-  <h1>Domore 14</h1>
-</div>
+
 
 </div>
 
@@ -479,8 +468,8 @@ grid-template-areas: "Selectitem"
         </div>
     
         <div>
-          <a href="Sandpaper.html" class="similarproduct"><img id="pic4" src="Sandpaper.png" alt="https://i.ibb.co/CHKgcHf/Sandpaper.webp" >
-          <h1>SandPaper</h1></a>
+          <a href="Cuttingdisc.html" class="similarproduct"><img id="pic4" src="Cuttingdisc.png" alt="https://i.ibb.co/kH34j5c/Cuttingdisc.jpg" >
+          <h1>Cutting Disc</h1></a>
         </div>
     
         </div>
@@ -528,12 +517,12 @@ grid-template-areas: "Selectitem"
         var Inquirepic = document.querySelector(".Inquirepic");
           var overlay = document.getElementById("overlay")
         
-          let FirstInput = 1;
+          let FirstInput = prompt("Please enter the length of the Sandpaper(Meter / cm / inch):");
       
       
   
       if (FirstInput !== null) {
-          const newText = `Light Cutting disc`;
+          const newText = `#36 SandPaper 11" x ${FirstInput}`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -565,12 +554,12 @@ else{
         
 var Inquirepic = document.querySelector(".Inquirepic");
           var overlay = document.getElementById("overlay")
-          let FirstInput = 1;
+          let FirstInput = prompt("Please enter the length of the Sandpaper(Meter / cm / inch):");
       
       
   
       if (FirstInput !== null) {
-          const newText = `Nice9 Cutting disc`;
+          const newText = `#80 SandPaper 11" x ${FirstInput}`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -609,7 +598,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Domore 4inch Cutting disc`;
+          const newText = `#120 SandPaper 9inch x11inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -646,7 +635,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Tailin Cutting disc`;
+          const newText = `#220 SandPaper 9inch x11inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -685,7 +674,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Tyrolit Cutting disc`;
+          const newText = `#400 SandPaper 9inch x11inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -714,44 +703,7 @@ else{
     
       })
 
-      document.querySelector('.Inquire6').addEventListener('click', function() {
-        
-var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
       
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Domore 14inch Cutting disc`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
 
   }
             </script>
