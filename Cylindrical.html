@@ -217,11 +217,13 @@ grid-template-areas: "Selectitem"
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6
+      Inquire7";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
-      
+      overflow-x:auto;
+      display:flex;
   }
 
   .inquiryitem h1{
@@ -264,6 +266,12 @@ grid-template-areas: "Selectitem"
     cursor: pointer;
     margin-left: 9%
   }
+  
+  .Inquire7{
+    grid-area: Inquire7;
+    cursor: pointer;
+    margin-left: 9%
+  }
 
   #picture1{
     width: 70%;
@@ -295,6 +303,11 @@ grid-template-areas: "Selectitem"
     height: 70%;
   }
   
+  #picture7{
+    width: 70%;
+    height: 70%;
+  }
+  
     
     @media screen and (max-width: 1024px) {
       .SteelProduct{
@@ -320,7 +333,7 @@ grid-template-areas: "Selectitem"
       }
       
       .Description button{
-        height:5%
+        height:10%
       }
       
       .Cutsize{
@@ -354,15 +367,15 @@ grid-template-areas: "Selectitem"
       }
       
       #pic1{
-        margin-left:15%
+        margin-left:7%
 ;
       }
       
       #pic2{
-        margin-left:10%
+        margin-left:25%
       }
       #pic3{
-        margin-left:7%;
+        margin-left:15%;
       }
       #pic4{
         margin-left:25%;
@@ -378,13 +391,47 @@ grid-template-areas: "Selectitem"
   }
 
       .Inquirepic{
-        height: 41%;
+        height: 80%;
       }
       
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6";
-    
+    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6"
+      "Inquire7 Inquire8";
+    display:grid;
   }
+  
+  .inquiryitem h1{
+    margin-left: 0%;
+  }
+  
+  #picture1{
+    margin-left:15%;
+  }
+
+  #picture2{
+    margin-left:15%;
+  }
+
+  #picture3{
+    margin-left:15%;
+  }
+
+  #picture4{
+    margin-left:15%;
+  }
+  
+#picture5{
+    margin-left:15%;
+  }
+  
+#picture6{
+    margin-left:15%;
+  }
+  
+  #picture7{
+    margin-left:15%;
+  }
+  
       }
       </style>
 
@@ -399,7 +446,7 @@ grid-template-areas: "Selectitem"
     
     
       <div class="ProductName">
-        <b>Cutting Disc</b>
+        <b>Cylindrical</b>
         </div>
       
     <div class="ProductGroup">
@@ -407,14 +454,14 @@ grid-template-areas: "Selectitem"
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Cuttingdisc.png">
+          <img  src="Cylindrical.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>A cutting disc is a circular blade used with power tools like grinders or saws to cut through various materials such as metal, stone, or plastic. These discs are designed to spin at high speeds, allowing them to make precise and efficient cuts. Made from different materials depending on their intended use, cutting discs are essential in construction, metalworking, and DIY projects. They come in various sizes and types, each suited for specific tasks, ensuring that users can achieve clean and accurate cuts on their chosen material.</p>
+          <p>A cylindrical hinge, also known as a barrel hinge or pivot hinge, is a type of hinge that allows two parts to rotate around a central axis, typically in a cylindrical or barrel-shaped housing. These hinges are often used in applications where a clean, compact design is needed, as the hinge mechanism is largely concealed within the cylindrical structure.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>4inch ,14inch</p>
+          <p>3/8inch ,1/2inch,5/8 inch,3/4 inch ,1 inch ,1-1/4 inch ,1-1/2 inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -425,33 +472,38 @@ grid-template-areas: "Selectitem"
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Light.png">
-  <h1>Light</h1>
+  <img id="picture1" src="Cylindrical38.png">
+  <h1>Cylindrical 3/8</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Nice9.png">
-  <h1>Nice9</h1>
+  <img id="picture2" src="Cylindrical12.png">
+  <h1>Cylindrical 1/2</h1>
 </div>
 
 <div class="Inquire3">
-  <img id="picture3" src="Domore4.png">
-  <h1>Domore 4</h1>
+  <img id="picture3" src="Cylindrical58.png">
+  <h1>Cylindrical 5/8</h1>
 </div>
 
 <div class="Inquire4">
-  <img id="picture4" src="Tailin.png">
-  <h1>Tailin</h1>
+  <img id="picture4" src="Cylindrical34.png">
+  <h1>Cylindrical 3/4</h1>
 </div>
 
 <div class="Inquire5">
-  <img id="picture5" src="Tyrolit.png">
-  <h1>Tyrolit</h1>
+  <img id="picture5" src="Cylindrical1.png">
+  <h1>Cylindrical 1</h1>
 </div>
 
 <div class="Inquire6">
-  <img id="picture6" src="Domore14.png">
-  <h1>Domore 14</h1>
+  <img id="picture6" src="Cylindrical114.png">
+  <h1>Cylindrical 1-1/4</h1>
+</div>
+
+<div class="Inquire7">
+  <img id="picture7" src="Cylindrical112.png">
+  <h1>Cylindrical 1-1/2</h1>
 </div>
 
 </div>
@@ -464,23 +516,23 @@ grid-template-areas: "Selectitem"
     
         <div class="Product_Picture">
           <div>
-          <a href="Grindingdisc.html" class="similarproduct"><img id="pic1" src="Grindingdisc.png" alt="https://i.ibb.co/MP6KbSZ/Grindingdisc.jpg" >
-          <h1>Grinding Disc</h1></a>
+          <a href="Weldingrod.html" class="similarproduct"><img id="pic1" src="Weldingrod.png" alt="https://i.ibb.co/nbQmGbg/Weldingrod.jpg" >
+          <h1>Welding Rod</h1></a>
         </div>
     
         <div>
-          <a href="Flapdisc.html" class="similarproduct"><img id="pic2" src="Flapdisc.png" alt="https://i.ibb.co/bmXbdG0/Flapdisc.jpg" >
-          <h1>FlapDisc</h1></a>
+          <a href="GISquaretube.html" class="similarproduct"><img id="pic2" src="Gisquaretube.png" alt="https://i.ibb.co/9yNvVMG/images.jpg" >
+          <h1>GiSquareTube</h1></a>
         </div>
     
         <div>
-          <a href="Sandflex.html" class="similarproduct"><img id="pic3" src="Sandflex.png" alt="https://i.ibb.co/GMjmdLS/Sandflex.jpg" >
-          <h1>Sandflex</h1></a>
+          <a href="Redoxide.html" class="similarproduct"><img id="pic3" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
+          <h1>RedOxide</h1></a>
         </div>
     
         <div>
-          <a href="Sandpaper.html" class="similarproduct"><img id="pic4" src="Sandpaper.png" alt="https://i.ibb.co/CHKgcHf/Sandpaper.webp" >
-          <h1>SandPaper</h1></a>
+          <a href="GalvanizedPlate.html" class="similarproduct"><img id="pic4" src="GalvanizedPlate.png" alt="https://i.ibb.co/b7sLNkd/images-3.jpg" >
+          <h1>Galvanized Plate</h1></a>
         </div>
     
         </div>
@@ -533,7 +585,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Light Cutting disc`;
+          const newText = `Cylindrical 3/8`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -570,7 +622,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Nice9 Cutting disc`;
+          const newText = `Cylindrical 1/2`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -609,7 +661,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Domore 4inch Cutting disc`;
+          const newText = `Cylindrical 5/8`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -646,7 +698,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Tailin Cutting disc`;
+          const newText = `Cylindrical 3/4`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -685,7 +737,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Tyrolit Cutting disc`;
+          const newText = `Cylindrical 1`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -724,7 +776,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Domore 14inch Cutting disc`;
+          const newText = `Cylindrical 1-1/4`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -752,6 +804,46 @@ else{
       }
     
       })
+      
+document.querySelector('.Inquire7').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Cylindrical 1-1/2`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+      
 
   }
             </script>
