@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 65%;
+    height: 80%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -222,7 +222,6 @@ grid-template-areas: "Selectitem"
         grid-gap:3%;
         grid-area: inquiryitem;
       overflow-x:auto;
-      display:flex;
   }
 
   .inquiryitem h1{
@@ -256,26 +255,63 @@ grid-template-areas: "Selectitem"
   }
   
 
+  .Inquire5{
+    grid-area: Inquire5;
+    cursor: pointer;
+    margin-left: 3%;
+  }
+
+  .Inquire6{
+    grid-area: Inquire6;
+    cursor: pointer;
+    margin-left: 9%;
+  }
+
+  .Inquire7{
+    grid-area: Inquire7;
+    cursor: pointer;
+    margin-left: 9%;
+  }
+
+
   #picture1{
-    width: 70%;
+    width: 80%;
     height: 70%;
    margin-left:20%;
   }
 
   #picture2{
-    width: 70%;
+    width: 80%;
     height: 70%;
     margin-left:20%;
   }
 
   #picture3{
-    width: 70%;
+    width: 80%;
     height: 70%;
     margin-left:20%;
   }
 
   #picture4{
-    width: 70%;
+    width: 80%;
+    height: 70%;
+    margin-left:20%;
+  }
+
+  #picture5{
+    width: 80%;
+    height: 70%;
+   margin-left:20%;
+  }
+
+  #picture6{
+    width: 80%;
+    height: 70%;
+    margin-left:20%;
+  }
+
+  #picture7{
+    width: 80%;
     height: 70%;
     margin-left:20%;
   }
@@ -379,19 +415,31 @@ grid-template-areas: "Selectitem"
   }
   
   #picture1{
-    margin-left:15%;
+    margin-left:10%;
   }
 
   #picture2{
-    margin-left:15%;
+    margin-left:10%;
   }
 
   #picture3{
-    margin-left:15%;
+    margin-left:10%;
   }
 
   #picture4{
-    margin-left:15%;
+    margin-left:10%;
+  }
+
+  #picture5{
+    margin-left:10%;
+  }
+
+  #picture6{
+    margin-left:10%;
+  }
+
+  #picture7{
+    margin-left:10%;
   }
   
 
@@ -423,9 +471,9 @@ grid-template-areas: "Selectitem"
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>A Dynabolt is a type of fastener used in construction to securely anchor objects to concrete or masonry surfaces. It consists of a threaded bolt with an expansion sleeve that expands when the bolt is tightened, creating a strong grip within the drilled hole.</p>
+          <p>A log screw, also known as a lag screw or lag bolt, is a heavy-duty fastener used primarily in wood construction. These screws are designed to create strong, secure connections in wood, often used for joining large pieces of timber or attaching heavy objects to wood structures.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>1/4 inch , 5/16 inch , 3/8 inch ,1/2 inch</p>
+          <p>1/4 x 1 inch , 1/4 x 1-1/2 inch , 1/4 x 2 inch , 5/16 x 1-1/2 inch , 5/16 x 2 inch , 3/8 x 1-1/2 inch , 3/8 x 2 inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -436,25 +484,39 @@ grid-template-areas: "Selectitem"
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Dynabolt14.png">
-  <h1>Dyna Bolt 1/4 inch</h1>
+  <img id="picture1" src="Logscrew141.png">
+  <h1>Logscrew 1/4 x 1 inch</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Dynabolt516.png">
-  <h1>Dyna Bolt 5/16 inch</h1>
+  <img id="picture2" src="Logscrew14112.png">
+  <h1>Logscrew 1/4 x 1-1/2 inch</h1>
 </div>
 
 <div class="Inquire3">
-  <img id="picture3" src="Dynabolt38.png">
-  <h1>Dyna Bolt 3/8 inch</h1>
+  <img id="picture3" src="Logscrew142.png">
+  <h1>Logscrew 1/4 x 2 inch</h1>
 </div>
 
 <div class="Inquire4">
-  <img id="picture4" src="Dynabolt12.png">
-  <h1>Dyna Bolt 1/2 inch</h1>
+  <img id="picture4" src="Logscrew516112.png">
+  <h1>Logscrew 5/16 x 1-1/2 inch</h1>
 </div>
 
+  <div class="Inquire5">
+    <img id="picture5" src="Logscrew5162.png">
+    <h1>Logscrew 5/16 x 2 inch</h1>
+  </div>
+  
+  <div class="Inquire6">
+    <img id="picture6" src="Logscrew38112.png">
+    <h1>Logscrew 3/8 x 1-1/2 inch</h1>
+  </div>
+  
+  <div class="Inquire7">
+    <img id="picture7" src="Logscrew382.png">
+    <h1>Logscrew 3/8 x 2 inch</h1>
+  </div>
 
 
 </div>
@@ -536,7 +598,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Dyna Bolt 1/4 inch`;
+          const newText = `Logscrew 1/4 inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
