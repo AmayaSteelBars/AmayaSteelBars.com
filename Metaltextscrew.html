@@ -137,15 +137,15 @@
 }
 
   #pic2{
-    margin-left:15%;
+    margin-left:0%;
   }
   
   #pic3{
-    margin-left:7%;
+    margin-left:0%;
   }
   
   #pic4{
-    margin-left:0;
+    margin-left:6%;
   }
   
       .Product_Picture div h1{
@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 50%;
+    height: 39%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -211,35 +211,55 @@ grid-template-areas: "Selectitem"
 
   .Selectitem{
     color: darkblue;
-    margin-left: 27%;
+    margin-left: 24%;
     grid-area: Selectitem;
     font-size: 40px;
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 ";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
-      
+      overflow-x:auto;
+      display:flex;
   }
 
   .inquiryitem h1{
     color:black;
-    margin-left: 0%;
+    margin-left: 5%;
   }
 
   .Inquire1{
     grid-area: Inquire1;
     cursor: pointer;
-    margin-left: 16%;
+    margin-left: 9%;
   }
 
   .Inquire2{
     grid-area: Inquire2;
     cursor: pointer;
-    margin-left: 4%;
+    margin-left: 9%;
   }
+
+  .Inquire3{
+    grid-area: Inquire3;
+    cursor: pointer;
+    margin-left: 9%;
+  }
+
+  .Inquire4{
+    grid-area: Inquire4;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
+.Inquire5{
+    grid-area: Inquire5;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
 
 
   #picture1{
@@ -251,6 +271,22 @@ grid-template-areas: "Selectitem"
     width: 70%;
     height: 70%;
   }
+
+  #picture3{
+    width: 70%;
+    height: 70%;
+  }
+
+  #picture4{
+    width: 70%;
+    height: 70%;
+  }
+  
+#picture5{
+    width: 70%;
+    height: 70%;
+  }
+  
 
   
     
@@ -278,7 +314,7 @@ grid-template-areas: "Selectitem"
       }
       
       .Description button{
-        height:13%
+        height:10%
       }
       
       .Cutsize{
@@ -312,18 +348,18 @@ grid-template-areas: "Selectitem"
       }
       
       #pic1{
-        margin-left:0%
+        margin-left:7%
 ;
       }
       
       #pic2{
-        margin-left:10%
+        margin-left:25%
       }
       #pic3{
-        margin-left:7%;
+        margin-left:15%;
       }
       #pic4{
-        margin-left:10%;
+        margin-left:25%;
       }
       
       #measurement1{
@@ -331,26 +367,50 @@ grid-template-areas: "Selectitem"
       }
 
   .Selectitem{
-    margin-left: 18%;
+    margin-left: 15%;
     
   }
 
       .Inquirepic{
-        height: 18%;
-      }
-
-      .Inquire1{
-        margin-left: 9%;
-      }
-
-      .Inquire2{
-        margin-left: 15%;
+        height: 80%;
       }
       
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" ;
-    
+    grid-template-areas: "Inquire1" 
+      "Inquire2"
+      "Inquire3" 
+      "Inquire4" 
+      "Inquire5" 
+      "Inquire6";
+    display:grid;
   }
+  
+  .inquiryitem h1{
+    margin-left: 0%;
+  }
+  
+  #picture1{
+    margin-left:10%;
+  }
+
+  #picture2{
+    margin-left:10%;
+  }
+
+  #picture3{
+    margin-left:10%;
+  }
+
+  #picture4{
+    margin-left:10%;
+  }
+  
+#picture5{
+    margin-left:10%;
+  }
+  
+
+  
       }
       </style>
 
@@ -365,7 +425,7 @@ grid-template-areas: "Selectitem"
     
     
       <div class="ProductName">
-        <b>Epoxy Primer</b>
+        <b>Metal Text Screw</b>
         </div>
       
     <div class="ProductGroup">
@@ -373,14 +433,14 @@ grid-template-areas: "Selectitem"
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Epoxyprimer.png">
+          <img  src="Metaltextscrew.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>An epoxy primer is a type of coating used as a base layer on various surfaces to enhance adhesion and provide protection. It's made from a two-component system consisting of an epoxy resin and a hardener. When mixed, these components create a strong, durable primer that adheres well to surfaces like metal, wood, and concrete.</p>
+          <p>A Metal Tex Screw, also known as a Tek Screw, is a self-drilling fastener designed for securing metal to metal or metal to wood. These screws have a drill bit end that allows them to create their own hole as they are driven into the material, eliminating the need for pre-drilling. This makes them highly efficient and convenient for construction and manufacturing applications where speed and precision are important. Metal Tex Screws are commonly used in roofing, cladding, and other metal fabrication projects.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>1Liter ,1Gallon</p>
+          <p>1 inch ,1-1/2 inch, 2inch ,2-1/2inch ,3inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -391,14 +451,32 @@ grid-template-areas: "Selectitem"
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Epoxyprimer1Liter.png">
-  <h1>Epoxy Primer 1Liter</h1>
+  <img id="picture1" src="Metaltextscrew1inch.png">
+  <h1>Metaltextscrew 1inch</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Epoxyprimer4Liter.png">
-  <h1>Epoxy Primer 1Gallon</h1>
+  <img id="picture2" src="Metaltextscrew112inch.png">
+  <h1>Metaltextscrew 1-1/2inch</h1>
 </div>
+
+<div class="Inquire3">
+  <img id="picture3" src="Metaltextscrew2inch.png">
+  <h1>Metaltextscrew 2inch</h1>
+</div>
+
+<div class="Inquire4">
+  <img id="picture4" src="Metaltextscrew212inch.png">
+  <h1>Metaltextscrew 2-1/2inch</h1>
+</div>
+
+<div class="Inquire5">
+  <img id="picture5" src="Metaltextscrew3inch.png">
+  <h1>Metaltextscrew 3inch</h1>
+</div>
+
+
+
 
 
 </div>
@@ -411,23 +489,23 @@ grid-template-areas: "Selectitem"
     
         <div class="Product_Picture">
           <div>
-          <a href="Redoxide.html" class="similarproduct"><img id="pic1" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
-          <h1>Red Oxide</h1></a>
+          <a href="Woodtextscrew.html" class="similarproduct"><img id="pic1" src="Weldingrod.png" alt="https://i.ibb.co/nbQmGbg/Weldingrod.jpg" >
+          <h1>Welding Rod</h1></a>
         </div>
     
         <div>
-          <a href="Paintthinner.html" class="similarproduct"><img id="pic2" src="Paintthinner.png" alt="https://i.ibb.co/tqf7zgm/Paintthinner.jpg" >
-          <h1>Paint Thinner</h1></a>
+          <a href="GISquaretube.html" class="similarproduct"><img id="pic2" src="Gisquaretube.png" alt="https://i.ibb.co/9yNvVMG/images.jpg" >
+          <h1>GiSquareTube</h1></a>
         </div>
     
         <div>
-          <a href="Lacquerthinner.html" class="similarproduct"><img id="pic3" src="Lacquerthinner.png" alt="https://i.ibb.co/ZmCJGw4/Lacquerthinner.jpg" >
-          <h1>Lacquer Thinner</h1></a>
+          <a href="Redoxide.html" class="similarproduct"><img id="pic3" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
+          <h1>RedOxide</h1></a>
         </div>
     
         <div>
-          <a href="Paintbrush.html" class="similarproduct"><img id="pic4" src="Paintbrush.png" alt="https://i.ibb.co/dkfrC4B/Paintbrush.jpg" >
-          <h1>Paint Brush</h1></a>
+          <a href="GalvanizedPlate.html" class="similarproduct"><img id="pic4" src="GalvanizedPlate.png" alt="https://i.ibb.co/b7sLNkd/images-3.jpg" >
+          <h1>Galvanized Plate</h1></a>
         </div>
     
         </div>
@@ -480,7 +558,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Epoxy Primer 1Liter`;
+          const newText = `Cylindrical 3/8`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -517,7 +595,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Epoxy Primer 1Gallon`;
+          const newText = `Cylindrical 1/2`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -546,7 +624,199 @@ else{
     
       })
 
-     
+      document.querySelector('.Inquire3').addEventListener('click', function() {
+        
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Cylindrical 5/8`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire4').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Cylindrical 3/4`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire5').addEventListener('click', function() {
+        
+         var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Cylindrical 1`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire6').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Cylindrical 1-1/4`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+      
+document.querySelector('.Inquire7').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Cylindrical 1-1/2`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+      
 
   }
             </script>
