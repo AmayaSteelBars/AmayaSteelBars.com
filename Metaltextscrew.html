@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 39%;
+    height: 60%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -217,7 +217,7 @@ grid-template-areas: "Selectitem"
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
@@ -489,23 +489,23 @@ grid-template-areas: "Selectitem"
     
         <div class="Product_Picture">
           <div>
-          <a href="Woodtextscrew.html" class="similarproduct"><img id="pic1" src="Weldingrod.png" alt="https://i.ibb.co/nbQmGbg/Weldingrod.jpg" >
-          <h1>Welding Rod</h1></a>
+          <a href="Woodtextscrew.html" class="similarproduct"><img id="pic1" src="Woodtextscrew.png" alt="https://i.ibb.co/Ny3DtY0/Woodtextscrew.jpg" >
+          <h1>WoodText Screw</h1></a>
         </div>
     
         <div>
-          <a href="GISquaretube.html" class="similarproduct"><img id="pic2" src="Gisquaretube.png" alt="https://i.ibb.co/9yNvVMG/images.jpg" >
-          <h1>GiSquareTube</h1></a>
+          <a href="BlindRivets.html" class="similarproduct"><img id="pic2" src="BlindRivets.png" alt="https://i.ibb.co/yqjRQJg/Blind-Rivets.jpg" >
+          <h1>Blind Rivets</h1></a>
         </div>
     
         <div>
-          <a href="Redoxide.html" class="similarproduct"><img id="pic3" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
-          <h1>RedOxide</h1></a>
+          <a href="Drillbit.html" class="similarproduct"><img id="pic3" src="Drillbit.png" alt="https://i.ibb.co/YP9X7gq/Drillbit.jpg" >
+          <h1>Drill Bit</h1></a>
         </div>
     
         <div>
-          <a href="GalvanizedPlate.html" class="similarproduct"><img id="pic4" src="GalvanizedPlate.png" alt="https://i.ibb.co/b7sLNkd/images-3.jpg" >
-          <h1>Galvanized Plate</h1></a>
+          <a href="Vulcaseal.html" class="similarproduct"><img id="pic4" src="Vulcaseal.png" alt="https://i.ibb.co/F0s7pQq/Vulcaseal.jpg" >
+          <h1>Vulcaseal</h1></a>
         </div>
     
         </div>
@@ -558,7 +558,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Cylindrical 3/8`;
+          const newText = `Metaltextscrew 1inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -595,7 +595,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Cylindrical 1/2`;
+          const newText = `Metaltextscrew 1-1/2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -634,7 +634,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Cylindrical 5/8`;
+          const newText = `Metaltextscrew 2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -671,7 +671,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Cylindrical 3/4`;
+          const newText = `Metaltextscrew 2-1/2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -710,7 +710,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Cylindrical 1`;
+          const newText = `Metaltextscrew 3inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -739,83 +739,7 @@ else{
     
       })
 
-      document.querySelector('.Inquire6').addEventListener('click', function() {
-        
-var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Cylindrical 1-1/4`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-      
-document.querySelector('.Inquire7').addEventListener('click', function() {
-        
-var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Cylindrical 1-1/2`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
+     
       
 
   }
