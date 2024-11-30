@@ -137,7 +137,7 @@
 }
 
   #pic2{
-    margin-left:16%;
+    margin-left:0%;
   }
   
   #pic3{
@@ -219,14 +219,14 @@ grid-template-areas: "Selectitem"
   .inquiryitem{
     grid-template-areas: "Inquire1 Inquire2 Inquire3 ";
         display: grid;
-        grid-gap:3%;
+        grid-gap:0%;
         grid-area: inquiryitem;
       overflow-x:auto;
   }
 
   .inquiryitem h1{
     color:black;
-    margin-left: 5%;
+    margin-left: 0%;
     text-align:-webkit-center;
   }
 
@@ -277,19 +277,19 @@ grid-template-areas: "Selectitem"
   #picture1{
     width: 80%;
     height: 70%;
-   margin-left:20%;
+   margin-left:10%;
   }
 
   #picture2{
     width: 80%;
     height: 70%;
-    margin-left:20%;
+    margin-left:10%;
   }
 
   #picture3{
     width: 80%;
     height: 70%;
-    margin-left:20%;
+    margin-left:10%;
   }
 
   #picture4{
@@ -579,7 +579,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Logscrew 1/4 x 1 inch`;
+          const newText = `ExpansionShield 1/4 inch short`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -616,7 +616,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Logscrew 1/4 x 1-1/2 inch`;
+          const newText = `ExpansionShield 5/16 inch short`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -655,7 +655,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Logscrew 1/4 x 2 inch`;
+          const newText = `ExpansionShield 3/8 inch short`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -683,158 +683,7 @@ else{
     
       })
 
-      document.querySelector('.Inquire4').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
       
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Logscrew 5/16 x 1-1/2 inch`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-
- document.querySelector('.Inquire5').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Logscrew 5/16 x 2 inch`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-      
-      
-      document.querySelector('.Inquire6').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Logscrew 3/8 x 1-1/2 inch`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-      
-      document.querySelector('.Inquire7').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Logscrew 3/8 x 2 inch`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
 
   }
             </script>
