@@ -217,7 +217,7 @@ grid-template-areas: "Selectitem"
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 ";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
@@ -248,17 +248,7 @@ grid-template-areas: "Selectitem"
     margin-left: 9%;
   }
 
-  .Inquire4{
-    grid-area: Inquire4;
-    cursor: pointer;
-    margin-left: 9%
-  }
   
-.Inquire5{
-    grid-area: Inquire5;
-    cursor: pointer;
-    margin-left: 9%
-  }
   
 
 
@@ -277,15 +267,7 @@ grid-template-areas: "Selectitem"
     height: 70%;
   }
 
-  #picture4{
-    width: 70%;
-    height: 70%;
-  }
-  
-#picture5{
-    width: 70%;
-    height: 70%;
-  }
+ 
   
 
   
@@ -378,15 +360,12 @@ grid-template-areas: "Selectitem"
   .inquiryitem{
     grid-template-areas: "Inquire1" 
       "Inquire2"
-      "Inquire3" 
-      "Inquire4" 
-      "Inquire5" 
-      "Inquire6";
+      "Inquire3" ;
     display:grid;
   }
   
   .inquiryitem h1{
-    margin-left: 15%;
+    margin-left: 20%;
   }
   
   #picture1{
@@ -401,13 +380,7 @@ grid-template-areas: "Selectitem"
     margin-left:10%;
   }
 
-  #picture4{
-    margin-left:10%;
-  }
   
-#picture5{
-    margin-left:10%;
-  }
   
 
   
@@ -425,7 +398,7 @@ grid-template-areas: "Selectitem"
     
     
       <div class="ProductName">
-        <b>Metal Text Screw</b>
+        <b>Wood Text Screw</b>
         </div>
       
     <div class="ProductGroup">
@@ -433,14 +406,14 @@ grid-template-areas: "Selectitem"
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Metaltextscrew.png">
+          <img  src="Woodtextscrew.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>A Metal Tex Screw, also known as a Tek Screw, is a self-drilling fastener designed for securing metal to metal or metal to wood. These screws have a drill bit end that allows them to create their own hole as they are driven into the material, eliminating the need for pre-drilling. This makes them highly efficient and convenient for construction and manufacturing applications where speed and precision are important. Metal Tex Screws are commonly used in roofing, cladding, and other metal fabrication projects.</p>
+          <p>A wood Text screw is a type of self-drilling screw designed for fastening wood to metal or metal to wood without needing a pilot hole. "Text" screws typically have a pointed end that can drill through thin metal sheets, while their threads allow them to grip securely into wood as well.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>1 inch ,1-1/2 inch, 2inch ,2-1/2inch ,3inch</p>
+          <p>2inch ,2-1/2inch ,3inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -451,30 +424,19 @@ grid-template-areas: "Selectitem"
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Metaltextscrew1inch.png">
-  <h1>Metaltextscrew 1inch</h1>
+  <img id="picture1" src="Woodtextscrew2inch.png">
+  <h1>Woodtextscrew 2inch</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Metaltextscrew112inch.png">
-  <h1>Metaltextscrew 1-1/2inch</h1>
+  <img id="picture2" src="Woodtextscrew212inch.png">
+  <h1>Woodtextscrew 2-1/2inch</h1>
 </div>
 
 <div class="Inquire3">
-  <img id="picture3" src="Metaltextscrew2inch.png">
-  <h1>Metaltextscrew 2inch</h1>
+  <img id="picture3" src="Woodtextscrew3inch.png">
+  <h1>Woodtextscrew 3inch</h1>
 </div>
-
-<div class="Inquire4">
-  <img id="picture4" src="Metaltextscrew212inch.png">
-  <h1>Metaltextscrew 2-1/2inch</h1>
-</div>
-
-<div class="Inquire5">
-  <img id="picture5" src="Metaltextscrew3inch.png">
-  <h1>Metaltextscrew 3inch</h1>
-</div>
-
 
 
 
@@ -489,8 +451,8 @@ grid-template-areas: "Selectitem"
     
         <div class="Product_Picture">
           <div>
-          <a href="Woodtextscrew.html" class="similarproduct"><img id="pic1" src="Woodtextscrew.png" alt="https://i.ibb.co/Ny3DtY0/Woodtextscrew.jpg" >
-          <h1>WoodText Screw</h1></a>
+          <a href="Metaltextscrew.html" class="similarproduct"><img id="pic1" src="Metaltextscrew.png" alt="https://i.ibb.co/sCmFFrS/Metaltextscrew.jpg" >
+          <h1>MetalText Screw</h1></a>
         </div>
     
         <div>
@@ -558,7 +520,7 @@ grid-template-areas: "Selectitem"
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 1inch`;
+          const newText = `Woodtextscrew 2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -595,7 +557,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 1-1/2inch`;
+          const newText = `Woodtextscrew 2-1/2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -634,7 +596,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 2inch`;
+          const newText = `Woodtextscrew 3inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -662,82 +624,7 @@ else{
     
       })
 
-      document.querySelector('.Inquire4').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
       
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Metaltextscrew 2-1/2inch`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-
-      document.querySelector('.Inquire5').addEventListener('click', function() {
-        
-         var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Metaltextscrew 3inch`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
 
      
       
