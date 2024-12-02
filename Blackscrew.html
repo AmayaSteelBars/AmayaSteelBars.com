@@ -141,11 +141,11 @@
   }
   
   #pic3{
-    margin-left:1%;
+    margin-left:0%;
   }
   
   #pic4{
-    margin-left:0;
+    margin-left:6%;
   }
   
       .Product_Picture div h1{
@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 57%;
+    height: 60%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -217,11 +217,12 @@ grid-template-areas: "Selectitem"
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6 Inquire7 Inquire8 Inquire9";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
-      
+      overflow-x:auto;
+      display:flex;
   }
 
   .inquiryitem h1{
@@ -241,7 +242,47 @@ grid-template-areas: "Selectitem"
     margin-left: 9%;
   }
 
+  .Inquire3{
+    grid-area: Inquire3;
+    cursor: pointer;
+    margin-left: 9%;
+  }
+
+  .Inquire4{
+    grid-area: Inquire4;
+    cursor: pointer;
+    margin-left: 9%
+  }
   
+.Inquire5{
+    grid-area: Inquire5;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
+  .Inquire6{
+    grid-area: Inquire6;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
+  .Inquire7{
+    grid-area: Inquire7;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
+  .Inquire8{
+    grid-area: Inquire8;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
+  .Inquire9{
+    grid-area: Inquire9;
+    cursor: pointer;
+    margin-left: 9%
+  }
 
 
   #picture1{
@@ -254,9 +295,66 @@ grid-template-areas: "Selectitem"
     height: 70%;
   }
 
-  
-  
+  #picture3{
+    width: 70%;
+    height: 70%;
+  }
 
+  #picture4{
+    width: 70%;
+    height: 70%;
+  }
+  
+#picture5{
+    width: 70%;
+    height: 70%;
+  }
+  
+  #picture6{
+    width: 70%;
+    height: 70%;
+  }
+  
+#picture7{
+    width: 70%;
+    height: 70%;
+  }
+  
+  #picture8{
+    width: 70%;
+    height: 70%;
+  }
+  
+  #picture9{
+    width: 70%;
+    height: 70%;
+  }
+  
+  .arrowdown1{
+    position:fixed;
+    opacity:1;
+    width:20%;
+    height:10%;
+     background-color:darkblue;
+     left:50%;
+     top:90%;
+     transform:translate(-50%,-10%)
+  }
+  
+  .arrowdown2{
+    font-size:100px;
+    font-family:Sans-serif;
+    font-style:bold;
+    left:50%;
+    transform:translate(-50%)
+    
+  }
+  
+    .arrowdown1.active{
+    position:fixed;
+    opacity:0;
+  }
+  
     
     @media screen and (max-width: 1024px) {
       .SteelProduct{
@@ -282,7 +380,7 @@ grid-template-areas: "Selectitem"
       }
       
       .Description button{
-        height:9%
+        height:5%
       }
       
       .Cutsize{
@@ -316,18 +414,18 @@ grid-template-areas: "Selectitem"
       }
       
       #pic1{
-        margin-left:23%
+        margin-left:7%
 ;
       }
       
       #pic2{
-        margin-left:25%
+        margin-left:5%
       }
       #pic3{
-        margin-left:25%;
+        margin-left:10%;
       }
       #pic4{
-        margin-left:23%;
+        margin-left:25%;
       }
       
       #measurement1{
@@ -335,26 +433,67 @@ grid-template-areas: "Selectitem"
       }
 
   .Selectitem{
-    margin-left: 20%;
+    margin-left: 15%;
     
   }
 
       .Inquirepic{
-        height: 25%;
+        height: 80%;
       }
       
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" ;
-
-    #picture1{
-        margin-left: 15%;
-    }
-
-    #picture2{
-        margin-left: 15%;
-    }
-    
+    grid-template-areas: "Inquire1" 
+      "Inquire2"
+      "Inquire3" 
+      "Inquire4" 
+      "Inquire5" 
+      "Inquire6"
+      "Inquire7" 
+      "Inquire8" 
+      "Inquire9";
+    display:grid;
   }
+  
+  .inquiryitem h1{
+    margin-left: 0%;
+  }
+  
+  #picture1{
+    margin-left:10%;
+  }
+
+  #picture2{
+    margin-left:10%;
+  }
+
+  #picture3{
+    margin-left:10%;
+  }
+
+  #picture4{
+    margin-left:10%;
+  }
+  
+#picture5{
+    margin-left:10%;
+  }
+  
+#picture6{
+    margin-left:10%;
+  }
+
+  #picture7{
+    margin-left:10%;
+  }
+
+  #picture8{
+    margin-left:10%;
+  }
+  
+#picture9{
+    margin-left:10%;
+  }
+  
       }
       </style>
 
@@ -369,7 +508,7 @@ grid-template-areas: "Selectitem"
     
     
       <div class="ProductName">
-        <b>Gi Wire</b>
+        <b>Black Screw</b>
         </div>
       
     <div class="ProductGroup">
@@ -377,14 +516,14 @@ grid-template-areas: "Selectitem"
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Giwire.png">
+          <img  src="Blackscrew.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>GI wire, short for Galvanized Iron wire, is a type of steel wire that has been coated with a layer of zinc through a process called galvanization. This zinc coating helps protect the wire from corrosion and rust, making it durable and long-lasting. GI wire is commonly used in various applications, including construction, fencing, and binding materials together. Its flexibility and strength make it ideal for tying rebar in concrete structures, creating fences, and even in agricultural settings for supporting plants</p>
+          <p>A "Blackscrew," commonly referred to as a gypsum or drywall black screw, is a type of fastener designed primarily for attaching drywall to metal or wood framing. These screws typically have a phosphate-coated, black surface, which gives them a corrosion-resistant finish ideal for indoor construction.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>#16 , #18 x 1Roll, 1kg</p>
+          <p>1 inch ,1-1/4inch ,1-1/2 inch, 2inch ,3inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -395,18 +534,55 @@ grid-template-areas: "Selectitem"
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Giwire18.png">
-  <h1>Giwire#18</h1>
+  <img id="picture1" src="Blackscrewmetal1inch.png">
+  <h1>Blackscrew Metal1inch</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Giwire16.png">
-  <h1>Giwire#16</h1>
+  <img id="picture2" src="Blackscrewmetal112inch.png">
+  <h1>Blackscrew Metal1-1/2inch</h1>
+</div>
+
+<div class="Inquire3">
+  <img id="picture3" src="Blackscrewmetal2inch.png">
+  <h1>Blackscrew Metal2inch</h1>
+</div>
+
+<div class="Inquire4">
+  <img id="picture4" src="Blackscrewmetal3inch.png">
+  <h1>Blackscrew Metal3inch</h1>
+</div>
+
+<div class="Inquire5">
+  <img id="picture5" src="Blackscrewwood1inch.png">
+  <h1>Blackscrew Wood1inch</h1>
 </div>
 
 
+<div class="Inquire6">
+  <img id="picture6" src="Blackscrewwood114inch.png">
+  <h1>Blackscrew Wood1-1/4inch</h1>
+</div>
+
+<div class="Inquire7">
+  <img id="picture7" src="Blackscrewwood112inch.png">
+  <h1>Blackscrewwood1-1/2inch</h1>
+</div>
+
+<div class="Inquire8">
+  <img id="picture8" src="Blackscrewwood2inch.png">
+  <h1>Blackscrew Wood2inch</h1>
+</div>
+
+<div class="Inquire9">
+  <img id="picture9" src="Blackscrewwood3inch.png">
+  <h1>Blackscrew Wood3inch</h1>
+</div>
 
 
+</div>
+<div class="arrowdown1"><div class="arrowdown2">
+  V</div>
 </div>
 
 </div>
@@ -417,23 +593,23 @@ grid-template-areas: "Selectitem"
     
         <div class="Product_Picture">
           <div>
-          <a href="SteelMatting.html" class="similarproduct"><img id="pic1" src="SteelMatting.png" alt="https://i.ibb.co/sjHny2X/Steel-Matting.jpg" >
-          <h1>SteelMatting</h1></a>
+          <a href="Woodtextscrew.html" class="similarproduct"><img id="pic1" src="Woodtextscrew.png" alt="https://i.ibb.co/Ny3DtY0/Woodtextscrew.jpg" >
+          <h1>WoodText Screw</h1></a>
         </div>
     
         <div>
-          <a href="Deformedbar.html" class="similarproduct"><img id="pic2" src="DeformedBar.png" alt="https://i.ibb.co/9V5qstZ/Deformed-Bar.jpg" >
-          <h1>DeformedBar</h1></a>
+          <a href="BlindRivets.html" class="similarproduct"><img id="pic2" src="BlindRivets.png" alt="https://i.ibb.co/yqjRQJg/Blind-Rivets.jpg" >
+          <h1>Blind Rivets</h1></a>
         </div>
     
         <div>
-          <a href="ChickenWire.html" class="similarproduct"><img id="pic3" src="ChickenWire.png" alt="https://i.ibb.co/qWZ5Yx2/Chicken-Wire.jpg" >
-          <h1>ChickenWire</h1></a>
+          <a href="Drillbit.html" class="similarproduct"><img id="pic3" src="Drillbit.png" alt="https://i.ibb.co/YP9X7gq/Drillbit.jpg" >
+          <h1>Drill Bit</h1></a>
         </div>
     
         <div>
-          <a href="GiCpurlins.html" class="similarproduct"><img id="pic4" src="GiCpurlins.png" alt="https://i.ibb.co/8DfmWj3/Gi-Cpurlins.jpg" >
-          <h1>GiCpurlins</h1></a>
+          <a href="Vulcaseal.html" class="similarproduct"><img id="pic4" src="Vulcaseal.png" alt="https://i.ibb.co/F0s7pQq/Vulcaseal.jpg" >
+          <h1>Vulcaseal</h1></a>
         </div>
     
         </div>
@@ -481,12 +657,12 @@ grid-template-areas: "Selectitem"
         var Inquirepic = document.querySelector(".Inquirepic");
           var overlay = document.getElementById("overlay")
         
-          
-          let FirstInput = prompt("Please enter the weight of the Giwire#18(1roll / per kg:");
+          let FirstInput = 1;
+      
       
   
       if (FirstInput !== null) {
-          const newText = `Giwire#18 ${FirstInput} `;
+          const newText = `Metaltextscrew 1inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -518,12 +694,12 @@ else{
         
 var Inquirepic = document.querySelector(".Inquirepic");
           var overlay = document.getElementById("overlay")
-          let FirstInput = prompt("Please enter the weight of the Giwire#16(1Roll / per kg ):");
-          
+          let FirstInput = 1;
+      
       
   
       if (FirstInput !== null) {
-          const newText = `Giwire#16 ${FirstInput}`;
+          const newText = `Metaltextscrew 1-1/2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -552,8 +728,122 @@ else{
     
       })
 
+      document.querySelector('.Inquire3').addEventListener('click', function() {
+        
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
       
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Metaltextscrew 2inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
 
+      document.querySelector('.Inquire4').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Metaltextscrew 2-1/2inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire5').addEventListener('click', function() {
+        
+         var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Metaltextscrew 3inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+     
       
 
   }
