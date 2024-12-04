@@ -206,8 +206,13 @@ grid-template-areas: "Selectitem"
 
 #overlay.active {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
+
+body.overlay-active{
+overflow: hidden;
+}
+
 
   .Selectitem{
     color: darkblue;
@@ -332,7 +337,7 @@ grid-template-areas: "Selectitem"
   
   .arrowdown1{
     position:fixed;
-    opacity:0;
+    opacity:1;
     width:20%;
     height:10%;
      background-color:darkblue;
@@ -348,11 +353,20 @@ grid-template-areas: "Selectitem"
     font-style:bold;
     left:50%;
     transform:translate(-50%)
-    
+    display: none;
+  }
+  .arrowdown3{
+    position: fixed;
+    font-size:100px;
+    font-family:Sans-serif;
+    font-style:bold;
+    left:50%;
+    transform:translate(-50%)
+    display: block;
   }
   
     .arrowdown1.active{
-    opacity:1;
+    opacity:0;
   }
   
     
@@ -380,7 +394,7 @@ grid-template-areas: "Selectitem"
       }
       
       .Description button{
-        height:5%
+        height:10%
       }
       
       .Cutsize{
@@ -456,6 +470,16 @@ grid-template-areas: "Selectitem"
   
   .inquiryitem h1{
     margin-left: 0%;
+  }
+  
+  .arrowdown2{
+    display: block;
+    left: 47%;
+    transform:translate(-53%)
+  }
+  
+  .arrowdown3{
+    display:none;
   }
   
   #picture1{
@@ -583,6 +607,7 @@ grid-template-areas: "Selectitem"
 </div>
 <div class="arrowdown1"><div class="arrowdown2">
   V</div>
+  <div class="arrowdown3">></div>
 </div>
 
 </div>
@@ -630,10 +655,16 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('Inquirepic')) {
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+          
+            
+document.body.classList.add('overlay-active');
+
           }
           else{
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+            
+            document.body.classList.remove('overlay-active');
           }
       
         })
@@ -645,10 +676,13 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('active')) {
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+            
+            document.body.classList.remove('overlay-active');
           }
           else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+            document.body.classList.add('overlay-active');
             }
       })
 
@@ -846,31 +880,41 @@ else{
      
 document.querySelector('.inquiryitem').addEventListener("scroll", function() {
     var arrowdown1 = document.querySelector(".arrowdown1");
+    
+    const container =document.querySelector('.inquiryitem');
+    
     let isScrolling;
 
-    clearTimeout(isScrolling);
+    
 
-    let scrollTop = this.scrollTop;
-    let clientHeight = this.clientHeight;
-    let scrollHeight = this.scrollHeight;
+    let scrollTop = container.scrollTop;
+    let clientHeight = container.clientHeight;
+    let scrollHeight = container.scrollHeight;
+    
+    const treshold = 0.05 * scrollHeight;
 
     if (scrollTop === 0) {
-        arrowdown1.classList.add('active');
-    } else if (scrollTop + clientHeight >= scrollHeight) {
-        arrowdown1.classList.remove('active');
-    } else {
         arrowdown1.classList.remove('active');
     }
+    else if (scrollTop + clientHeight >= scrollHeight - treshold) {
+        arrowdown1.classList.add('active');
+    }
+    
+    else {
+        arrowdown1.classList.add('active');
+    }
+
+
+clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
-        if (scrollTop !== 0 && scrollTop + clientHeight < scrollHeight) {
-            arrowdown1.classList.add('active');
+        if (scrollTop !== 0 && scrollTop + clientHeight < scrollHeight - treshold) {
+            arrowdown1.classList.remove('active');
         }
         
         
-    }, 300);
+    }, 10);
 });
-
 
 
   }
