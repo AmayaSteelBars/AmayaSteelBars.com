@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 60%;
+    height: 83%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -227,6 +227,7 @@ overflow: hidden;
         grid-gap:3%;
         grid-area: inquiryitem;
       overflow-x:auto;
+      overflow-y: hidden;
       display:flex;
   }
 
@@ -338,12 +339,12 @@ overflow: hidden;
   .arrowdown1{
     position:fixed;
     opacity:1;
-    width:20%;
-    height:10%;
+    width:15%;
+    height:25%;
      background-color:darkblue;
-     left:50%;
-     top:90%;
-     transform:translate(-50%,-10%)
+     left:87%;
+     top:50%;
+     transform:translate(-13%,-50%)
   }
   
   .arrowdown2{
@@ -351,8 +352,8 @@ overflow: hidden;
     font-size:100px;
     font-family:Sans-serif;
     font-style:bold;
-    left:50%;
-    transform:translate(-50%)
+    left:30%;
+
     display: none;
   }
   .arrowdown3{
@@ -361,7 +362,7 @@ overflow: hidden;
     font-family:Sans-serif;
     font-style:bold;
     left:50%;
-    transform:translate(-50%)
+ 
     display: block;
   }
   
@@ -466,10 +467,20 @@ overflow: hidden;
       "Inquire8" 
       "Inquire9";
     display:grid;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   
   .inquiryitem h1{
     margin-left: 0%;
+  }
+
+  .arrowdown1{
+    width:20%;
+    height:10%;
+    left:50%;
+     top:90%;
+     transform:translate(-50%,-10%) 
   }
   
   .arrowdown2{
@@ -877,29 +888,34 @@ else{
     
       })
 
+
+      
      
 document.querySelector('.inquiryitem').addEventListener("scroll", function() {
     var arrowdown1 = document.querySelector(".arrowdown1");
     
     const container =document.querySelector('.inquiryitem');
+
+    const isHorizontal =window.matchMedia('(min-width:1024px)').matches;
     
     let isScrolling;
 
     
+//for overflow-X&y
+    let scrollPosition= isHorizontal?container.scrollLeft:container.scrollTop;
+    let clientSize =isHorizontal?container.clientWidth:container.clientHeight;
+    let scrollSize =isHorizontal?container.scrollWidth:container.scrollHeight;
 
-    let scrollTop = container.scrollTop;
-    let clientHeight = container.clientHeight;
-    let scrollHeight = container.scrollHeight;
     
-    const treshold = 0.05 * scrollHeight;
+    const treshold = 0.05 * scrollSize;
 
-    if (scrollTop === 0) {
+    if (scrollPosition === 0) {
         arrowdown1.classList.remove('active');
     }
-    else if (scrollTop + clientHeight >= scrollHeight - treshold) {
+    else if (scrollPosition + clientSize >= scrollSize - treshold) {
         arrowdown1.classList.add('active');
     }
-    
+
     else {
         arrowdown1.classList.add('active');
     }
@@ -908,11 +924,10 @@ document.querySelector('.inquiryitem').addEventListener("scroll", function() {
 clearTimeout(isScrolling);
 
     isScrolling = setTimeout(() => {
-        if (scrollTop !== 0 && scrollTop + clientHeight < scrollHeight - treshold) {
+        if (scrollPosition !== 0 && scrollPosition + clientSize < scrollSize - treshold) {
             arrowdown1.classList.remove('active');
         }
-        
-        
+      
     }, 10);
 });
 
