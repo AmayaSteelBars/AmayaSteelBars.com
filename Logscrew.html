@@ -209,6 +209,10 @@ grid-template-areas: "Selectitem"
   pointer-events: all;
 }
 
+body.overlay-active{
+overflow: hidden;
+}
+
   .Selectitem{
     color: darkblue;
     margin-left: 24%;
@@ -221,7 +225,8 @@ grid-template-areas: "Selectitem"
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
-      overflow-x:auto;
+        overflow-x:auto;
+      overflow-y: hidden;
   }
 
   .inquiryitem h1{
@@ -317,6 +322,40 @@ grid-template-areas: "Selectitem"
   }
   
 
+  .arrowdown1{
+    position:fixed;
+    opacity:1;
+    width:15%;
+    height:25%;
+     background-color:darkblue;
+     left:87%;
+     top:50%;
+     transform:translate(-13%,-50%)
+  }
+  
+  .arrowdown2{
+    position: fixed;
+    font-size:100px;
+    font-family:Sans-serif;
+    font-style:bold;
+    left:30%;
+
+    display: none;
+  }
+  .arrowdown3{
+    position: fixed;
+    font-size:100px;
+    font-family:Sans-serif;
+    font-style:bold;
+    left:50%;
+ 
+    display: block;
+  }
+  
+    .arrowdown1.active{
+    opacity:0;
+  }
+
   
     
     @media screen and (max-width: 1024px) {
@@ -408,10 +447,30 @@ grid-template-areas: "Selectitem"
     grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6"
       "Inquire7 Inquire8";
     display:grid;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
   
   .inquiryitem h1{
     margin-left: 0%;
+  }
+
+  .arrowdown1{
+    width:20%;
+    height:15%;
+    left:50%;
+     top:87%;
+     transform:translate(-50%,13%) 
+  }
+  
+  .arrowdown2{
+    display: block;
+    left: 47%;
+    transform:translate(-53%)
+  }
+  
+  .arrowdown3{
+    display:none;
   }
   
   #picture1{
@@ -521,6 +580,11 @@ grid-template-areas: "Selectitem"
 
 </div>
 
+<div class="arrowdown1"><div class="arrowdown2">
+  V</div>
+  <div class="arrowdown3">></div>
+</div>
+
 </div>
      
         <div class="ProductDetailstitle">
@@ -566,10 +630,14 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('Inquirepic')) {
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
           }
           else{
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
       
         })
@@ -581,10 +649,14 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('active')) {
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
           else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       })
 
@@ -615,10 +687,14 @@ grid-template-areas: "Selectitem"
   if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       } else {
           alert("❌No input provided.");
@@ -652,10 +728,14 @@ var Inquirepic = document.querySelector(".Inquirepic");
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {
@@ -691,10 +771,14 @@ else{
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       } else {
           alert("❌No input provided.");
@@ -728,10 +812,14 @@ else{
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {
@@ -766,10 +854,14 @@ else{
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {
@@ -805,10 +897,14 @@ else{
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {
@@ -843,10 +939,14 @@ else{
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {
@@ -854,6 +954,48 @@ else{
       }
     
       })
+
+      document.querySelector('.inquiryitem').addEventListener("scroll", function() {
+    var arrowdown1 = document.querySelector(".arrowdown1");
+    
+    const container =document.querySelector('.inquiryitem');
+
+    const isHorizontal =window.matchMedia('(min-width:1024px)').matches;
+    
+    let isScrolling;
+
+    
+//for overflow-X&y
+    let scrollPosition= isHorizontal?container.scrollLeft:container.scrollTop;
+    let clientSize =isHorizontal?container.clientWidth:container.clientHeight;
+    let scrollSize =isHorizontal?container.scrollWidth:container.scrollHeight;
+
+    
+    const treshold = 0.05 * scrollSize;
+
+
+
+    if (scrollPosition === 0) {
+        arrowdown1.classList.remove('active');
+    }
+    else if (scrollPosition + clientSize >= scrollSize - treshold) {
+        arrowdown1.classList.add('active');
+    }
+
+    else {
+        arrowdown1.classList.add('active');
+    }
+
+
+clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(() => {
+        if (scrollPosition !== 0 && scrollPosition + clientSize < scrollSize - treshold) {
+            arrowdown1.classList.remove('active');
+        }
+      
+    }, 10);
+});
 
   }
             </script>

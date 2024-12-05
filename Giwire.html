@@ -178,7 +178,7 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 57%;
+    height:80%;
     left: 50%;
     top: 50%;
     z-index: 999999;
@@ -207,6 +207,10 @@ grid-template-areas: "Selectitem"
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+body.overlay-active{
+overflow: hidden;
 }
 
   .Selectitem{
@@ -454,10 +458,14 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('Inquirepic')) {
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
           }
           else{
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
       
         })
@@ -469,10 +477,14 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('active')) {
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
           else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       })
 
@@ -482,7 +494,7 @@ grid-template-areas: "Selectitem"
           var overlay = document.getElementById("overlay")
         
           
-          let FirstInput = prompt("Please enter the weight of the Giwire#18(1roll / per kg:");
+          let FirstInput = prompt("Please enter the weight of the Giwire#18(1roll / per kg):");
       
   
       if (FirstInput !== null) {
@@ -503,10 +515,14 @@ grid-template-areas: "Selectitem"
   if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       } else {
           alert("❌No input provided.");
@@ -540,10 +556,14 @@ var Inquirepic = document.querySelector(".Inquirepic");
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {

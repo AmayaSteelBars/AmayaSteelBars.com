@@ -209,6 +209,10 @@ grid-template-areas: "Selectitem"
   pointer-events: all;
 }
 
+body.overlay-active{
+overflow: hidden;
+}
+
   .Selectitem{
     color: darkblue;
     margin-left: 24%;
@@ -222,6 +226,7 @@ grid-template-areas: "Selectitem"
         grid-gap:0%;
         grid-area: inquiryitem;
       overflow-x:auto;
+      overflow-y: hidden;
   }
 
   .inquiryitem h1{
@@ -407,6 +412,8 @@ grid-template-areas: "Selectitem"
   .inquiryitem{
     grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4";
     display:grid;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .inquiryitem h1{
@@ -547,10 +554,14 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('Inquirepic')) {
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
           }
           else{
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
       
         })
@@ -562,10 +573,14 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('active')) {
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
           else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       })
 
@@ -596,10 +611,14 @@ grid-template-areas: "Selectitem"
   if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       } else {
           alert("❌No input provided.");
@@ -633,10 +652,14 @@ var Inquirepic = document.querySelector(".Inquirepic");
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
   
       } else {
@@ -672,10 +695,14 @@ else{
 if (Inquirepic.classList.contains('active')) {
 Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
           }
 else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
             }
       } else {
           alert("❌No input provided.");
