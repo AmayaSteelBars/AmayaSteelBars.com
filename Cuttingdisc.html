@@ -206,7 +206,11 @@ grid-template-areas: "Selectitem"
 
 #overlay.active {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
+}
+
+body.overlay-active{
+overflow: hidden;
 }
 
   .Selectitem{
@@ -501,10 +505,20 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('Inquirepic')) {
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
+            
+            
+            document.body.classList.add('overlay-active');
+            
           }
+          
+
+          
           else{
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+            
+            document.body.classList.remove('overlay-active');
+            
           }
       
         })
@@ -516,10 +530,16 @@ grid-template-areas: "Selectitem"
           if (Inquirepic.classList.contains('active')) {
             Inquirepic.classList.remove('active');
             overlay.classList.remove('active');
+            
+            document.body.classList.remove('overlay-active');
+            
           }
           else{
             Inquirepic.classList.add('active');
-            overlay.classList.add('active');
+            overlay.classList.add('active')
+            
+            document.body.classList.add('overlay-active');
+            
             }
       })
 

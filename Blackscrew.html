@@ -601,7 +601,7 @@ overflow: hidden;
 
 <div class="Inquire7">
   <img id="picture7" src="Blackscrewwood112inch.png">
-  <h1>Blackscrewwood1-1/2inch</h1>
+  <h1>Blackscrew Wood1-1/2inch</h1>
 </div>
 
 <div class="Inquire8">
@@ -707,7 +707,7 @@ document.body.classList.add('overlay-active');
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 1inch`;
+          const newText = `Blackscrew Metal1inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -744,7 +744,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 1-1/2inch`;
+          const newText = `Blackscrew Metal1-1/2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -783,7 +783,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 2inch`;
+          const newText = `Blackscrew Metal2inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -820,7 +820,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 2-1/2inch`;
+          const newText = `Blackscrew Metal3inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -859,7 +859,7 @@ else{
       
   
       if (FirstInput !== null) {
-          const newText = `Metaltextscrew 3inch`;
+          const newText = `Blackscrew Wood1inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -889,8 +889,163 @@ else{
       })
 
 
+document.querySelector('.Inquire6').addEventListener('click', function() {
+        
+         var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
       
-     
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Blackscrew Wood1-1/4inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+document.querySelector('.Inquire7').addEventListener('click', function() {
+        
+         var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Blackscrew Wood1-1/2inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+document.querySelector('.Inquire8').addEventListener('click', function() {
+        
+         var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Blackscrew Wood2inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+      
+      document.querySelector('.Inquire9').addEventListener('click', function() {
+        
+         var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Blackscrew Wood3inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+      
+
 document.querySelector('.inquiryitem').addEventListener("scroll", function() {
     var arrowdown1 = document.querySelector(".arrowdown1");
     
@@ -908,6 +1063,8 @@ document.querySelector('.inquiryitem').addEventListener("scroll", function() {
 
     
     const treshold = 0.05 * scrollSize;
+
+
 
     if (scrollPosition === 0) {
         arrowdown1.classList.remove('active');
@@ -930,7 +1087,6 @@ clearTimeout(isScrolling);
       
     }, 10);
 });
-
 
   }
             </script>
