@@ -133,19 +133,19 @@
       }
   
 #pic1{
-    margin-left:12%;
+    margin-left:5%;
 }
 
   #pic2{
-    margin-left:5%;
+    margin-left:0%;
   }
   
   #pic3{
-    margin-left:5%;
+    margin-left:0%;
   }
   
   #pic4{
-    margin-left:10%;
+    margin-left:6%;
   }
   
       .Product_Picture div h1{
@@ -178,12 +178,11 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 90%;
+    height: 75%;
     left: 50%;
     top: 50%;
     z-index: 999999;
     display: grid;
-    grid-auto-rows: 0fr 1fr;
 grid-template-areas: "Selectitem"
   "inquiryitem";
 
@@ -210,6 +209,7 @@ grid-template-areas: "Selectitem"
   pointer-events: all;
 }
 
+
 body.overlay-active{
 overflow: hidden;
 }
@@ -222,12 +222,11 @@ overflow: hidden;
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4";
         display: grid;
-        grid-gap:5%;
+        grid-gap:3%;
         grid-area: inquiryitem;
-        overflow-x:auto;
-      overflow-y: hidden;
+      overflow-x:auto;
   }
 
   .inquiryitem h1{
@@ -239,33 +238,52 @@ overflow: hidden;
   .Inquire1{
     grid-area: Inquire1;
     cursor: pointer;
-    margin-left: 0%;
+    margin-left: 3%;
   }
 
   .Inquire2{
     grid-area: Inquire2;
     cursor: pointer;
-    margin-left: 0%;
+    margin-left: 9%;
   }
 
+  .Inquire3{
+    grid-area: Inquire3;
+    cursor: pointer;
+    margin-left: 9%;
+  }
 
-
+  .Inquire4{
+    grid-area: Inquire4;
+    cursor: pointer;
+    margin-left: 9%
+  }
+  
 
   #picture1{
-    width: 80%;
+    width: 70%;
     height: 70%;
-   margin-left:15%;
+   margin-left:20%;
   }
 
   #picture2{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:15%;
+    margin-left:20%;
   }
 
-  
-  
+  #picture3{
+    width: 70%;
+    height: 70%;
+    margin-left:20%;
+  }
 
+  #picture4{
+    width: 70%;
+    height: 70%;
+    margin-left:20%;
+  }
+  
 
   
     
@@ -327,17 +345,18 @@ overflow: hidden;
       }
       
       #pic1{
-        margin-left:7%;
+        margin-left:7%
+;
       }
       
       #pic2{
-        margin-left:0%
+        margin-left:10%
       }
       #pic3{
-        margin-left:5%;
+        margin-left:7%;
       }
       #pic4{
-        margin-left:5%;
+        margin-left:10%;
       }
       
       #measurement1{
@@ -345,36 +364,39 @@ overflow: hidden;
       }
 
   .Selectitem{
-    margin-left: 15%;
+    margin-left: 20%;
     
   }
 
       .Inquirepic{
-        height: 60%;
+        height: 40%;
       }
       
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2";
+    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6"
+      "Inquire7 Inquire8";
     display:grid;
-    overflow-x: hidden;
-    overflow-y: auto;
   }
   
   .inquiryitem h1{
     margin-left: 0%;
   }
-
-  
   
   #picture1{
-    margin-left:10%;
+    margin-left:15%;
   }
 
   #picture2{
-    margin-left:10%;
+    margin-left:15%;
   }
 
+  #picture3{
+    margin-left:15%;
+  }
 
+  #picture4{
+    margin-left:15%;
+  }
   
 
   
@@ -392,7 +414,7 @@ overflow: hidden;
     
     
       <div class="ProductName">
-        <b>Mini Roller</b>
+        <b>Pillow Block</b>
         </div>
       
     <div class="ProductGroup">
@@ -400,14 +422,14 @@ overflow: hidden;
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Miniroller.png">
+          <img  src="Pillowblock.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>A Miniroller is a compact version of a paint roller, designed for painting small or hard-to-reach areas where a standard roller is too large. It's perfect for detailed tasks like painting trim, corners, or narrow surfaces and is often used on furniture, doors, or cabinets to achieve a smooth finish.</p>
+          <p>A pillow block, also known as a plummer block, is a type of bearing housing that provides support for a rotating shaft with the help of compatible bearings and various accessories. The housing is typically made of cast iron or steel and is designed to be mounted on a surface, such as a machine frame or base.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>4 inch</p>
+          <p>3/4 inch , 1 inch , 1-1/4 inch ,1-1/2 inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -418,21 +440,28 @@ overflow: hidden;
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Miniroller4.png">
-  <h1>Mini Roller</h1>
+  <img id="picture1" src="Pillowblock34inch.png">
+  <h1>Pillow Block 3/4 inch</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Paintroller.png">
-  <h1>Paint Roller</h1>
+  <img id="picture2" src="Pillowblock1inch.png">
+  <h1>Pillow Block 1 inch</h1>
+</div>
+
+<div class="Inquire3">
+  <img id="picture3" src="Pillowblock114inch.png">
+  <h1>Pillow Block 1-1/4 inch</h1>
+</div>
+
+<div class="Inquire4">
+  <img id="picture4" src="Pillowblock112inch.png">
+  <h1>Pillow Block 1-1/2 inch</h1>
 </div>
 
 
 
-
 </div>
-
-
 
 </div>
      
@@ -442,13 +471,13 @@ overflow: hidden;
     
         <div class="Product_Picture">
           <div>
-          <a href="Paintbrush.html" class="similarproduct"><img id="pic1" src="Paintbrush.png" alt="https://i.ibb.co/dkfrC4B/Paintbrush.jpg" >
-          <h1>Paint Brush</h1></a>
+          <a href="Roundbar.html" class="similarproduct"><img id="pic1" src="RoundBar.png" alt="https://i.ibb.co/3BqLHr3/RoundBar.jpg" >
+          <h1>RoundBar</h1></a>
         </div>
     
         <div>
-          <a href="Redoxide.html" class="similarproduct"><img id="pic2" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
-          <h1>Red Oxide</h1></a>
+          <a href="Shafting.html" class="similarproduct"><img id="pic2" src="Shafting.png" alt="https://i.ibb.co/0G7gLNz/Shafting.jpg" >
+          <h1>Shafting</h1></a>
         </div>
     
         <div>
@@ -457,8 +486,8 @@ overflow: hidden;
         </div>
     
         <div>
-          <a href="Paintthinner.html" class="similarproduct"><img id="pic4" src="Paintthinner.png" alt="https://i.ibb.co/tqf7zgm/Paintthinner.jpg" >
-          <h1>Paint Thinner</h1></a>
+          <a href="Weldingrod.html" class="similarproduct"><img id="pic4" src="Weldingrod.png" alt="https://i.ibb.co/nbQmGbg/Weldingrod.jpg" >
+          <h1>Welding Rod</h1></a>
         </div>
     
         </div>
@@ -519,7 +548,7 @@ overflow: hidden;
       
   
       if (FirstInput !== null) {
-          const newText = `Mini Roller`;
+          const newText = `Pillow Block 3/4 inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -560,7 +589,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Paint Roller`;
+          const newText = `Pillow Block 1 inch`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -593,6 +622,91 @@ else{
     
       })
 
+      document.querySelector('.Inquire3').addEventListener('click', function() {
+        
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Pillow Block 1-1/4 inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire4').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Pillow Block 1-1/2 inch`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      
       
 
   }

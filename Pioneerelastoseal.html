@@ -137,15 +137,15 @@
 }
 
   #pic2{
-    margin-left:5%;
+    margin-left:15%;
   }
   
   #pic3{
-    margin-left:5%;
+    margin-left:7%;
   }
   
   #pic4{
-    margin-left:10%;
+    margin-left:0;
   }
   
       .Product_Picture div h1{
@@ -178,12 +178,11 @@
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
     width: 75%;
-    height: 90%;
+    height: 50%;
     left: 50%;
     top: 50%;
     z-index: 999999;
     display: grid;
-    grid-auto-rows: 0fr 1fr;
 grid-template-areas: "Selectitem"
   "inquiryitem";
 
@@ -216,56 +215,46 @@ overflow: hidden;
 
   .Selectitem{
     color: darkblue;
-    margin-left: 24%;
+    margin-left: 27%;
     grid-area: Selectitem;
     font-size: 40px;
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2";
+    grid-template-areas: "Inquire1 Inquire2 ";
         display: grid;
-        grid-gap:5%;
+        grid-gap:3%;
         grid-area: inquiryitem;
-        overflow-x:auto;
-      overflow-y: hidden;
+      
   }
 
   .inquiryitem h1{
     color:black;
-    margin-left: 5%;
-    text-align:-webkit-center;
+    margin-left: 0%;
   }
 
   .Inquire1{
     grid-area: Inquire1;
     cursor: pointer;
-    margin-left: 0%;
+    margin-left: 16%;
   }
 
   .Inquire2{
     grid-area: Inquire2;
     cursor: pointer;
-    margin-left: 0%;
+    margin-left: 4%;
   }
-
-
 
 
   #picture1{
-    width: 80%;
+    width: 70%;
     height: 70%;
-   margin-left:15%;
   }
 
   #picture2{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:15%;
   }
-
-  
-  
-
 
   
     
@@ -288,12 +277,12 @@ overflow: hidden;
       }
      
       .Description h1 b{
-        margin-left: 20%;
+        margin-left: 25%;
         color: darkblue;
       }
       
       .Description button{
-        height:10%
+        height:13%
       }
       
       .Cutsize{
@@ -327,57 +316,45 @@ overflow: hidden;
       }
       
       #pic1{
-        margin-left:7%;
+        margin-left:15%
+;
       }
       
       #pic2{
-        margin-left:0%
+        margin-left:10%
       }
       #pic3{
-        margin-left:5%;
+        margin-left:7%;
       }
       #pic4{
-        margin-left:5%;
+        margin-left:25%;
       }
       
       #measurement1{
-        margin-left:15%;
+        margin-left:22%;
       }
 
   .Selectitem{
-    margin-left: 15%;
+    margin-left: 18%;
     
   }
 
       .Inquirepic{
-        height: 60%;
+        height: 18%;
+      }
+
+      .Inquire1{
+        margin-left: 9%;
+      }
+
+      .Inquire2{
+        margin-left: 0%;
       }
       
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2";
-    display:grid;
-    overflow-x: hidden;
-    overflow-y: auto;
+    grid-template-areas: "Inquire1 Inquire2" ;
+    
   }
-  
-  .inquiryitem h1{
-    margin-left: 0%;
-  }
-
-  
-  
-  #picture1{
-    margin-left:10%;
-  }
-
-  #picture2{
-    margin-left:10%;
-  }
-
-
-  
-
-  
       }
       </style>
 
@@ -392,7 +369,7 @@ overflow: hidden;
     
     
       <div class="ProductName">
-        <b>Mini Roller</b>
+        <b>Pioneer Elastoseal Pistilito</b>
         </div>
       
     <div class="ProductGroup">
@@ -400,14 +377,14 @@ overflow: hidden;
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Miniroller.png">
+          <img  src="Grindingdisc.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>A Miniroller is a compact version of a paint roller, designed for painting small or hard-to-reach areas where a standard roller is too large. It's perfect for detailed tasks like painting trim, corners, or narrow surfaces and is often used on furniture, doors, or cabinets to achieve a smooth finish.</p>
+          <p>A grinding disc is a circular abrasive tool used with grinders to smooth, shape, or remove material from surfaces. These discs are made from abrasive grains bonded together, and they come in various sizes and types depending on the material they are designed to work on, such as metal, stone, or concrete. When attached to a grinder, the disc spins at high speeds, allowing it to grind down surfaces efficiently.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>4 inch</p>
+          <p>4inch</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -418,21 +395,17 @@ overflow: hidden;
 
   <div class="inquiryitem">
 <div class="Inquire1">
-  <img id="picture1" src="Miniroller4.png">
-  <h1>Mini Roller</h1>
+  <img id="picture1" src="Domoregrinding.png">
+  <h1>Domore Grinding Disc</h1>
 </div>
 
 <div class="Inquire2">
-  <img id="picture2" src="Paintroller.png">
-  <h1>Paint Roller</h1>
+  <img id="picture2" src="Tyrolitgrinding.png">
+  <h1>Tyrolit Grinding Disc</h1>
 </div>
 
 
-
-
 </div>
-
-
 
 </div>
      
@@ -442,23 +415,23 @@ overflow: hidden;
     
         <div class="Product_Picture">
           <div>
-          <a href="Paintbrush.html" class="similarproduct"><img id="pic1" src="Paintbrush.png" alt="https://i.ibb.co/dkfrC4B/Paintbrush.jpg" >
-          <h1>Paint Brush</h1></a>
+          <a href="Cuttingdisc.html" class="similarproduct"><img id="pic1" src="Cuttingdisc.png" alt="https://i.ibb.co/kH34j5c/Cuttingdisc.jpg" >
+          <h1>Cutting Disc</h1></a>
         </div>
     
         <div>
-          <a href="Redoxide.html" class="similarproduct"><img id="pic2" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
-          <h1>Red Oxide</h1></a>
+          <a href="Flapdisc.html" class="similarproduct"><img id="pic2" src="Flapdisc.png" alt="https://i.ibb.co/bmXbdG0/Flapdisc.jpg" >
+          <h1>FlapDisc</h1></a>
         </div>
     
         <div>
-          <a href="Epoxyprimer.html" class="similarproduct"><img id="pic3" src="Epoxyprimer.png" alt="https://i.ibb.co/T4Y1sq2/Epoxyprimer.jpg" >
-          <h1>Epoxy Primer</h1></a>
+          <a href="Sandflex.html" class="similarproduct"><img id="pic3" src="Sandflex.png" alt="https://i.ibb.co/GMjmdLS/Sandflex.jpg" >
+          <h1>Sandflex</h1></a>
         </div>
     
         <div>
-          <a href="Paintthinner.html" class="similarproduct"><img id="pic4" src="Paintthinner.png" alt="https://i.ibb.co/tqf7zgm/Paintthinner.jpg" >
-          <h1>Paint Thinner</h1></a>
+          <a href="Sandpaper.html" class="similarproduct"><img id="pic4" src="Sandpaper.png" alt="https://i.ibb.co/CHKgcHf/Sandpaper.webp" >
+          <h1>SandPaper</h1></a>
         </div>
     
         </div>
@@ -500,11 +473,11 @@ overflow: hidden;
             overlay.classList.remove('active');
 
             document.body.classList.remove('overlay-active');
+
           }
           else{
             Inquirepic.classList.add('active');
             overlay.classList.add('active');
-
             document.body.classList.add('overlay-active');
             }
       })
@@ -519,7 +492,7 @@ overflow: hidden;
       
   
       if (FirstInput !== null) {
-          const newText = `Mini Roller`;
+          const newText = `Domore Grinding Disc`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -560,7 +533,7 @@ var Inquirepic = document.querySelector(".Inquirepic");
       
   
       if (FirstInput !== null) {
-          const newText = `Paint Roller`;
+          const newText = `Tyrolit Grinding Disc`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -593,7 +566,7 @@ else{
     
       })
 
-      
+     
 
   }
             </script>
