@@ -16,9 +16,7 @@
       padding:0;
     }
     
-    .SteelProduct{
-        margin-top:0%;
-      }
+    
            .ProductName{
           color:white;
           font-size:50px;
@@ -26,6 +24,10 @@
           background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
           margin-top: 5%;
         }
+  
+      .SteelProduct{
+        margin-top: 0%;
+      }
   
         .BrandNew{
           grid-area: BrandNew;
@@ -170,99 +172,13 @@
     background-color: white;
     margin-bottom:20px;
   }
-
-  .Inquirepic{
-    position: fixed;
-    border-radius: 10px;
-    background-color: white;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-    width: 75%;
-    height: 50%;
-    left: 50%;
-    top: 50%;
-    z-index: 999999;
-    display: grid;
-grid-template-areas: "Selectitem"
-  "inquiryitem";
-
-  }
-
-  .Inquirepic.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-  #overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .5);
-  pointer-events: none;
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-body.overlay-active{
-overflow: hidden;
-}
-
-  .Selectitem{
-    color: darkblue;
-    margin-left: 27%;
-    grid-area: Selectitem;
-    font-size: 40px;
-  }
-
-  .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 ";
-        display: grid;
-        grid-gap:3%;
-        grid-area: inquiryitem;
-      
-  }
-
-  .inquiryitem h1{
-    color:black;
-    margin-left: 0%;
-  }
-
-  .Inquire1{
-    grid-area: Inquire1;
-    cursor: pointer;
-    margin-left: 16%;
-  }
-
-  .Inquire2{
-    grid-area: Inquire2;
-    cursor: pointer;
-    margin-left: 4%;
-  }
-
-
-  #picture1{
-    width: 70%;
-    height: 70%;
-  }
-
-  #picture2{
-    width: 70%;
-    height: 70%;
-  }
-
-  
     
     @media screen and (max-width: 1024px) {
+    
       .SteelProduct{
         margin-top: 10%;
       }
-      
+    
       .BrandNew{
           grid-area: BrandNew;
           color: darkblue;
@@ -282,7 +198,7 @@ overflow: hidden;
       }
       
       .Description button{
-        height:8%
+        height:15%
       }
       
       .Cutsize{
@@ -321,40 +237,18 @@ overflow: hidden;
       }
       
       #pic2{
-        margin-left:10%
+        margin-left:3%
       }
       #pic3{
-        margin-left:7%;
+        margin-left:-1%;
       }
       #pic4{
-        margin-left:35%;
+        margin-left:1%;
       }
       
       #measurement1{
         margin-left:22%;
       }
-
-  .Selectitem{
-    margin-left: 18%;
-    
-  }
-
-      .Inquirepic{
-        height: 18%;
-      }
-
-      .Inquire1{
-        margin-left: 9%;
-      }
-
-      .Inquire2{
-        margin-left: 0%;
-      }
-      
-  .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" ;
-    
-  }
       }
       </style>
 
@@ -369,7 +263,7 @@ overflow: hidden;
     
     
       <div class="ProductName">
-        <b>Pioneer Elastoseal Pistilito</b>
+        <b>Vulcaseal</b>
         </div>
       
     <div class="ProductGroup">
@@ -377,37 +271,18 @@ overflow: hidden;
           <b><img src="new.png">BrandNew</b>
         </div>
         <div class="Product">
-          <img  src="Pioneerelastoseal.png">
+          <img  src="Vulcaseal.png">
         </div>
     
         <div class="Description">
           <h1><b><img src="Information.png">Description</b></h1>
-          <p>Pioneer Elastoseal is a high-grade waterproofing sealant commonly used for roof repairs and other sealing applications. It's a single-component, toluene-free sealant that cures to form an elastic and weatherproof seal. This makes it ideal for sealing joints, gaps, and holes on roofs, gutters, flashings, downspouts, and drainpipes. It works on both dry and wet surfaces and offers excellent resistance to UV rays, ensuring a long-lasting and durable seal.</p>
+          <p>Vulcaseal is a popular elastomeric sealant used for sealing, patching, and filling leaks, cracks, holes, and gaps in various materials. It's a one-component sealant that's easy to apply and spread over surfaces like corrugated metal roofing, gutters, downspouts, and plumbing pipes. Vulcaseal is known for its durability and flexibility, making it ideal for both household and construction applications.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>85g , 250g</p>
+          <p>1/4 Liter</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
-<div id="Inquirepic" class="Inquirepic">
-  <div class="Selectitem">
-    Select the Inquiry product
-  </div>
 
-  <div class="inquiryitem">
-<div class="Inquire1">
-  <img id="picture1" src="Pioneerelastoseal85g.png">
-  <h1>Pioneer Elastoseal 85g</h1>
-</div>
-
-<div class="Inquire2">
-  <img id="picture2" src="Pioneerelastoseal250g.png">
-  <h1>Pioneer Elastoseal 250g</h1>
-</div>
-
-
-</div>
-
-</div>
      
         <div class="ProductDetailstitle">
            <div class="Detailstitle"><b>Similar Product</b></div>
@@ -437,62 +312,19 @@ overflow: hidden;
         </div>
       </div>
   
-      <div id="overlay"></div>
+    
     
     <script>
                  function promptFunction() {
         const storage = [];
         const textarea = document.getElementById("Inquiry");
-
-  
-        
         document.getElementById('NewProduct').addEventListener('click', function() {
-          var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-          if (Inquirepic.classList.contains('Inquirepic')) {
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-
-            document.body.classList.add('overlay-active');
-          }
-          else{
-            Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-
-            document.body.classList.remove('overlay-active');
-          }
-      
-        })
-    
-
-      document.getElementById('overlay').addEventListener('click', function() {
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-          if (Inquirepic.classList.contains('active')) {
-            Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-
-            document.body.classList.remove('overlay-active');
-
-          }
-          else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-            document.body.classList.add('overlay-active');
-            }
-      })
-
-      document.querySelector('.Inquire1').addEventListener('click', function() {
-        
-        var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-        
-          let FirstInput = 1;
+      let FirstInput = 1;
       
       
   
       if (FirstInput !== null) {
-          const newText = `Pioneer Elastoseal 85g`;
+          const newText = `Slotted Angle Foot`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -505,69 +337,11 @@ overflow: hidden;
   textarea.value = storage.join('\n');
   
   saveInput();
-  
-  if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-
-            document.body.classList.remove('overlay-active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-
-            document.body.classList.add('overlay-active');
-            }
       } else {
           alert("❌No input provided.");
       }
-    
       })
-
-      document.querySelector('.Inquire2').addEventListener('click', function() {
-        
-var Inquirepic = document.querySelector(".Inquirepic");
-          var overlay = document.getElementById("overlay")
-          let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Pioneer Elastoseal 250g`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-  
-if (Inquirepic.classList.contains('active')) {
-Inquirepic.classList.remove('active');
-            overlay.classList.remove('active');
-
-            document.body.classList.remove('overlay-active');
-          }
-else{
-            Inquirepic.classList.add('active');
-            overlay.classList.add('active');
-
-            document.body.classList.add('overlay-active');
-            }
-  
-      } else {
-          alert("❌No input provided.");
-      }
-    
-      })
-
-     
-
+                   
   }
             </script>
 
