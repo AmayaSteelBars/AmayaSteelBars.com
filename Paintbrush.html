@@ -186,7 +186,7 @@
     grid-auto-rows: 0fr 1fr;
 grid-template-areas: "Selectitem"
   "inquiryitem";
-
+  grid-auto-rows:0fr 1fr ;
   }
 
   .Inquirepic.active {
@@ -224,10 +224,12 @@ overflow: hidden;
   .inquiryitem{
     grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6 Inquire7 Inquire8";
         display: grid;
+        grid-auto-columns:50% 50% 50% 50% 50%;
         grid-gap:5%;
         grid-area: inquiryitem;
         overflow-x:auto;
       overflow-y: hidden;
+
   }
 
   .inquiryitem h1{
