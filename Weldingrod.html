@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AmayaSteelBarTrading</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+  <style>
+  
+   *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    
+    .SteelProduct{
+        margin-top:0%;
+      }
+           .ProductName{
+          color:white;
+          font-size:50px;
+          font-family:"Montserrat",Sans-serif;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+          margin-top: 5%;
+        }
+  
+        .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 17%;;
+        }
+  
+        .BrandNew img{
+          width: 245px;
+      height: 100px;
+        }
+  
+      .Product{
+        grid-area: Product;
+      }
+  
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+  
+      .ProductDetailstitle{
+        grid-area: ProductDetailstitle;
+        padding: 0px 0px 10px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+       
+      }
+  
+      .Detailstitle{
+        color: darkblue;
+        font-size: 50px;
+      }
+      
+      .Description{
+        grid-area: Description;
+      font-size: 34px;
+      color: dodgerblue;
+      padding: 0px 0px 50px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      
+      }
+  
+      .Description h1 b{
+        margin-left: 33%;
+        color: darkblue;
+      }
+      .Description h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description p{
+        margin-left: 35px;
+      }
+      #measurement1{
+        margin-left:29%;
+      }
+  
+      .Description button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      height: 20%;
+      margin-bottom:10%;
+      }
+  
+      .Description button img{
+        width: 75px;
+      height: 56px;
+      margin-right: 32px;
+      }
+  
+      .Description button:hover{
+        color: grey;
+      }
+  
+  
+      
+  
+  
+  
+      .Product_Picture{
+        grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
+        display: grid;
+        grid-gap:3%;
+        overflow-x:auto;
+      
+      }
+  
+     .Product_Picture div a img{
+        width: 200px;
+        height: 200px;
+        margin-left: 2%;
+        cursor: pointer;
+      }
+  
+#pic1{
+    margin-left:12%;
+}
+
+  #pic2{
+    margin-left:5%;
+  }
+  
+  #pic3{
+    margin-left:5%;
+  }
+  
+  #pic4{
+    margin-left:10%;
+  }
+  
+      .Product_Picture div h1{
+        font-size: 50px;
+        color: darkblue;
+        
+      }
+  
+      .ProductGroup{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "BrandNew"
+    "Product"
+    "Description"
+    "ProductDetailstitle"
+    "Product_Picture"  ;
+    grid-gap:20px;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom:20px;
+  }
+
+  .Inquirepic{
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+    width: 75%;
+    height: 90%;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    display: grid;
+    grid-auto-rows: 0fr 1fr;
+grid-template-areas: "Selectitem"
+  "inquiryitem";
+
+  }
+
+  .Inquirepic.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+  #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.overlay-active{
+overflow: hidden;
+}
+
+  .Selectitem{
+    color: darkblue;
+    margin-left: 24%;
+    grid-area: Selectitem;
+    font-size: 40px;
+  }
+
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2";
+        display: grid;
+        grid-gap:5%;
+        grid-area: inquiryitem;
+        overflow-x:auto;
+      overflow-y: hidden;
+  }
+
+  .inquiryitem h1{
+    color:black;
+    margin-left: 5%;
+    text-align:-webkit-center;
+  }
+
+  .Inquire1{
+    grid-area: Inquire1;
+    cursor: pointer;
+    margin-left: 0%;
+  }
+
+  .Inquire2{
+    grid-area: Inquire2;
+    cursor: pointer;
+    margin-left: 0%;
+  }
+
+
+
+
+  #picture1{
+    width: 80%;
+    height: 70%;
+   margin-left:15%;
+  }
+
+  #picture2{
+    width: 80%;
+    height: 70%;
+    margin-left:15%;
+  }
+
+  
+  
+
+
+  
+    
+    @media screen and (max-width: 1024px) {
+      .SteelProduct{
+        margin-top: 10%;
+      }
+      
+      .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 0%;
+        }
+      
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+     
+      .Description h1 b{
+        margin-left: 20%;
+        color: darkblue;
+      }
+      
+      .Description button{
+        height:10%
+      }
+      
+      .Cutsize{
+          grid-area: Cutsize;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 10%;
+        
+        }
+      .Product2 img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+      
+      .Description2 h1 b{
+        margin-left: 24%;
+      }
+        
+    
+        
+        .Product_Picture div a img{
+        
+       margin-left:15%;
+        
+        
+      }
+      .Product_Picture div h1{
+        
+        padding-left: 8%;
+      }
+      
+      #pic1{
+        margin-left:7%;
+      }
+      
+      #pic2{
+        margin-left:0%
+      }
+      #pic3{
+        margin-left:5%;
+      }
+      #pic4{
+        margin-left:5%;
+      }
+      
+      #measurement1{
+        margin-left:15%;
+      }
+
+  .Selectitem{
+    margin-left: 15%;
+    
+  }
+
+      .Inquirepic{
+        height: 60%;
+      }
+      
+  .inquiryitem{
+    grid-template-areas: "Inquire1"
+     "Inquire2";
+    display:grid;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .inquiryitem h1{
+    margin-left: 0%;
+  }
+
+  
+  
+  #picture1{
+    margin-left:10%;
+  }
+
+  #picture2{
+    margin-left:10%;
+  }
+
+
+  
+
+  
+      }
+      </style>
+
+  </head>  
+    
+  <body>
+    
+  
+    <div class="SteelProduct">
+      <b>Hardware Products</b>
+      </div>
+    
+    
+      <div class="ProductName">
+        <b>Welding Rod</b>
+        </div>
+      
+    <div class="ProductGroup">
+        <div class="BrandNew">
+          <b><img src="new.png">BrandNew</b>
+        </div>
+        <div class="Product">
+          <img  src="Weldingrod.png">
+        </div>
+    
+        <div class="Description">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p>A welding rod is a piece of metal or alloy that is used in the welding process to join two pieces of metal together. It serves as a filler material that melts and fuses with the base metals, creating a strong bond once it solidifies. Welding rods come in different types, depending on the welding process and materials being joined.</p>
+          <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
+          <p>3/32 inch ,1/8inch</p>
+          <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+      
+<div id="Inquirepic" class="Inquirepic">
+  <div class="Selectitem">
+    Select the Inquiry product
+  </div>
+
+  <div class="inquiryitem">
+<div class="Inquire1">
+  <img id="picture1" src="Weldingrodgoldenbridge.png">
+  <h1>Golden Bridge</h1>
+</div>
+
+<div class="Inquire2">
+  <img id="picture2" src="Weldingrodfuji.png">
+  <h1>Fujiweld</h1>
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+     
+        <div class="ProductDetailstitle">
+           <div class="Detailstitle"><b>Similar Product</b></div>
+        </div>
+    
+        <div class="Product_Picture">
+          <div>
+          <a href="Weldingglass.html" class="similarproduct"><img id="pic1" src="Weldingglass.png" alt="https://i.ibb.co/rtLb7BV/Weldingglass.png" >
+          <h1>Welding Glass</h1></a>
+        </div>
+    
+        <div>
+          <a href="Steelbrush.html" class="similarproduct"><img id="pic2" src="Steelbrush.png" alt="https://i.ibb.co/j8SVwWh/Steelbrush.jpg" >
+          <h1>Steel Brush</h1></a>
+        </div>
+    
+        <div>
+          <a href="Epoxyprimer.html" class="similarproduct"><img id="pic3" src="Epoxyprimer.png" alt="https://i.ibb.co/T4Y1sq2/Epoxyprimer.jpg" >
+          <h1>Epoxy Primer</h1></a>
+        </div>
+    
+        <div>
+          <a href="Redoxide.html" class="similarproduct"><img id="pic4" src="Redoxide.png" alt="https://i.ibb.co/B4mYKsp/Redoxide.jpg" >
+          <h1>Red Oxide</h1></a>
+        </div>
+    
+        </div>
+      </div>
+  
+      <div id="overlay"></div>
+    
+    <script>
+                 function promptFunction() {
+        const storage = [];
+        const textarea = document.getElementById("Inquiry");
+
+  
+        
+        document.getElementById('NewProduct').addEventListener('click', function() {
+          var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('Inquirepic')) {
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+          }
+          else{
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+      
+        })
+    
+
+      document.getElementById('overlay').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('active')) {
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+          else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+      })
+
+      document.querySelector('.Inquire1').addEventListener('click', function() {
+        
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = prompt("Please enter the thickness of the Golden Bridge(3/32inch , 1/8 inch):");
+          
+          let SecondInput = prompt("Please enter the weight of the Golden Bridge(1kg /2kg etc , 1 Box =2.5kg):");
+      
+      
+  
+      if (FirstInput && SecondInput !== null) {
+          const newText = `Welding rod Golden Bridge ${FirstInput} ${SecondInput}`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire2').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          let FirstInput = prompt("Please enter the weight of the Fujiweld(1kg /2kg etc , 1 Box =10kg):");;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Welding rod Fujiweld ${FirstInput} `;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      
+
+  }
+            </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<link rel="stylesheet" href="design.css">
+
+</body>
+</html>
