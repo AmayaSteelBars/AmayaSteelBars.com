@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AmayaSteelBarTrading</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+  <style>
+  
+   *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    
+    .SteelProduct{
+        margin-top:0%;
+      }
+           .ProductName{
+          color:white;
+          font-size:50px;
+          font-family:"Montserrat",Sans-serif;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+          margin-top: 5%;
+        }
+  
+        .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 17%;;
+        }
+  
+        .BrandNew img{
+          width: 245px;
+      height: 100px;
+        }
+  
+      .Product{
+        grid-area: Product;
+      }
+  
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+  
+      .ProductDetailstitle{
+        grid-area: ProductDetailstitle;
+        padding: 0px 0px 10px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+       
+      }
+  
+      .Detailstitle{
+        color: darkblue;
+        font-size: 50px;
+      }
+      
+      .Description{
+        grid-area: Description;
+      font-size: 34px;
+      color: dodgerblue;
+      padding: 0px 0px 50px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      
+      }
+  
+      .Description h1 b{
+        margin-left: 33%;
+        color: darkblue;
+      }
+      .Description h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description p{
+        margin-left: 35px;
+      }
+      #measurement1{
+        margin-left:29%;
+      }
+  
+      .Description button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      height: 20%;
+      margin-bottom:10%;
+      }
+  
+      .Description button img{
+        width: 75px;
+      height: 56px;
+      margin-right: 32px;
+      }
+  
+      .Description button:hover{
+        color: grey;
+      }
+  
+  
+      
+  
+  
+  
+      .Product_Picture{
+        grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
+        display: grid;
+        grid-gap:3%;
+        overflow-x:auto;
+      
+      }
+  
+     .Product_Picture div a img{
+        width: 200px;
+        height: 200px;
+        margin-left: 2%;
+        cursor: pointer;
+      }
+  
+#pic1{
+    margin-left:12%;
+}
+
+  #pic2{
+    margin-left:0%;
+  }
+  
+  #pic3{
+    margin-left:1%;
+  }
+  
+  #pic4{
+    margin-left:0;
+  }
+  
+      .Product_Picture div h1{
+        font-size: 50px;
+        color: darkblue;
+        
+      }
+  
+      .ProductGroup{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "BrandNew"
+    "Product"
+    "Description"
+    "ProductDetailstitle"
+    "Product_Picture"  ;
+    grid-gap:20px;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom:20px;
+  }
+
+  .Inquirepic{
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+    width: 75%;
+    height: 57%;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    display: grid;
+grid-template-areas: "Selectitem"
+  "inquiryitem";
+
+  }
+
+  .Inquirepic.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+  #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.overlay-active{
+overflow: hidden;
+}
+
+  .Selectitem{
+    color: darkblue;
+    margin-left: 24%;
+    grid-area: Selectitem;
+    font-size: 40px;
+  }
+
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2";
+        display: grid;
+        grid-gap:3%;
+        grid-area: inquiryitem;
+      
+  }
+
+  .inquiryitem h1{
+    color:black;
+    margin-left: 5%;
+  }
+
+  .Inquire1{
+    grid-area: Inquire1;
+    cursor: pointer;
+    margin-left: 9%;
+  }
+
+  .Inquire2{
+    grid-area: Inquire2;
+    cursor: pointer;
+    margin-left: 9%;
+  }
+
+  
+
+
+  #picture1{
+    width: 70%;
+    height: 70%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+  }
+
+  
+  
+
+    
+    @media screen and (max-width: 1024px) {
+      .SteelProduct{
+        margin-top: 10%;
+      }
+      
+      .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 0%;
+        }
+      
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+     
+      .Description h1 b{
+        margin-left: 25%;
+        color: darkblue;
+      }
+      
+      .Description button{
+        height:11%
+      }
+      
+      .Cutsize{
+          grid-area: Cutsize;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 10%;
+        
+        }
+      .Product2 img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+      
+      .Description2 h1 b{
+        margin-left: 24%;
+      }
+        
+    
+        
+        .Product_Picture div a img{
+        
+       margin-left:15%;
+        
+        
+      }
+      .Product_Picture div h1{
+        
+        padding-left: 8%;
+      }
+      
+      #pic1{
+        margin-left:15%
+;
+      }
+      
+      #pic2{
+        margin-left:10%
+      }
+      #pic3{
+        margin-left:25%;
+      }
+      #pic4{
+        margin-left:11%;
+      }
+      
+      #measurement1{
+        margin-left:15%;
+      }
+
+  .Selectitem{
+    margin-left: 20%;
+    
+  }
+
+      .Inquirepic{
+        height: 25%;
+      }
+      
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2" ;
+
+    #picture1{
+        margin-left: 15%;
+    }
+
+    #picture2{
+        margin-left: 15%;
+    }
+    
+  }
+      }
+      </style>
+
+  </head>  
+    
+  <body>
+    
+  
+    <div class="SteelProduct">
+      <b>Hardware Products</b>
+      </div>
+    
+    
+      <div class="ProductName">
+        <b>Insulationfoam</b>
+        </div>
+      
+    <div class="ProductGroup">
+        <div class="BrandNew">
+          <b><img src="new.png">BrandNew</b>
+        </div>
+        <div class="Product">
+          <img  src="Insulationfoam.png">
+        </div>
+    
+        <div class="Description">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p>Insulation foam is a material used to reduce heat transfer and improve energy efficiency in buildings. It's typically made from polyurethane or polystyrene and comes in various forms, such as spray foam, rigid foam boards, and foam panels. Insulation foam is applied to walls, roofs, and floors to create a barrier that helps maintain indoor temperatures, reduce energy costs, and enhance comfort. Its excellent insulating properties make it a popular choice for both residential and commercial construction projects.</p>
+          <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
+          <p>5mm , 10mm x 50M</p>
+          <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+      
+<div id="Inquirepic" class="Inquirepic">
+  <div class="Selectitem">
+    Select the Inquiry product
+  </div>
+
+  <div class="inquiryitem">
+<div class="Inquire1">
+  <img id="picture1" src="Insulationfoamsingle.png">
+  <h1>Insulationfoam Single</h1>
+</div>
+
+<div class="Inquire2">
+  <img id="picture2" src="Insulationfoamdouble.png">
+  <h1>Insulationfoam Double</h1>
+</div>
+
+
+
+
+</div>
+
+</div>
+     
+        <div class="ProductDetailstitle">
+           <div class="Detailstitle"><b>Similar Product</b></div>
+        </div>
+    
+        <div class="Product_Picture">
+          <div>
+          <a href="Longspanribtype.html" class="similarproduct"><img id="pic1" src="Longspanribtype.png" alt="https://i.ibb.co/x7VG5vX/longspanribtype.jpg" >
+          <h1>Longspanribtype</h1></a>
+        </div>
+    
+        <div>
+          <a href="BiCpurlins.html" class="similarproduct"><img id="pic2" src="BiCpurlins.png" alt="https://i.ibb.co/yWpPHkS/Bi-Cpurlins.jpg" >
+          <h1>Bi C-Purlins</h1></a>
+        </div>
+    
+        <div>
+          <a href="Giwire.html" class="similarproduct"><img id="pic3" src="Giwire.png" alt="https://i.ibb.co/MhRT8yn/Giwire.webp" >
+          <h1>Gi Wire</h1></a>
+        </div>
+    
+        <div>
+          <a href="Metaltextscrew.html" class="similarproduct"><img id="pic4" src="Metaltextscrew.png" alt="https://i.ibb.co/sCmFFrS/Metaltextscrew.jpg" >
+          <h1>MetalText Screw</h1></a>
+        </div>
+    
+        </div>
+      </div>
+  
+      <div id="overlay"></div>
+    
+    <script>
+                 function promptFunction() {
+        const storage = [];
+        const textarea = document.getElementById("Inquiry");
+
+  
+        
+        document.getElementById('NewProduct').addEventListener('click', function() {
+          var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('Inquirepic')) {
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+
+          }
+          else{
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+      
+        })
+    
+
+      document.getElementById('overlay').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('active')) {
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+          else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+      })
+
+      document.querySelector('.Inquire1').addEventListener('click', function() {
+        
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          
+          let FirstInput = prompt("Please enter the length of the Insulationfoam Single:");
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Insulationfoam Single 10mm X ${FirstInput} `;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire2').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          let FirstInput = prompt("Please enter the thickness of the Insulationfoam Double(5mm / 10mm ):");
+          let SecondInput = prompt("Please enter the length of the Insulationfoam Double:");
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Insulationfoam Double ${FirstInput} X ${SecondInput}`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      
+
+      
+
+  }
+            </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<link rel="stylesheet" href="design.css">
+
+</body>
+</html>

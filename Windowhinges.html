@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AmayaSteelBarTrading</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+  <style>
+  
+   *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+    
+    .SteelProduct{
+        margin-top:0%;
+      }
+           .ProductName{
+          color:white;
+          font-size:50px;
+          font-family:"Montserrat",Sans-serif;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+          margin-top: 5%;
+        }
+  
+        .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 17%;;
+        }
+  
+        .BrandNew img{
+          width: 245px;
+      height: 100px;
+        }
+  
+      .Product{
+        grid-area: Product;
+      }
+  
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+  
+      .ProductDetailstitle{
+        grid-area: ProductDetailstitle;
+        padding: 0px 0px 10px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+       
+      }
+  
+      .Detailstitle{
+        color: darkblue;
+        font-size: 50px;
+      }
+      
+      .Description{
+        grid-area: Description;
+      font-size: 34px;
+      color: dodgerblue;
+      padding: 0px 0px 50px 0px;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      
+      }
+  
+      .Description h1 b{
+        margin-left: 33%;
+        color: darkblue;
+      }
+      .Description h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description p{
+        margin-left: 35px;
+      }
+      #measurement1{
+        margin-left:29%;
+      }
+  
+      .Description button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      height: 20%;
+      margin-bottom:10%;
+      }
+  
+      .Description button img{
+        width: 75px;
+      height: 56px;
+      margin-right: 32px;
+      }
+  
+      .Description button:hover{
+        color: grey;
+      }
+  
+  
+      
+  
+  
+  
+      .Product_Picture{
+        grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
+        display: grid;
+        grid-gap:2%;
+        overflow-x:auto;
+      
+      }
+  
+     .Product_Picture div a img{
+        width: 200px;
+        height: 200px;
+        margin-left: 2%;
+        cursor: pointer;
+      }
+  
+#pic1{
+    margin-left:12%;
+}
+
+  #pic2{
+    margin-left:0%;
+  }
+  
+  #pic3{
+    margin-left:0%;
+  }
+  
+  #pic4{
+    margin-left:0;
+  }
+  
+      .Product_Picture div h1{
+        font-size: 50px;
+        color: darkblue;
+        
+      }
+  
+      .ProductGroup{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "BrandNew"
+    "Product"
+    "Description"
+    "ProductDetailstitle"
+    "Product_Picture"  ;
+    grid-gap:20px;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom:20px;
+  }
+
+  .Inquirepic{
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+    width: 75%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    display: grid;
+grid-template-areas: "Selectitem"
+  "inquiryitem";
+
+  }
+
+  .Inquirepic.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+  #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.overlay-active{
+overflow: hidden;
+}
+
+  .Selectitem{
+    color: darkblue;
+    margin-left: 27%;
+    grid-area: Selectitem;
+    font-size: 40px;
+  }
+
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2 ";
+        display: grid;
+        grid-gap:3%;
+        grid-area: inquiryitem;
+      
+  }
+
+  .inquiryitem h1{
+    color:black;
+    margin-left: 0%;
+  }
+
+  .Inquire1{
+    grid-area: Inquire1;
+    cursor: pointer;
+    margin-left: 16%;
+  }
+
+  .Inquire2{
+    grid-area: Inquire2;
+    cursor: pointer;
+    margin-left: 4%;
+  }
+
+
+  #picture1{
+    width: 50%;
+    height: 50%;
+  }
+
+  #picture2{
+    width: 50%;
+    height: 50%;
+  }
+
+  
+    
+    @media screen and (max-width: 1024px) {
+      .SteelProduct{
+        margin-top: 10%;
+      }
+      
+      .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 0%;
+        }
+      
+      .Product img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+     
+      .Description h1 b{
+        margin-left: 25%;
+        color: darkblue;
+      }
+      
+      .Description button{
+        height:7%
+      }
+      
+      .Cutsize{
+          grid-area: Cutsize;
+          color: darkblue;
+          font-size: 100px;
+         margin-left: 10%;
+        
+        }
+      .Product2 img{
+        width: 70%;
+      height: 100%;
+      margin-left: 15%;
+      }
+      
+      .Description2 h1 b{
+        margin-left: 24%;
+      }
+        
+    
+        
+        .Product_Picture div a img{
+        
+       margin-left:15%;
+        
+        
+      }
+      .Product_Picture div h1{
+        
+        padding-left: 15%;
+      }
+      
+      #pic1{
+        margin-left:15%
+;
+      }
+      
+      #pic2{
+        margin-left:5%
+      }
+      #pic3{
+        margin-left:7%;
+      }
+      #pic4{
+        margin-left:18%;
+      }
+      
+      #measurement1{
+        margin-left:22%;
+      }
+
+  .Selectitem{
+    margin-left: 18%;
+    
+  }
+
+      .Inquirepic{
+        height: 25%;
+      }
+
+
+      #picture1{
+    width: 70%;
+    height: 70%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+  }
+
+      .Inquire1{
+        margin-left: 9%;
+      }
+
+      .Inquire2{
+        margin-left: 0%;
+      }
+      
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2" ;
+    
+  }
+      }
+      </style>
+
+  </head>  
+    
+  <body>
+    
+  
+    <div class="SteelProduct">
+      <b>Hardware Products</b>
+      </div>
+    
+    
+      <div class="ProductName">
+        <b>Window Hinges</b>
+        </div>
+      
+    <div class="ProductGroup">
+        <div class="BrandNew">
+          <b><img src="new.png">BrandNew</b>
+        </div>
+        <div class="Product">
+          <img  src="Windowhinges.png">
+        </div>
+    
+        <div class="Description">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p>Window hinges are the hardware components that allow windows to open and close smoothly. They are typically attached to the window frame and the sash (the part of the window that moves). Depending on the type of window, there are different kinds of hinges, such as butt hinges, friction hinges, and pivot hinges. These hinges ensure that the window operates correctly, providing stability and ease of use.</p>
+          <h1><b id="measurement1"><img src="measurement.png">Orientation</b></h1>
+          <p>Left,Right</p>
+          <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+      
+<div id="Inquirepic" class="Inquirepic">
+  <div class="Selectitem">
+    Select the Inquiry product
+  </div>
+
+  <div class="inquiryitem">
+<div class="Inquire1">
+  <img id="picture1" src="Windowhingesleft.png">
+  <h1>WindowHinges Left</h1>
+</div>
+
+<div class="Inquire2">
+  <img id="picture2" src="Windowhingesright.png">
+  <h1>WindowHinges Right</h1>
+</div>
+
+
+</div>
+
+</div>
+     
+        <div class="ProductDetailstitle">
+           <div class="Detailstitle"><b>Similar Product</b></div>
+        </div>
+    
+        <div class="Product_Picture">
+          <div>
+          <a href="Windowhandle.html" class="similarproduct"><img id="pic1" src="Windowhandle.png" alt="https://i.ibb.co/HKXkMzp/Windowhandle.jpg" >
+          <h1>Window Handle</h1></a>
+        </div>
+    
+        <div>
+          <a href="ZBar.html" class="similarproduct"><img id="pic2" src="ZBar.png" alt="https://i.ibb.co/c2DGCsD/ZBar.png" >
+          <h1>ZBar</h1></a>
+        </div>
+    
+        <div>
+          <a href="Tbar.html" class="similarproduct"><img id="pic3" src="Tbar.png" alt="https://i.ibb.co/61Cy1Zg/Tbar.png" >
+          <h1>T Bar</h1></a>
+        </div>
+    
+        <div>
+          <a href="Ibar.html" class="similarproduct"><img id="pic4" src="Ibar.png" alt="https://i.ibb.co/CWXhpww/Tbar.jpg" >
+          <h1>I Bar</h1></a>
+        </div>
+    
+        </div>
+      </div>
+  
+      <div id="overlay"></div>
+    
+    <script>
+                 function promptFunction() {
+        const storage = [];
+        const textarea = document.getElementById("Inquiry");
+
+  
+        
+        document.getElementById('NewProduct').addEventListener('click', function() {
+          var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('Inquirepic')) {
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+          }
+          else{
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+      
+        })
+    
+
+      document.getElementById('overlay').addEventListener('click', function() {
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          if (Inquirepic.classList.contains('active')) {
+            Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+
+          }
+          else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+            document.body.classList.add('overlay-active');
+            }
+      })
+
+      document.querySelector('.Inquire1').addEventListener('click', function() {
+        
+        var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+        
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `WindowHinges Left`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+  if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+      document.querySelector('.Inquire2').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          let FirstInput = 1;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `WindowHinges Right`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
+
+     
+
+  }
+            </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<link rel="stylesheet" href="design.css">
+
+</body>
+</html>
