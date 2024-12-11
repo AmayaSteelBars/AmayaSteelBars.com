@@ -1,6 +1,4 @@
 
-
-
 body {
   margin: 0;
   padding: 0;
@@ -8,14 +6,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #eee;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  
 }
 
 .slider {
   height: 150vh;
-  margin-top: -10px;
   position: relative;
-  margin-bottom: 5%;
 }
 
 .slider2 {
@@ -361,20 +357,21 @@ body {
 #home{
   width: 100%;
     height: 100%;
-  margin-top:-1%;
+  
 }
 #hometitle{
-  margin-top: 3%;
+  position:relative;
+  top: 40%;
+  transform: translate(0,-60%);
+  font-size: 30px;
+  font-weight:900 ;
+  font-weight: bold;
 }
 
 
 #menupicture{
   width: 100px;
     height: 100px;
-    
-    margin-top: -2%;
-
-  
 }
 
 #amaya{
@@ -384,10 +381,9 @@ text-align: center;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem 1rem 0rem;
     height: 16%;
     z-index: 3000;
 
@@ -510,6 +506,7 @@ grid-template-areas:
 
 .homecontent{
   grid-template-areas: "mainContent" "mainContent2" "contactformat";
+  display: grid;
 }
 
 .SteelProduct{
@@ -560,6 +557,7 @@ grid-template-areas:"background1" "box" ;
 .contactus .title h2{
   color:#fff;
   font-weight: 500;
+  font-weight: bold;
 }
 
 .form{
@@ -778,8 +776,8 @@ grid-template-areas:"background1" "box" ;
   z-index: 100;
  }
    #amaya a img{
-     width: 70px;
-  height: 70px;
+     width: 100%;
+  height: 100%;
    }
    #menu{
   margin-top: 20%;
