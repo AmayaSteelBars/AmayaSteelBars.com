@@ -372,14 +372,9 @@ body {
 text-align: center;
     color: white;
     background-color: darkblue;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem 1rem 0rem;
-    z-index: 3000;
-    width:100%;
     grid-area: amaya;
   
 } 
@@ -390,8 +385,14 @@ text-align: center;
 
 
 .amayatitle{
-  grid-template-areas: "amaya" "sub-menu-wrap";
-  display: grid;
+  grid-template-areas:
+        "amaya"
+        "sub-menu-wrap";
+    display: grid;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 9999999;
 }
 
 
@@ -422,13 +423,10 @@ nav ul li a{
 }
 
 .sub-menu-wrap{
-  position: fixed;
-  width: 100%;
   max-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   transition: max-height 1s;
-  z-index: 3000;
 grid-area:sub-menu-wrap ;
 }
 
@@ -441,7 +439,7 @@ grid-area:sub-menu-wrap ;
   padding: 20px;
   margin: 0px;
   width: 100%;
-  height: 100%;
+  height: max-content;
 }
 
 
