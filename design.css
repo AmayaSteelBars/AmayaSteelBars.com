@@ -351,15 +351,10 @@ body {
   }
 }
 
-
-
-
 #home{
   width: 50px;
     height: 50px;
    
-
-  
 }
 #hometitle{
   font-size: 47px;
@@ -433,7 +428,7 @@ nav ul li a{
   overflow-y: auto;
   overflow-x: hidden;
   transition: max-height 1s;
-  z-index: 200;
+  z-index: 3000;
 grid-area:sub-menu-wrap ;
 }
 
@@ -497,6 +492,7 @@ grid-template-areas:
 
 .homecontent{
   grid-template-areas: "mainContent" "mainContent2" "contactformat";
+  grid-gap: 3%;
   display: grid;
 }
 
@@ -755,32 +751,6 @@ grid-template-areas:"background1" "box" ;
   min-height: 300px;
   padding: 0;
 }
-#amaya{
-  text-align: center;
-  color: white;
-  background-color: darkblue;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height:5%;
-  font-size: 10px;
-  z-index: 100;
- }
-   #amaya a img{
-     width: 100%;
-  height: 100%;
-   }
-   #menu{
-  margin-top: 20%;
-  width:100%;
-  min-height:max-content;
-  background:darkblue;
-  color:white;
-  text-align: center;
-}
-   .sub-menu-wrap{
-     top:5%;
-   }
-  
+
  }
 
