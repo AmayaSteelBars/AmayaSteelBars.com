@@ -384,7 +384,8 @@ text-align: center;
     justify-content: space-between;
     padding: 1rem 0rem 1rem 0rem;
     z-index: 3000;
-    width:100%
+    width:100%;
+    grid-area: amaya;
   
 } 
 .homelink{
@@ -393,19 +394,11 @@ text-align: center;
 }
 
 
-#menu{
-  margin-top: 8%;
-  width: 100%;
-  min-height: 100%;
-  background: darkblue;
-  color: white;
-  text-align: center;
+.amayatitle{
+  grid-template-areas: "amaya" "sub-menu-wrap";
+  display: grid;
 }
-nav{
-  position:absolute;
-  width:100%;
-  
-}
+
 
 
 /*transition design in hover*/
@@ -435,13 +428,13 @@ nav ul li a{
 
 .sub-menu-wrap{
   position: fixed;
-  top: 13%;
   width: 100%;
   max-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   transition: max-height 1s;
   z-index: 200;
+grid-area:sub-menu-wrap ;
 }
 
 .sub-menu-wrap.open-menu{
