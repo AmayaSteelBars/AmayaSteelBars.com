@@ -585,9 +585,11 @@
           </div>
 
             </div>
-         
+
         
         </div>
+         <div class="menuoverlay"></div>
+
 
 <div class="homecontent">
 
@@ -2123,10 +2125,32 @@ Paint thinner is a solvent used to dilute oil-based paints and clean up after pa
   <script>
 
     let submenu=document.getElementById("submenu");
+    
+    let menuoverlay =document.querySelector(".menuoverlay")
 
       function toggleMenu(){
         submenu.classList.toggle("open-menu");
+        
+        
+        menuoverlay.classList.toggle('active');
+        
+        document.body.classList.toggle('overlay-active');
+        
       }
+      
+document.querySelector(".menuoverlay").addEventListener("click",function(){
+  
+  if(menuoverlay.classList.contains("active")){
+    
+    
+    submenu.classList.remove("open-menu");
+        menuoverlay.classList.remove('active');
+        
+        document.body.classList.remove('overlay-active');
+        
+        
+  }
+      })
     </script>
 
   <script>

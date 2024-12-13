@@ -344,10 +344,10 @@ body {
   }
 
   .slider{
-    height: 83vh;
+    height: 55vh;
   }
   .slider2{
-    height: 83vh;
+    height: 53vh;
   }
 }
 
@@ -359,7 +359,6 @@ body {
 #hometitle{
   font-size: 47px;
   font-weight: bold;
-  
 }
 
 
@@ -372,9 +371,11 @@ body {
 text-align: center;
     color: white;
     background-color: darkblue;
+    
     display: flex;
     justify-content: space-between;
     padding: 1rem 0rem 1rem 0rem;
+   
     grid-area: amaya;
   
 } 
@@ -385,14 +386,12 @@ text-align: center;
 
 
 .amayatitle{
-  grid-template-areas:
-        "amaya"
-        "sub-menu-wrap";
-    display: grid;
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    z-index: 9999999;
+  grid-template-areas: "amaya" "sub-menu-wrap";
+  display: grid;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  width: 100%;
 }
 
 
@@ -430,6 +429,28 @@ nav ul li a{
 grid-area:sub-menu-wrap ;
 }
 
+.menuoverlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index:5000 ;
+}
+
+.menuoverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.overlay-active{
+overflow: hidden;
+}
+
 .sub-menu-wrap.open-menu{
   max-height: 50vh;
 }
@@ -439,7 +460,7 @@ grid-area:sub-menu-wrap ;
   padding: 20px;
   margin: 0px;
   width: 100%;
-  height: max-content;
+  height: max-height;
 }
 
 
