@@ -319,6 +319,30 @@ body {
             opacity:0%;
         }
 
+        @media screen and (max-width: 600px) {
+          .slider{
+         height: 150vh;
+          }
+        }
+
+        @media screen and (min-width: 600px) {
+          .slider{
+            height: 150vh;
+          }
+        }
+        @media screen and (min-width: 768px) {
+          .slider{
+            height: 150vh;
+          }
+        }
+
+        @media screen and (min-width: 992px) {
+          .slider{
+            height: 150vh;
+          }
+        }
+
+
 @media screen and (max-width: 1024px) {
   .thumbnail {
     justify-content: start;
@@ -343,9 +367,7 @@ body {
     top: 10%;
   }
 
-  .slider{
-    height: 55vh;
-  }
+  
   .slider2{
     height: 53vh;
   }
