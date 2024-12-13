@@ -2354,6 +2354,8 @@ function navigateTo(page, addToHistory = true) {
     /* Close the submenu if it's open */
     if (submenu.classList.contains('open-menu')) {
         submenu.classList.remove('open-menu');
+        menuoverlay.classList.remove('active');
+        document.body.classList.remove('overlay-active');
     }
 
     if (page === 'Home.html') {
