@@ -319,69 +319,24 @@ body {
             opacity:0%;
         }
 
-        @media screen and (max-width: 600px) {
-          .slider{
-         height: 150vh;
-          }
-        }
-
-        @media screen and (min-width: 600px) {
-          .slider{
-            height: 150vh;
-          }
-        }
-        @media screen and (min-width: 768px) {
-          .slider{
-            height: 150vh;
-          }
-        }
-
-        @media screen and (min-width: 992px) {
-          .slider{
-            height: 150vh;
-          }
-        }
-
-
-@media screen and (max-width: 1024px) {
-  .thumbnail {
-    justify-content: start;
-  }
-
-  .thumbnail2 {
-    justify-content: start;
-  }
-
-  .slider .list .item .content h2 {
-    font-size: 60px;
-  }
-  .slider2 .list2 .item2 .content2 h2 {
-    font-size: 60px;
-  }
-
-  .arrows {
-    top: 10%;
-  }
-
-  .arrows2 {
-    top: 10%;
-  }
-
-  
-  .slider2{
-    height: 53vh;
-  }
-}
+       
+        
+      
 
 #home{
   width: 50px;
     height: 50px;
    
 }
+
 #hometitle{
   font-size: 47px;
   font-weight: bold;
+  position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 
 
 #menupicture{
@@ -756,6 +711,119 @@ grid-template-areas:"background1" "box" ;
 .Product_Picture a{
   text-decoration:none;
 }
+
+
+
+@media screen and (max-width: 300px) {
+  #hometitle{
+    font-size: 17px;
+  }
+
+  .slider{
+ height: 250vh;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  #hometitle{
+    font-size: 21px;
+  }
+
+  .slider{
+ height: 250vh;
+  }
+}
+
+
+@media screen and (min-width: 400px) {
+  #hometitle{
+    font-size: 21px;
+  }
+
+  .slider{
+ height: 250vh;
+  }
+}
+
+
+
+@media screen and (min-width: 500px) {
+
+  #hometitle{
+    font-size: 30px;
+  }
+
+  .slider{
+    height: 150vh;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+
+  #hometitle{
+    font-size: 47px;
+  }
+
+  .slider{
+    height: 150vh;
+  }
+}
+@media screen and (min-width: 768px) {
+
+  #hometitle{
+    font-size: 47px;
+  }
+  .slider{
+    height: 150vh;
+  }
+}
+
+@media screen and (minx-width: 992px) {
+
+  #hometitle{
+    font-size: 47px;
+  }
+
+
+  .slider{
+    height: 150vh;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+.thumbnail {
+justify-content: start;
+}
+
+.thumbnail2 {
+justify-content: start;
+}
+
+.slider .list .item .content h2 {
+font-size: 60px;
+}
+.slider2 .list2 .item2 .content2 h2 {
+font-size: 60px;
+}
+
+.arrows {
+top: 10%;
+}
+
+.arrows2 {
+top: 10%;
+}
+
+
+.slider2{
+height: 53vh;
+}
+}
+
 
 
  @media (max-width:1024px){
