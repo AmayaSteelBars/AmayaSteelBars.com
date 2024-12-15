@@ -324,8 +324,8 @@ body {
       
 
 #home{
-  width: 50px;
-    height: 50px;
+  width: 75px;
+  height: 75px;
    
 }
 
@@ -341,7 +341,7 @@ body {
 
 #menupicture{
   width: 75px;
-    height: 50px;
+    height: 75px;
 }
 
 #amaya{
@@ -715,9 +715,24 @@ grid-template-areas:"background1" "box" ;
 
 
 @media screen and (max-width: 300px) {
-  #hometitle{
-    font-size: 17px;
+  #home{
+    width:30px;
+    height: 30px;
   }
+  #hometitle{
+    font-size: 20px;
+  }
+
+  #menupicture{
+    width: 30px;
+    height: 30px;
+  }
+
+
+
+.sub-menu{
+  padding: 5px;
+}
 
   .slider{
  height: 250vh;
@@ -725,9 +740,28 @@ grid-template-areas:"background1" "box" ;
 }
 
 @media screen and (min-width: 300px) {
-  #hometitle{
-    font-size: 21px;
+  #home{
+    width:40px;
+    height: 40px;
   }
+
+  #hometitle{
+    font-size: 25px;
+  }
+
+  #menupicture{
+    width: 40px;
+    height: 40px;
+  }
+
+  .sub-menu{
+    padding: 15px;
+  }
+
+  .sub-menu-link{
+    font-size:15px;
+  }
+
 
   .slider{
  height: 250vh;
@@ -736,8 +770,19 @@ grid-template-areas:"background1" "box" ;
 
 
 @media screen and (min-width: 400px) {
+ 
+
   #hometitle{
-    font-size: 21px;
+    font-size: 30px;
+  }
+
+  .sub-menu{
+    padding: 20px;
+  }
+
+
+  .sub-menu-link{
+    font-size:20px;
   }
 
   .slider{
@@ -748,9 +793,19 @@ grid-template-areas:"background1" "box" ;
 
 
 @media screen and (min-width: 500px) {
+  #home{
+    width:60px;
+    height: 60px;
+  }
+
 
   #hometitle{
-    font-size: 30px;
+    font-size: 35px;
+  }
+
+  #menupicture{
+    width: 60px;
+    height: 60px;
   }
 
   .slider{
@@ -762,7 +817,11 @@ grid-template-areas:"background1" "box" ;
 @media screen and (min-width: 600px) {
 
   #hometitle{
-    font-size: 47px;
+    font-size: 40px;
+  }
+
+  .sub-menu-link{
+    font-size:25px;
   }
 
   .slider{
@@ -770,19 +829,30 @@ grid-template-areas:"background1" "box" ;
   }
 }
 @media screen and (min-width: 768px) {
+  #home{
+    width:75px;
+    height: 75px;
+  }
+
 
   #hometitle{
-    font-size: 47px;
+    font-size: 45px;
   }
+  
+  #menupicture{
+    width: 75px;
+    height: 75px;
+  }
+
   .slider{
     height: 150vh;
   }
 }
 
-@media screen and (minx-width: 992px) {
+@media screen and (min-width: 992px) {
 
   #hometitle{
-    font-size: 47px;
+    font-size: 50px;
   }
 
 
@@ -792,7 +862,8 @@ grid-template-areas:"background1" "box" ;
 }
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  
 
 
 .thumbnail {
