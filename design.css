@@ -100,6 +100,7 @@ body {
 .slider .list .item .content h2 {
   font-size: 100px;
   margin: 0;
+  font-weight: bold;
 }
 
 .slider2 .list2 .item2 .content2 h2 {
@@ -304,6 +305,8 @@ body {
 
 .sliderbutton {
   font-size: 50px;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .sliderbutton:hover {
@@ -320,15 +323,6 @@ body {
         }
 
        
-        
-      
-
-#home{
-  width: 75px;
-  height: 75px;
-   
-}
-
 #hometitle{
   font-size: 47px;
   font-weight: bold;
@@ -348,13 +342,10 @@ body {
 text-align: center;
     color: white;
     background-color: darkblue;
-    
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0rem 1rem 0rem;
-   
+    padding: 1rem 1rem 1rem 1rem;
     grid-area: amaya;
-  
 } 
 .homelink{
   text-decoration: none;
@@ -500,6 +491,7 @@ grid-template-areas:
   background: linear-gradient(135deg,darkblue 70%, #0f0bee00 80%);
   background-size: contain;
   z-index: 50;
+  font-weight: bold;
 }
 
 
@@ -715,10 +707,7 @@ grid-template-areas:"background1" "box" ;
 
 
 @media screen and (max-width: 300px) {
-  #home{
-    width:30px;
-    height: 30px;
-  }
+
   #hometitle{
     font-size: 20px;
   }
@@ -740,10 +729,7 @@ grid-template-areas:"background1" "box" ;
 }
 
 @media screen and (min-width: 300px) {
-  #home{
-    width:40px;
-    height: 40px;
-  }
+
 
   #hometitle{
     font-size: 25px;
@@ -761,11 +747,36 @@ grid-template-areas:"background1" "box" ;
   .sub-menu-link{
     font-size:15px;
   }
-
-
+  
+  .SteelProduct{
+    font-size: 25px;
+}
   .slider{
- height: 250vh;
+ height: 80vh;
   }
+  
+  .slider .list .item .content {
+width: 250px;
+}
+  
+  .slider .list .item .content h2 {
+font-size: 40px;
+}
+
+.sliderbutton {
+  font-size: 30px;
+}
+
+.thumbnail{
+  height: 140px;
+}
+
+.thumbnail .item {
+  width: 90px;
+  height: 130px;
+}
+
+
 }
 
 
@@ -793,10 +804,7 @@ grid-template-areas:"background1" "box" ;
 
 
 @media screen and (min-width: 500px) {
-  #home{
-    width:60px;
-    height: 60px;
-  }
+
 
 
   #hometitle{
@@ -829,10 +837,7 @@ grid-template-areas:"background1" "box" ;
   }
 }
 @media screen and (min-width: 768px) {
-  #home{
-    width:75px;
-    height: 75px;
-  }
+
 
 
   #hometitle{
