@@ -776,9 +776,35 @@ font-size: 40px;
   height: 130px;
 }
 
+.HardwareProduct{
+  font-size: 35px;
+}
+
+.slider2{
+ height: 80vh;
+  }
 
 }
 
+
+.slider2 .list2 .item2 .content2 {
+width: 250px;
+}
+  
+.slider2 .list2 .item2 .content2 h2 {
+font-size: 40px;
+}
+
+
+
+.thumbnail2{
+  height: 140px;
+}
+
+.thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
+}
 
 @media screen and (min-width: 400px) {
  
@@ -850,7 +876,7 @@ font-size: 40px;
   }
 
   .slider{
-    height: 150vh;
+    height: 100vh;
   }
 }
 
@@ -862,7 +888,7 @@ font-size: 40px;
 
 
   .slider{
-    height: 150vh;
+    height: 100vh;
   }
 }
 
