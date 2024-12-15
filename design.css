@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 
 body {
   margin: 0;
@@ -12,14 +6,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #eee;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  
 }
 
 .slider {
   height: 150vh;
-  margin-top: -10px;
   position: relative;
-  margin-bottom: 5%;
 }
 
 .slider2 {
@@ -327,95 +319,58 @@ body {
             opacity:0%;
         }
 
-@media screen and (max-width: 1024px) {
-  .thumbnail {
-    justify-content: start;
-  }
-
-  .thumbnail2 {
-    justify-content: start;
-  }
-
-  .slider .list .item .content h2 {
-    font-size: 60px;
-  }
-  .slider2 .list2 .item2 .content2 h2 {
-    font-size: 60px;
-  }
-
-  .arrows {
-    top: 10%;
-  }
-
-  .arrows2 {
-    top: 10%;
-  }
-
-  .slider{
-    height: 83vh;
-  }
-  .slider2{
-    height: 83vh;
-  }
-}
-
-
-
+       
+        
+      
 
 #home{
-  width: 100%;
-    height: 100%;
-  margin-top:-1%;
+  width: 75px;
+  height: 75px;
+   
 }
+
 #hometitle{
-  margin-top: 3%;
+  font-size: 47px;
+  font-weight: bold;
+  position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 
 
 #menupicture{
-  width: 100px;
-    height: 100px;
-    
-    margin-top: -2%;
-
-  
+  width: 75px;
+    height: 75px;
 }
 
 #amaya{
 text-align: center;
     color: white;
     background-color: darkblue;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
-    height: 16%;
-    z-index: 3000;
-
+    padding: 1rem 0rem 1rem 0rem;
+   
+    grid-area: amaya;
   
 } 
-#amaya a{
+.homelink{
   text-decoration: none;
   color: #eee;
 }
 
 
-#menu{
-  margin-top: 8%;
+.amayatitle{
+  grid-template-areas: "amaya" "sub-menu-wrap";
+  display: grid;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
   width: 100%;
-  min-height: 100%;
-  background: darkblue;
-  color: white;
-  text-align: center;
 }
-nav{
-  position:absolute;
-  width:100%;
-  
-}
+
 
 
 /*transition design in hover*/
@@ -444,14 +399,33 @@ nav ul li a{
 }
 
 .sub-menu-wrap{
-  position: fixed;
-  top: 13%;
-  width: 100%;
   max-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   transition: max-height 1s;
-  z-index: 200;
+grid-area:sub-menu-wrap ;
+}
+
+.menuoverlay{
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+  z-index:5000 ;
+}
+
+.menuoverlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.overlay-active{
+overflow: hidden;
 }
 
 .sub-menu-wrap.open-menu{
@@ -463,7 +437,7 @@ nav ul li a{
   padding: 20px;
   margin: 0px;
   width: 100%;
-  height: 100%;
+  height: max-height;
 }
 
 
@@ -504,6 +478,18 @@ grid-template-areas:
 
 #mainContent{
   margin-top: 10%;
+  grid-area: mainContent;
+}
+
+#mainContent2{
+  grid-area: mainContent2;
+}
+
+
+.homecontent{
+  grid-template-areas: "mainContent" "mainContent2" "contactformat";
+  grid-gap: 3%;
+  display: grid;
 }
 
 .SteelProduct{
@@ -526,15 +512,23 @@ grid-template-areas:
 }
 
 
+.contactformat{
+  grid-area: contactformat;
+grid-template-areas:"background1" "box" ;
+
+}
+
 
 #background{
   background: linear-gradient(90deg,#0e3959 0%,#0e3959 30%,#03a9f5 30%,#03a9f5 100%);
   height: 500px;
+  grid-area: background1;
 }
 
 .contactus{
   position:relative;
   width:100%;
+  max-width: 75%;
   padding: 40px 100px;
 }
 .contactus .title{
@@ -546,6 +540,7 @@ grid-template-areas:
 .contactus .title h2{
   color:#fff;
   font-weight: 500;
+  font-weight: bold;
 }
 
 .form{
@@ -565,7 +560,12 @@ grid-template-areas:
   background: #fff;
   box-shadow: 0 5px 35px rgb(0,0,0,0,15);
 }
+
+
+
+
 .box{
+  grid-area: box;
   position:relative;
   display:grid;
   grid-template-columns: 2fr 1fr;
@@ -713,6 +713,190 @@ grid-template-areas:
 }
 
 
+
+@media screen and (max-width: 300px) {
+  #home{
+    width:30px;
+    height: 30px;
+  }
+  #hometitle{
+    font-size: 20px;
+  }
+
+  #menupicture{
+    width: 30px;
+    height: 30px;
+  }
+
+
+
+.sub-menu{
+  padding: 5px;
+}
+
+  .slider{
+ height: 250vh;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  #home{
+    width:40px;
+    height: 40px;
+  }
+
+  #hometitle{
+    font-size: 25px;
+  }
+
+  #menupicture{
+    width: 40px;
+    height: 40px;
+  }
+
+  .sub-menu{
+    padding: 15px;
+  }
+
+  .sub-menu-link{
+    font-size:15px;
+  }
+
+
+  .slider{
+ height: 250vh;
+  }
+}
+
+
+@media screen and (min-width: 400px) {
+ 
+
+  #hometitle{
+    font-size: 30px;
+  }
+
+  .sub-menu{
+    padding: 20px;
+  }
+
+
+  .sub-menu-link{
+    font-size:20px;
+  }
+
+  .slider{
+ height: 250vh;
+  }
+}
+
+
+
+@media screen and (min-width: 500px) {
+  #home{
+    width:60px;
+    height: 60px;
+  }
+
+
+  #hometitle{
+    font-size: 35px;
+  }
+
+  #menupicture{
+    width: 60px;
+    height: 60px;
+  }
+
+  .slider{
+    height: 150vh;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+
+  #hometitle{
+    font-size: 40px;
+  }
+
+  .sub-menu-link{
+    font-size:25px;
+  }
+
+  .slider{
+    height: 150vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  #home{
+    width:75px;
+    height: 75px;
+  }
+
+
+  #hometitle{
+    font-size: 45px;
+  }
+  
+  #menupicture{
+    width: 75px;
+    height: 75px;
+  }
+
+  .slider{
+    height: 150vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  #hometitle{
+    font-size: 50px;
+  }
+
+
+  .slider{
+    height: 150vh;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  
+
+
+.thumbnail {
+justify-content: start;
+}
+
+.thumbnail2 {
+justify-content: start;
+}
+
+.slider .list .item .content h2 {
+font-size: 60px;
+}
+.slider2 .list2 .item2 .content2 h2 {
+font-size: 60px;
+}
+
+.arrows {
+top: 10%;
+}
+
+.arrows2 {
+top: 10%;
+}
+
+
+.slider2{
+height: 53vh;
+}
+}
+
+
+
  @media (max-width:1024px){
  
   body{
@@ -747,32 +931,6 @@ grid-template-areas:
   min-height: 300px;
   padding: 0;
 }
-#amaya{
-  text-align: center;
-  color: white;
-  background-color: darkblue;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height:5%;
-  font-size: 10px;
-  z-index: 100;
- }
-   #amaya a img{
-     width: 70px;
-  height: 70px;
-   }
-   #menu{
-  margin-top: 20%;
-  width:100%;
-  min-height:max-content;
-  background:darkblue;
-  color:white;
-  text-align: center;
-}
-   .sub-menu-wrap{
-     top:5%;
-   }
-  
+
  }
 

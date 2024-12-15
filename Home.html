@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="AmayaSteelBars - Quality Metals and More">
 <meta property="og:description" content="Explore our wide range of high-quality metals, tailored to meet your business needs.">
 <meta property="og:image" content="Logo.jpg">
@@ -36,14 +37,11 @@
 
   <div id="loadingSpinner">Loading...</div>
   
+  <div class="amayatitle">
 <div id="amaya"><a class="homelink" href="Home.html"><img id="home" src="home3.png"></a>
-  <a class="homelink" href="Home.html"><h1 id="hometitle">AmayaSteelBarTrading</h1></a><img id="menupicture" src="menu3.png" onclick="toggleMenu()">
+  <a class="homelink" href="Home.html"><div id="hometitle">AmayaSteelBarTrading</div></a><img id="menupicture" src="menu3.png" onclick="toggleMenu()">
 </div>
 
-  <div id="menu">
-    <nav>
-    
-  
           <div class="sub-menu-wrap" id="submenu">
             <div class="sub-menu">
               <div class="product">
@@ -588,11 +586,13 @@
           </div>
 
             </div>
-          </div>
-        </nav>
-  </div>
+
+        
+        </div>
+         <div class="menuoverlay"></div>
 
 
+<div class="homecontent">
 
 <div id="mainContent">
 <div class="SteelProduct">
@@ -2023,7 +2023,7 @@ Paint thinner is a solvent used to dilute oil-based paints and clean up after pa
   </div>
 </div>
 </div>
-
+<div class="contactformat">
 
         <div id="background">
           <div class="contactus">
@@ -2119,15 +2119,39 @@ Paint thinner is a solvent used to dilute oil-based paints and clean up after pa
           </div>
         </div>
     
-    
+</div>
+
+      </div>
 
   <script>
 
     let submenu=document.getElementById("submenu");
+    
+    let menuoverlay =document.querySelector(".menuoverlay")
 
       function toggleMenu(){
         submenu.classList.toggle("open-menu");
+        
+        
+        menuoverlay.classList.toggle('active');
+        
+        document.body.classList.toggle('overlay-active');
+        
       }
+      
+document.querySelector(".menuoverlay").addEventListener("click",function(){
+  
+  if(menuoverlay.classList.contains("active")){
+    
+    
+    submenu.classList.remove("open-menu");
+        menuoverlay.classList.remove('active');
+        
+        document.body.classList.remove('overlay-active');
+        
+        
+  }
+      })
     </script>
 
   <script>
@@ -2331,6 +2355,8 @@ function navigateTo(page, addToHistory = true) {
     /* Close the submenu if it's open */
     if (submenu.classList.contains('open-menu')) {
         submenu.classList.remove('open-menu');
+        menuoverlay.classList.remove('active');
+        document.body.classList.remove('overlay-active');
     }
 
     if (page === 'Home.html') {
