@@ -10,11 +10,15 @@
  
   <style>
   
-  *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+  
+  html, body {
+    outline: 2px solid red; /* Highlights the boundaries */
+    overflow-x: hidden; /* Temporarily prevents horizontal overflow */
+}
+
+* {
+    outline: 1px dashed blue; /* Outlines all elements for debugging */
+}
     
     
            .ProductName{
@@ -449,7 +453,8 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 
-<link rel="stylesheet" href="design.css">
+
+<link rel="stylesheet" href="design.css">
 
 </body>
 </html>
