@@ -231,6 +231,7 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   overflow: auto;
+  overflow-y: hidden;
 }
 
 .thumbnail2 {
@@ -244,6 +245,7 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
   overflow: auto;
+  overflow-y: hidden;
 }
 
 .thumbnail::-webkit-scrollbar {
@@ -491,7 +493,7 @@ grid-template-areas:
   background: linear-gradient(135deg,darkblue 70%, #0f0bee00 80%);
   background-size: contain;
   z-index: 50;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 
@@ -501,6 +503,7 @@ grid-template-areas:
   font-family: "Montserrat", Sans-serif;
   background: linear-gradient(135deg,darkblue 70%, #0f0bee00 80%);
   z-index: 50;
+  font-weight: 800;
 }
 
 
@@ -723,9 +726,62 @@ grid-template-areas:"background1" "box" ;
   padding: 5px;
 }
 
-  .slider{
- height: 250vh;
-  }
+.SteelProduct{
+  font-size: 30px;
+}
+.slider{
+height: 85vh;
+}
+
+.slider .list .item .content {
+width: 250px;
+}
+
+.slider .list .item .content h2 {
+font-size: 40px;
+}
+
+.sliderbutton {
+font-size: 30px;
+}
+
+.thumbnail{
+height: 140px;
+}
+
+.thumbnail .item {
+width: 90px;
+height: 130px;
+}
+
+.HardwareProduct{
+font-size: 30px;
+background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+}
+
+.slider2{
+height: 85vh;
+}
+
+
+.slider2 .list2 .item2 .content2 {
+width: 250px;
+}
+
+.slider2 .list2 .item2 .content2 h2 {
+font-size: 40px;
+}
+
+
+
+.thumbnail2{
+height: 140px;
+}
+
+.thumbnail2 .item2 {
+width: 90px;
+height: 130px;
+}
 }
 
 @media screen and (min-width: 300px) {
@@ -748,62 +804,65 @@ grid-template-areas:"background1" "box" ;
     font-size:15px;
   }
   
+
   .SteelProduct{
-    font-size: 25px;
-}
+    font-size: 30px;
+  }
   .slider{
- height: 80vh;
+  height: 85vh;
   }
   
   .slider .list .item .content {
-width: 250px;
-}
+  width: 250px;
+  }
   
   .slider .list .item .content h2 {
-font-size: 40px;
-}
-
-.sliderbutton {
-  font-size: 30px;
-}
-
-.thumbnail{
-  height: 140px;
-}
-
-.thumbnail .item {
-  width: 90px;
-  height: 130px;
-}
-
-.HardwareProduct{
-  font-size: 35px;
-}
-
-.slider2{
- height: 80vh;
+  font-size: 40px;
   }
-
-}
-
-
-.slider2 .list2 .item2 .content2 {
-width: 250px;
-}
   
-.slider2 .list2 .item2 .content2 h2 {
-font-size: 40px;
-}
-
-
-
-.thumbnail2{
+  .sliderbutton {
+  font-size: 30px;
+  }
+  
+  .thumbnail{
   height: 140px;
-}
-
-.thumbnail2 .item2 {
+  }
+  
+  .thumbnail .item {
   width: 90px;
   height: 130px;
+  }
+  
+  .HardwareProduct{
+  font-size: 30px;
+  background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+  }
+  
+  .slider2{
+  height: 85vh;
+  }
+  
+  
+  .slider2 .list2 .item2 .content2 {
+  width: 250px;
+  }
+  
+  .slider2 .list2 .item2 .content2 h2 {
+  font-size: 40px;
+  }
+  
+  
+  
+  .thumbnail2{
+  height: 140px;
+  }
+  
+  .thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
+  }
+  
+
 }
 
 @media screen and (min-width: 400px) {
@@ -822,8 +881,62 @@ font-size: 40px;
     font-size:20px;
   }
 
+
+  .SteelProduct{
+    font-size: 30px;
+  }
   .slider{
- height: 250vh;
+  height: 85vh;
+  }
+  
+  .slider .list .item .content {
+  width: 250px;
+  }
+  
+  .slider .list .item .content h2 {
+  font-size: 40px;
+  }
+  
+  .sliderbutton {
+  font-size: 30px;
+  }
+  
+  .thumbnail{
+  height: 140px;
+  }
+  
+  .thumbnail .item {
+  width: 90px;
+  height: 130px;
+  }
+  
+  .HardwareProduct{
+  font-size: 30px;
+  background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+  }
+  
+  .slider2{
+  height: 85vh;
+  }
+  
+  
+  .slider2 .list2 .item2 .content2 {
+  width: 250px;
+  }
+  
+  .slider2 .list2 .item2 .content2 h2 {
+  font-size: 40px;
+  }
+  
+  
+  
+  .thumbnail2{
+  height: 140px;
+  }
+  
+  .thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
   }
 }
 
@@ -842,8 +955,61 @@ font-size: 40px;
     height: 60px;
   }
 
+  .SteelProduct{
+    font-size: 30px;
+  }
   .slider{
-    height: 150vh;
+  height: 83vh;
+  }
+  
+  .slider .list .item .content {
+  width: 300px;
+  }
+  
+  .slider .list .item .content h2 {
+  font-size: 40px;
+  }
+  
+  .sliderbutton {
+  font-size: 30px;
+  }
+  
+  .thumbnail{
+  height: 140px;
+  }
+  
+  .thumbnail .item {
+  width: 90px;
+  height: 130px;
+  }
+  
+  .HardwareProduct{
+  font-size: 30px;
+  background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+  }
+  
+  .slider2{
+  height: 83vh;
+  }
+  
+  
+  .slider2 .list2 .item2 .content2 {
+  width: 300px;
+  }
+  
+  .slider2 .list2 .item2 .content2 h2 {
+  font-size: 40px;
+  }
+  
+  
+  
+  .thumbnail2{
+  height: 140px;
+  }
+  
+  .thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
   }
 }
 
@@ -858,8 +1024,61 @@ font-size: 40px;
     font-size:25px;
   }
 
+  .SteelProduct{
+    font-size: 30px;
+  }
   .slider{
-    height: 150vh;
+  height: 80vh;
+  }
+  
+  .slider .list .item .content {
+  width: 350px;
+  }
+  
+  .slider .list .item .content h2 {
+  font-size: 40px;
+  }
+  
+  .sliderbutton {
+  font-size: 30px;
+  }
+  
+  .thumbnail{
+  height: 140px;
+  }
+  
+  .thumbnail .item {
+  width: 90px;
+  height: 130px;
+  }
+  
+  .HardwareProduct{
+  font-size: 30px;
+  background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+  }
+  
+  .slider2{
+  height: 80vh;
+  }
+  
+  
+  .slider2 .list2 .item2 .content2 {
+  width: 350px;
+  }
+  
+  .slider2 .list2 .item2 .content2 h2 {
+  font-size: 40px;
+  }
+  
+  
+  
+  .thumbnail2{
+  height: 140px;
+  }
+  
+  .thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -875,8 +1094,61 @@ font-size: 40px;
     height: 75px;
   }
 
+  .SteelProduct{
+    font-size: 30px;
+  }
   .slider{
-    height: 100vh;
+  height: 80vh;
+  }
+  
+  .slider .list .item .content {
+  width: 350px;
+  }
+  
+  .slider .list .item .content h2 {
+  font-size: 40px;
+  }
+  
+  .sliderbutton {
+  font-size: 30px;
+  }
+  
+  .thumbnail{
+  height: 140px;
+  }
+  
+  .thumbnail .item {
+  width: 90px;
+  height: 130px;
+  }
+  
+  .HardwareProduct{
+  font-size: 30px;
+  background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+  }
+  
+  .slider2{
+  height: 80vh;
+  }
+  
+  
+  .slider2 .list2 .item2 .content2 {
+  width: 350px;
+  }
+  
+  .slider2 .list2 .item2 .content2 h2 {
+  font-size: 40px;
+  }
+  
+  
+  
+  .thumbnail2{
+  height: 140px;
+  }
+  
+  .thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
   }
 }
 
@@ -890,6 +1162,64 @@ font-size: 40px;
   .slider{
     height: 100vh;
   }
+
+  .SteelProduct{
+    font-size: 30px;
+  }
+  .slider{
+  height: 76vh;
+  }
+  
+  .slider .list .item .content {
+  width: 500px;
+  }
+  
+  .slider .list .item .content h2 {
+  font-size: 40px;
+  }
+  
+  .sliderbutton {
+  font-size: 30px;
+  }
+  
+  .thumbnail{
+  height: 140px;
+  }
+  
+  .thumbnail .item {
+  width: 90px;
+  height: 130px;
+  }
+  
+  .HardwareProduct{
+  font-size: 30px;
+  background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+  }
+  
+  .slider2{
+  height: 76vh;
+  }
+  
+  
+  .slider2 .list2 .item2 .content2 {
+  width: 500px;
+  }
+  
+  .slider2 .list2 .item2 .content2 h2 {
+  font-size: 40px;
+  }
+  
+  
+  
+  .thumbnail2{
+  height: 140px;
+  }
+  
+  .thumbnail2 .item2 {
+  width: 90px;
+  height: 130px;
+  }
+
 }
 
 
@@ -906,10 +1236,27 @@ justify-content: start;
 }
 
 .slider .list .item .content h2 {
-font-size: 60px;
+font-size: 50px;
 }
+
+
+.slider .list .item .content {
+  width: 700px;
+  }
+
+
+  .thumbnail{
+    height: 100px;
+    }
+
+  .thumbnail .item {
+    width: 45px;
+    height: 65px;
+    }
+
+
 .slider2 .list2 .item2 .content2 h2 {
-font-size: 60px;
+font-size: 50px;
 }
 
 .arrows {
@@ -920,10 +1267,6 @@ top: 10%;
 top: 10%;
 }
 
-
-.slider2{
-height: 53vh;
-}
 }
 
 
