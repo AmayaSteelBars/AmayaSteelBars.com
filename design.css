@@ -10,6 +10,10 @@ body {
   
 }
 
+#content{
+  grid-area: content1 ;
+}
+
 .slider {
   height: 150vh;
   position: relative;
@@ -478,7 +482,7 @@ grid-template-areas:
 
 
 .homecontent{
-  grid-template-areas: "mainContent" "mainContent2" "contactformat";
+  grid-template-areas:"content1" "mainContent" "mainContent2" "contactformat";
   grid-gap: 5%;
   display: grid;
   overflow-y: auto; 
