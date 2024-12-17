@@ -10,14 +10,15 @@
  
   <style>
   
-
+        .SteelProduct{
+        margin-top: 0%;
+      }
     
            .ProductName{
           color:white;
           font-size:50px;
           font-family:"Montserrat",Sans-serif;
           background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
-          margin-top: 5%;
         }
   
         .BrandNew{
@@ -233,9 +234,29 @@
     "ProductDetailstitle"
     "Product_Picture"  ;
     grid-gap:20px;
-    margin-top: 20px;
+    
     background-color: white;
-    margin-bottom:20px;
+    
+  }
+  
+  @media screen and (min-width: 300px) {
+    .SteelProduct{
+        margin-top: 5%;
+      }
+    
+    .ProductName{
+      font-size: 30px;
+    }
+    .BrandNew{
+      font-size: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 400px) {
+    
+        .BrandNew{
+      font-size: 30px;
+    }
   }
     
     @media screen and (max-width: 1024px) {

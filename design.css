@@ -1,3 +1,17 @@
+html, body {
+    outline: 10px solid red; /* Highlights the boundaries */
+    overflow-x: hidden; /* Temporarily prevents horizontal overflow */
+    z-index: 9999999999;
+}
+
+#background, .box {
+    outline: 2px solid red; /* See their bounds */
+}
+
+* {
+    outline: 1px dashed blue; /* Outlines all elements for debugging */
+}
+
 
 body {
   margin: 0;
@@ -6,7 +20,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #eee;
-
   
 }
 
@@ -488,7 +501,6 @@ grid-template-areas:
   overflow-y: auto; 
  scroll-snap-type: y mandatory;
  height: 100vh;
- margin-top: 7%;
 }
 
 .homecontent > div{
@@ -496,8 +508,6 @@ scroll-snap-align: start;
 }
 
 .SteelProduct{
-  position: static;
-  top: 15%;
   font-size: 50px;
   font-family: "Montserrat", Sans-serif;
   background: linear-gradient(135deg,darkblue 70%, #0f0bee00 80%);
@@ -525,7 +535,7 @@ grid-template-areas:"background1" "box" ;
 
 #background{
   background: linear-gradient(90deg,#0e3959 0%,#0e3959 30%,#03a9f5 30%,#03a9f5 100%);
-  height: 200px;
+  height: max-content;
   grid-area: background1;
   
 }
@@ -541,12 +551,11 @@ grid-template-areas:"background1" "box" ;
   justify-content: center;
   align-items: center;
   font-size: 2em;
-}
-.contactus .title h2{
   color:#fff;
   font-weight: 500;
   font-weight: bold;
 }
+
 
 .form{
   grid-area: form;
@@ -574,13 +583,11 @@ grid-template-areas:"background1" "box" ;
   position:relative;
   display:grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 5fr 4fr;
   grid-template-areas: 
   "form info"
   "form map"
   "aboutus aboutus";
-  grid-gap:20px;
-  margin-top: 20px;
+  grid-gap:10px;
 }
 .contact h3{
   color: #0e3959;
@@ -607,7 +614,6 @@ grid-template-areas:"background1" "box" ;
 .inputbox{
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
   width:50%;
 }
 .formbox .row100 .inputbox{
@@ -627,7 +633,6 @@ grid-template-areas:"background1" "box" ;
   border: 1px solid #333;
   resize: none;
   min-height: 220px;
-  margin-bottom: 10px;
 }
 
 .inputbox input[type="submit"]{
@@ -657,7 +662,6 @@ grid-template-areas:"background1" "box" ;
 .info .infobox div{
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 .info .infobox div span{
   min-width:40px;
@@ -819,7 +823,7 @@ height: 130px;
     font-size: 30px;
   }
   .slider{
-  height: 85vh;
+  height: 650px;
   }
   
   .slider .list .item .content {
@@ -849,7 +853,7 @@ height: 130px;
   }
   
   .slider2{
-  height: 85vh;
+  height: 650px;
   }
   
   
@@ -1310,7 +1314,6 @@ top: 10%;
         "map"
         "aboutus";
     grid-gap: 20px;
-    margin-top: 20px;
 }
 .formbox .row50{
   gap: 0;
