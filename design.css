@@ -1,16 +1,4 @@
-html, body {
-    outline: 10px solid red; /* Highlights the boundaries */
-    overflow-x: hidden; /* Temporarily prevents horizontal overflow */
-    z-index: 9999999999;
-}
 
-#background, .box {
-    outline: 2px solid red; /* See their bounds */
-}
-
-* {
-    outline: 1px dashed blue; /* Outlines all elements for debugging */
-}
 
 
 body {
@@ -25,6 +13,7 @@ body {
 
 #content{
   grid-area: content1 ;
+  margin-bottom: 7%;
 }
 
 .slider {
