@@ -325,8 +325,8 @@ body {
 /*music*/
  #playbutton {
             display: none;
-            margin-top: 20px;
             opacity:0%;
+            position: fixed;
         }
 
        
@@ -558,6 +558,7 @@ grid-template-areas:"background1" "box" ;
 .aboutus{
   grid-area: aboutus;
 }
+
 .contact{
   padding: 40px;
   background: #fff;
@@ -700,7 +701,6 @@ grid-template-areas:"background1" "box" ;
  }
 .aboutus{
   background: #0e3959;
-  padding-left: 30px;
 }
 .aboutus span{
   font-size: 35px;
