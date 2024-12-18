@@ -25,7 +25,8 @@
           grid-area: BrandNew;
           color: darkblue;
           font-size: 100px;
-         margin-left: 17%;;
+         display: flex;
+         justify-content: center;
         }
   
         .BrandNew img{
@@ -35,12 +36,13 @@
   
       .Product{
         grid-area: Product;
+        display: flex;
+        justify-content: center;
       }
   
       .Product img{
         width: 70%;
       height: 100%;
-      margin-left: 15%;
       }
   
       .ProductDetailstitle{
@@ -59,18 +61,17 @@
       
       .Description{
         grid-area: Description;
-      font-size: 34px;
       color: dodgerblue;
-      padding: 0px 0px 50px 0px;
       border-style: solid;
       border-width: 0px 0px 3px 0px;
       border-color: #090909;
-      
       }
   
       .Description h1 b{
-        margin-left: 33%;
         color: darkblue;
+        display: flex;
+        justify-content: center;
+        font-size: 34px;
       }
       .Description h1 b img{
         width: 96px;
@@ -78,7 +79,7 @@
       }
   
       .Description p{
-        margin-left: 91px;
+        font-size: 34px;
       }
       #measurement1{
         margin-left:15%;
@@ -241,15 +242,29 @@
   
   @media screen and (min-width: 300px) {
     .SteelProduct{
-        margin-top: 5%;
+        margin-top: 15%;
       }
     
     .ProductName{
       font-size: 30px;
     }
+  
+  .BrandNew img{
+      width: 122px;
+      height: 50px;
+        }
+    
     .BrandNew{
       font-size: 30px;
     }
+    
+          .Description h1 b{
+        font-size:30px ;
+      }
+      .Description h1 b img{
+        width: 80px;
+      height: 50px;
+      }
   }
   
   @media screen and (min-width: 400px) {
@@ -260,12 +275,7 @@
   }
     
     @media screen and (max-width: 1024px) {
-      .BrandNew{
-          grid-area: BrandNew;
-          color: darkblue;
-          font-size: 100px;
-         margin-left: 0%;
-        }
+    
       
       .Product img{
         width: 70%;

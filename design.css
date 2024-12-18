@@ -558,6 +558,18 @@ grid-template-areas:"background1" "box" ;
 .aboutus{
   grid-area: aboutus;
 }
+.aboutusTitle{
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.aboutusDescription{
+  display: flex;
+  justify-content: center;
+  font-size:1rem;
+}
 
 .contact{
   padding: 40px;
@@ -812,7 +824,7 @@ height: 130px;
     font-size: 30px;
   }
   .slider{
-  height: 650px;
+  height: 85vh;
   }
   
   .slider .list .item .content {
@@ -842,7 +854,7 @@ height: 130px;
   }
   
   .slider2{
-  height: 650px;
+  height: 88vh;
   }
   
   
