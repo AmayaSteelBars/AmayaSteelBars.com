@@ -16,7 +16,7 @@
     
            .ProductName{
           color:white;
-          font-size:50px;
+          font-size:2rem;
           font-family:"Montserrat",Sans-serif;
           background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
         }
@@ -24,7 +24,6 @@
         .BrandNew{
           grid-area: BrandNew;
           color: darkblue;
-          font-size: 100px;
          display: flex;
          justify-content: center;
         }
@@ -41,7 +40,7 @@
       }
   
       .Product img{
-        width: 70%;
+        width: 100%;
       height: 100%;
       }
   
@@ -80,27 +79,29 @@
   
       .Description p{
         font-size: 34px;
+        padding-left: 1rem;
+    padding-right: 1rem;
       }
-      #measurement1{
-        margin-left:15%;
-      }
+
+      
   
       .Description button{
         color: white;
       background: darkblue;
-      font-size: 70px;
-      border-radius: 20px;
+      font-size: 2rem;
+      border-radius: 25px;
       cursor: pointer;
       font-family:  "Montserrat", sans-serif;;
       width: 100%;
       height: 20%;
-      margin-bottom:10%;
+      justify-items: center;
+        display: flex;
+        justify-content: center;
       }
   
       .Description button img{
         width: 75px;
       height: 56px;
-      margin-right: 32px;
       }
   
       .Description button:hover{
@@ -111,9 +112,8 @@
       .Cutsize{
           grid-area: Cutsize;
           color: darkblue;
-          font-size: 100px;
-         margin-left: 17%;
-        
+        display: flex;
+        justify-content: center;
         }
   
         .Cutsize img{
@@ -126,27 +126,25 @@
       }
   
       .Product2 img{
-        width: 70%;
+        width: 100%;
       height: 100%;
-      margin-left: 18%;
+      
       }
      
    
       .Description2{
         grid-area: Description2;
-      font-size: 34px;
       color: dodgerblue;
-      padding: 0px 0px 100px 0px;
       border-style: solid;
       border-width: 0px 0px 3px 0px;
       border-color: #090909;
-      
-      margin-bottom:10%;
+     
       }
   
       .Description2 h1 b{
-        margin-left: 33%;
         color: darkblue;
+        display: flex;
+        justify-content: center;
       }
   
       .Description2 h1 b img{
@@ -155,12 +153,10 @@
       }
   
       .Description2 p{
-        margin-left: 91px;
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
       
-      #measurement2{
-        margin-left:18%;
-      }
     
       .Description2 button{
         color: white;
@@ -177,7 +173,6 @@
       .Description2 button img{
         width: 75px;
       height: 56px;
-      margin-right: 32px;
        
       }
   
@@ -198,7 +193,6 @@
      .Product_Picture div a img{
         width: 200px;
         height: 200px;
-        margin-left: 2%;
         cursor: pointer;
       }
   
@@ -242,28 +236,48 @@
   
   @media screen and (min-width: 300px) {
     .SteelProduct{
-        margin-top: 15%;
+        margin-top: 9%;
       }
     
     .ProductName{
-      font-size: 30px;
+      font-size:2rem;
     }
   
   .BrandNew img{
-      width: 122px;
-      height: 50px;
+      width: 80px;
+      height: 40px;
         }
-    
-    .BrandNew{
-      font-size: 30px;
-    }
     
           .Description h1 b{
         font-size:30px ;
       }
       .Description h1 b img{
-        width: 80px;
-      height: 50px;
+        width: 60px;
+      height: 40px;
+      }
+
+      .Description p{
+        font-size: 20px;
+      }
+      .Description button{
+        height: 8%;
+        font-size: 30px;
+      }
+      .Description button img{
+        width: 50px;
+      height: 30px;
+      }
+
+
+      .Cutsize img {
+    width: 60px;
+    height: 40px;
+}
+
+
+.Description2 h1 b img{
+        width: 60px;
+      height: 40px;
       }
   }
   
@@ -277,62 +291,7 @@
     @media screen and (max-width: 1024px) {
     
       
-      .Product img{
-        width: 70%;
-      height: 100%;
-      margin-left: 15%;
-      }
-     
-      .Description h1 b{
-        margin-left: 25%;
-        color: darkblue;
-      }
-      
-      .Description button{
-        height:13%
-      }
-      
-      .Cutsize{
-          grid-area: Cutsize;
-          color: darkblue;
-          font-size: 100px;
-         margin-left: 10%;
-        
-        }
-      .Product2 img{
-        width: 70%;
-      height: 100%;
-      margin-left: 15%;
-      }
-      
-      .Description2 h1 b{
-        margin-left: 24%;
-      }
-        
-      .Description2 button{
-        height:13%;
-      }
     
-        
-        .Product_Picture div a img{
-        
-       margin-left:15%;
-        
-        
-      }
-      .Product_Picture div h1{
-        
-        padding-left: 8%;
-      }
-      #pic2{
-        margin-left:15%
-      }
-      #pic3{
-        margin-left:10%;
-      }
-      #pic4{
-        margin-left:10%;
-      }
       }
       </style>
 
@@ -352,7 +311,7 @@
       
     <div class="ProductGroup">
         <div class="BrandNew">
-          <b><img src="new.png">BrandNew</b>
+          <h1><b><img src="new.png">BrandNew</b></h1>
         </div>
         <div class="Product">
           <img  src="anglebar.png">
@@ -367,7 +326,9 @@
         </div>
      
         <div class="Cutsize">
+          <h1>
           <b><img src="cut.png">Cut size</b>
+        </h1>
         </div>
         <div class="Product2">
           <img  src="anglebarcutsize.png">
