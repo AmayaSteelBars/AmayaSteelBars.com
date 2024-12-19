@@ -2357,6 +2357,8 @@ function navigateTo(page, addToHistory = true) {
     const mainContentDiv2 = document.getElementById('mainContent2');
     const submenu = document.getElementById('submenu');
     const loadingSpinner = document.getElementById('loadingSpinner');
+    
+    const homecontent = document.querySelector(".homecontent")
 
     disableNavigation(); // Disable navigation links
     loadingSpinner.style.display = 'block'; // Show loading spinner
@@ -2375,6 +2377,7 @@ function navigateTo(page, addToHistory = true) {
         contentDiv.innerHTML = '';  // Clear existing content
         loadingSpinner.style.display = 'none'; // Hide loading spinner
         enableNavigation(); // Enable navigation links
+        homecontent.scrollTop=0;
         window.scrollTo(0, 0);  // Scroll to the top
 
         if (addToHistory && history.state?.page !== 'Home.html') {
@@ -2408,6 +2411,8 @@ function navigateTo(page, addToHistory = true) {
 
             // Set the innerHTML excluding scripts
             contentDiv.innerHTML = tempDiv.innerHTML;
+            
+            homecontent.scrollTop=0;
             window.scrollTo(0, 0);  // Scroll to the top
 
             enableNavigation(); // Enable navigation links

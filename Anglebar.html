@@ -46,16 +46,15 @@
   
       .ProductDetailstitle{
         grid-area: ProductDetailstitle;
-        padding: 0px 0px 10px 0px;
       border-style: solid;
       border-width: 0px 0px 3px 0px;
       border-color: #090909;
-       
       }
   
       .Detailstitle{
         color: darkblue;
-        font-size: 50px;
+        display: flex;
+        justify-content: center;
       }
       
       .Description{
@@ -70,7 +69,7 @@
         color: darkblue;
         display: flex;
         justify-content: center;
-        font-size: 34px;
+        
       }
       .Description h1 b img{
         width: 96px;
@@ -78,13 +77,11 @@
       }
   
       .Description p{
-        font-size: 34px;
         padding-left: 1rem;
     padding-right: 1rem;
       }
 
       
-  
       .Description button{
         color: white;
       background: darkblue;
@@ -167,7 +164,9 @@
       font-family:  "Montserrat", sans-serif;;
       width: 100%;
       height: 20%;
-      
+      justify-items: center;
+        display: flex;
+        justify-content: center;
       }
   
       .Description2 button img{
@@ -187,29 +186,19 @@
         display: grid;
         grid-gap:3%;
         overflow-x:auto;
-      
+      padding-left: 10px;
+      padding-right:10px;
       }
   
      .Product_Picture div a img{
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         cursor: pointer;
       }
   
-  #pic2{
-    margin-left:0;
-  }
-  
-  #pic3{
-    margin-left:0;
-  }
-  
-  #pic4{
-    margin-left:0;
-  }
   
       .Product_Picture div h1{
-        font-size: 50px;
+        font-size: 2rem;
         color: darkblue;
         
       }
@@ -229,14 +218,12 @@
     "ProductDetailstitle"
     "Product_Picture"  ;
     grid-gap:20px;
-    
     background-color: white;
-    
   }
   
   @media screen and (min-width: 300px) {
     .SteelProduct{
-        margin-top: 9%;
+        margin-top: 17%;
       }
     
     .ProductName{
@@ -248,20 +235,16 @@
       height: 40px;
         }
     
-          .Description h1 b{
-        font-size:30px ;
-      }
+
       .Description h1 b img{
         width: 60px;
       height: 40px;
       }
 
-      .Description p{
-        font-size: 20px;
-      }
+
       .Description button{
         height: 8%;
-        font-size: 30px;
+        font-size: 2rem;
       }
       .Description button img{
         width: 50px;
@@ -278,6 +261,14 @@
 .Description2 h1 b img{
         width: 60px;
       height: 40px;
+      }
+     .Description2 button{
+        height: 9%;
+        font-size: 2rem;
+      }
+            .Description2 button img{
+        width: 50px;
+      height: 30px;
       }
   }
   
@@ -345,7 +336,7 @@
       
     
         <div class="ProductDetailstitle">
-           <div class="Detailstitle"><b>Similar Product</b></div>
+           <div class="Detailstitle"><h1><b>Similar Product</b></h1></div>
         </div>
     
         <div class="Product_Picture">
