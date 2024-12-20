@@ -10,7 +10,7 @@
  
   <style>
   
-.SteelProduct{
+  .SteelProduct{
         margin-top: 0%;
       }
     
@@ -257,10 +257,10 @@
       }
 
 
-      .Description button{
-        height: 10%;
+      .Description button {
+        height: 14%;
         font-size: 2rem;
-      }
+    }
       .Description button img{
         width: 50px;
       height: 30px;
@@ -277,10 +277,10 @@
         width: 60px;
       height: 40px;
       }
-     .Description2 button{
-        height: 10%;
+      .Description2 button {
+        height: 12%;
         font-size: 2rem;
-      }
+    }
             .Description2 button img{
         width: 50px;
       height: 30px;
@@ -309,7 +309,7 @@
 
 
       .Description button{
-        height: 10%;
+        height: 15%;
         font-size: 2rem;
       }
       .Description button img{
@@ -329,7 +329,7 @@
       height: 40px;
       }
      .Description2 button{
-        height: 8%;
+        height: 12%;
         font-size: 2rem;
       }
             .Description2 button img{
@@ -338,6 +338,17 @@
       }
   }
   
+  @media screen and (min-width: 400px){
+    .Description button {
+        height: 15%;
+    }
+
+    .Description2 button {
+        height: 20%;
+    }
+  }
+
+
   @media screen and (min-width: 500px) {
     
         .BrandNew{
@@ -389,12 +400,22 @@
     margin:0;
 
   }
+
+  .Product_Picture div a img {
+    width: 110px;
+    height: 110px;
+}
 }
 
   @media screen and (min-width: 600px) {
     .SteelProduct{
         margin-top: 15%;
       }
+
+      .Product_Picture div a img {
+    width: 130px;
+    height: 130px;
+}
   }
 
   @media screen and (min-width: 700px) {
@@ -411,15 +432,82 @@
     }
 
     .ProductGroup{
-      grid-template-rows:auto 20rem auto auto 20rem auto auto;
+      grid-template-rows:auto 20em auto auto 20rem auto auto;
     }
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
   }
+
+  @media screen and (min-width: 800px){
+
+    .Description button {
+      height: 13%;
+    }
+    .Description button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Description2 button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Detailstitle {
+        font-size: 30px;
+    }
+
+  }
+
+  @media screen and (min-width: 900px){
+
+    .SteelProduct {
+        margin-top: 11%;
+    }
     
-    @media screen and (max-width: 1024px) {
-    
-      
-    
+    .Description2 button {
+        height: 17%;
+    }
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+
+}
+
+@media screen and (min-width: 1000px){
+
+  .SteelProduct {
+        margin-top: 10%;
       }
+
+      .BrandNew img {
+        width: 164px;
+        height: 60px;
+    }
+
+    .Description p {
+        font-size: 27px;
+    }
+
+    .Cutsize img {
+        width: 110px;
+        height: 70px;
+    }
+
+    .Product_Picture div a img {
+        width: 200px;
+        height: 200px;
+    }
+}
       </style>
 
   </head>  
