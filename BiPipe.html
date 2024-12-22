@@ -96,7 +96,6 @@
       cursor: pointer;
       font-family:  "Montserrat", sans-serif;;
       width: 100%;
-      height: 20%;
       justify-items: center;
         display: flex;
         justify-content: center;
@@ -176,7 +175,6 @@
       cursor: pointer;
       font-family:  "Montserrat", sans-serif;;
       width: 100%;
-      height: 20%;
       justify-items: center;
         display: flex;
         justify-content: center;
@@ -214,11 +212,12 @@
       }
   
   
-      .Product_Picture div h1{
-        font-size: 2rem;
-        color: darkblue;
-        
-      }
+      .Product_Picture div h1 {
+    display: flex;
+    font-size: 2rem;
+    color: darkblue;
+    justify-content: center;
+}
   
       .ProductGroup{
     position:relative;
@@ -260,7 +259,6 @@
 
 
       .Description button {
-        height: 14%;
         font-size: 2rem;
     }
       .Description button img{
@@ -280,7 +278,6 @@
       height: 40px;
       }
       .Description2 button {
-        height: 18%;
         font-size: 2rem;
     }
             .Description2 button img{
@@ -311,7 +308,6 @@
 
 
       .Description button{
-        height: 13%;
         font-size: 2rem;
       }
       .Description button img{
@@ -331,7 +327,6 @@
       height: 40px;
       }
      .Description2 button{
-        height: 10%;
         font-size: 2rem;
       }
             .Description2 button img{
@@ -340,15 +335,6 @@
       }
   }
   
-  @media screen and (min-width: 400px){
-    .Description button {
-        height: 15%;
-    }
-
-    .Description2 button {
-        height: 20%;
-    }
-  }
 
 
   @media screen and (min-width: 500px) {
@@ -446,9 +432,6 @@
   @media screen and (min-width: 800px){
 
     .Description button {
-      height: 13%;
-    }
-    .Description button {
         width: 50%;
         position: relative;
         left: 50%;
@@ -474,9 +457,6 @@
         margin-top: 11%;
     }
     
-    .Description2 button {
-        height: 17%;
-    }
 
     .Product_Picture div a img {
     width: 150px;
