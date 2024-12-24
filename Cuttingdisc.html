@@ -202,7 +202,8 @@ overflow: hidden;
   }
   
     .Selectitem h1{
-    margin: 0;
+      display: flex;
+    justify-content: center;
   }
 
   .inquiryitem{
@@ -223,6 +224,8 @@ overflow: hidden;
   
   .Inquire1 h1{
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .Inquire2{
@@ -232,6 +235,8 @@ overflow: hidden;
   
     .Inquire2 h1{
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .Inquire3{
@@ -241,6 +246,8 @@ overflow: hidden;
   
   .Inquire3 h1{
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .Inquire4{
@@ -250,6 +257,8 @@ overflow: hidden;
   
   .Inquire4 h1{
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
   
 .Inquire5{
@@ -259,6 +268,8 @@ overflow: hidden;
   
   .Inquire5 h1{
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
   
 .Inquire6{
@@ -268,6 +279,8 @@ overflow: hidden;
 
   .Inquire6 h1{
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   #picture1{
@@ -282,7 +295,7 @@ overflow: hidden;
 
   #picture3{
     width: 70%;
-    height: 70%;
+    height: 70%; 
   }
 
   #picture4{
@@ -300,6 +313,43 @@ overflow: hidden;
     height: 70%;
   }
   
+
+  .arrowdown1{
+    position: fixed;
+    opacity: 0.60;
+    background-color: darkblue;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .arrowdown2{
+    font-family: Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.arrowdown2 h1{
+  color: white;
+    margin: 0;
+}
+
+  .arrowdown3{
+   font-family: Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrowdown3 h1{
+  color: white;
+    margin: 0;
+}
+  
+    .arrowdown1.active{
+    opacity:0;
+  }
 
   
   @media screen and (max-width: 300px) {
@@ -336,6 +386,21 @@ overflow: hidden;
     grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6";
     grid-gap: 0;
 }
+
+
+.arrowdown1{
+  left: 50%;
+  top: 90%;
+transform: translate(-50%, -10%);
+width: 20%;
+height: 11%;
+  }
+  
+
+  .arrowdown3{
+   opacity: 0;
+  }
+
   }
 
   @media screen and (min-width: 300px) {
@@ -368,16 +433,83 @@ overflow: hidden;
       height: 30px;
       }
 
+      .Inquirepic{
+        height: 50%;
+      }
 
+      .Selectitem h1 {
+   
+        font-size: 13px;
+}
 
      .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6";
+    grid-template-areas: "Inquire1"  "Inquire2" "Inquire3" "Inquire4" "Inquire5" "Inquire6";
     grid-gap:0;
+    overflow-y: auto;
 }
+
+
+#picture1{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture3{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture4{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+#picture5{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+#picture6{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .arrowdown1{
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -10%);
+    width: 20%;
+    height: 11%;
+  }
+  
+  .arrowdown3{
+   opacity: 0;
+  }
 
   }
   
- 
+  @media screen and (min-width: 400px){
+    .Selectitem h1 {
+        font-size: 16px;
+    }
+  }
 
 
   @media screen and (min-width: 500px) {
@@ -420,6 +552,10 @@ overflow: hidden;
     width: 110px;
     height: 110px;
 }
+
+.Selectitem h1 {
+        font-size: 20px;
+    }
 }
 
   @media screen and (min-width: 600px) {
@@ -431,6 +567,9 @@ overflow: hidden;
     width: 130px;
     height: 130px;
 }
+.Selectitem h1 {
+        font-size: 25px;
+    }
 
 
   }
@@ -456,6 +595,10 @@ overflow: hidden;
 }
 
 
+.Selectitem h1 {
+        font-size: 30px;
+    }
+
   }
 
   @media screen and (min-width: 800px){
@@ -473,6 +616,63 @@ overflow: hidden;
         font-size: 30px;
     }
 
+    .Inquirepic {
+        width: 100%;
+        
+    }
+
+    .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6";
+        grid-gap:3%;
+        grid-auto-rows: 0fr 1fr;
+  }
+
+  .Selectitem h1 {
+        font-size: 35px;
+    }
+
+    #picture1 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture2 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture3 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture4 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture5 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture6 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .arrowdown1{
+      opacity: 0;
+    }
+
+
+
   }
 
   @media screen and (min-width: 900px){
@@ -487,6 +687,10 @@ overflow: hidden;
     width: 150px;
     height: 150px;
 }
+.Inquirepic {
+       height: 60%;
+        
+    }
 
 }
 
@@ -550,9 +754,8 @@ overflow: hidden;
         </div>
       
 <div id="Inquirepic" class="Inquirepic">
-  <div class="Selectitem"><h1><b>
+  <div class="Selectitem"><h1>
     Select the Inquiry product
-    </b>
     </h1>
   </div>
 
@@ -587,7 +790,14 @@ overflow: hidden;
   <h1>Domore 14</h1>
 </div>
 
+
+<div class="arrowdown1"><div class="arrowdown2"><h1>
+  V</h1></div>
+  <div class="arrowdown3"><h1>></h1></div>
 </div>
+
+</div>
+
 
 </div>
      
@@ -925,6 +1135,49 @@ else{
       }
     
       })
+
+
+      document.querySelector('.inquiryitem').addEventListener("scroll", function() {
+    var arrowdown1 = document.querySelector(".arrowdown1");
+    
+    const container =document.querySelector('.inquiryitem');
+
+    const isHorizontal =window.matchMedia('(min-width:1024px)').matches;
+    
+    let isScrolling;
+
+    
+//for overflow-X&y
+    let scrollPosition= isHorizontal?container.scrollLeft:container.scrollTop;
+    let clientSize =isHorizontal?container.clientWidth:container.clientHeight;
+    let scrollSize =isHorizontal?container.scrollWidth:container.scrollHeight;
+
+    
+    const treshold = 0.05 * scrollSize;
+
+
+
+    if (scrollPosition === 0) {
+        arrowdown1.classList.remove('active');
+    }
+    else if (scrollPosition + clientSize >= scrollSize - treshold) {
+        arrowdown1.classList.add('active');
+    }
+
+    else {
+        arrowdown1.classList.add('active');
+    }
+
+
+clearTimeout(isScrolling);
+
+    isScrolling = setTimeout(() => {
+        if (scrollPosition !== 0 && scrollPosition + clientSize < scrollSize - treshold) {
+            arrowdown1.classList.remove('active');
+        }
+      
+    }, 10);
+});
 
   }
             </script>
