@@ -334,12 +334,21 @@ overflow: hidden;
 
       .Inquirepic{
         height: 50%;
+        grid-auto-rows: 0fr 1fr;
       }
 
       .Selectitem h1 {
         font-size: 13px;
+        
 }
 
+.Inquire1 h1 {
+    font-size: 15px;
+}
+
+.Inquire2 h1 {
+    font-size: 15px;
+}
 .inquiryitem{
     grid-template-areas: "Inquire1" "Inquire2";
     grid-gap: 0;
@@ -479,8 +488,16 @@ overflow: hidden;
     .inquiryitem{
     grid-template-areas: "Inquire1 Inquire2";
         grid-gap:3%;
-        grid-auto-rows: 0fr 1fr;
+        grid-auto-rows: 100% 100%;
   }
+
+  .Inquire1 h1 {
+    font-size: 25px;
+}
+
+.Inquire2 h1 {
+    font-size: 25px;
+}
 
   .Selectitem h1 {
         font-size: 35px;
@@ -517,6 +534,18 @@ overflow: hidden;
         
     }
 
+    .Inquire1 h1 {
+    font-size: 35px;
+}
+
+.Inquire2 h1 {
+    font-size: 35px;
+}
+.inquiryitem {
+  overflow-y: hidden;
+}
+
+
 }
 
 @media screen and (min-width: 1000px){
@@ -540,6 +569,8 @@ overflow: hidden;
         width: 200px;
         height: 200px;
     }
+
+
 }
     
 
