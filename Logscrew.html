@@ -10,73 +10,72 @@
  
   <style>
   
-   *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-    
-    .SteelProduct{
-        margin-top:0%;
+  .SteelProduct{
+        margin-top: 0%;
       }
+    
            .ProductName{
           color:white;
-          font-size:50px;
+          font-size:2rem;
           font-family:"Montserrat",Sans-serif;
           background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
-          margin-top: 5%;
         }
   
         .BrandNew{
           grid-area: BrandNew;
           color: darkblue;
-          font-size: 100px;
-         margin-left: 17%;;
+         display: flex;
+         justify-content: center;
         }
   
         .BrandNew img{
           width: 245px;
       height: 100px;
         }
+        
+    .BrandNew h1{
+      margin: 0;
+    }
   
       .Product{
         grid-area: Product;
+        display: flex;
+        justify-content: center;
       }
   
       .Product img{
-        width: 70%;
+        width: 100%;
       height: 100%;
-      margin-left: 15%;
       }
   
       .ProductDetailstitle{
         grid-area: ProductDetailstitle;
-        padding: 0px 0px 10px 0px;
       border-style: solid;
       border-width: 0px 0px 3px 0px;
       border-color: #090909;
-       
       }
   
       .Detailstitle{
         color: darkblue;
-        font-size: 50px;
+        display: flex;
+        justify-content: center;
       }
       
       .Description{
         grid-area: Description;
-      font-size: 34px;
       color: dodgerblue;
-      padding: 0px 0px 50px 0px;
       border-style: solid;
       border-width: 0px 0px 3px 0px;
       border-color: #090909;
-      
       }
-  
+        .Description h1{
+          margin: 0;
+        }
       .Description h1 b{
-        margin-left: 33%;
         color: darkblue;
+        display: flex;
+        justify-content: center;
+        
       }
       .Description h1 b img{
         width: 96px;
@@ -84,28 +83,28 @@
       }
   
       .Description p{
-        margin-left: 35px;
+        padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
       }
-      #measurement1{
-        margin-left:29%;
-      }
-  
+
+      
       .Description button{
         color: white;
       background: darkblue;
-      font-size: 70px;
-      border-radius: 20px;
+      font-size: 2rem;
+      border-radius: 25px;
       cursor: pointer;
       font-family:  "Montserrat", sans-serif;;
       width: 100%;
-      height: 20%;
-      margin-bottom:10%;
+      justify-items: center;
+        display: flex;
+        justify-content: center;
       }
   
       .Description button img{
         width: 75px;
       height: 56px;
-      margin-right: 32px;
       }
   
       .Description button:hover{
@@ -113,46 +112,34 @@
       }
   
   
-      
-  
-  
+
   
       .Product_Picture{
         grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
         display: grid;
         grid-gap:3%;
         overflow-x:auto;
-      
+      padding-left: 10px;
+      padding-right:10px;
+      padding-bottom:30px;
       }
   
      .Product_Picture div a img{
-        width: 200px;
-        height: 200px;
-        margin-left: 2%;
+        width: 100px;
+        height: 100px;
         cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
       }
   
-#pic1{
-    margin-left:12%;
+  
+      .Product_Picture div h1 {
+    display: flex;
+    font-size: 2rem;
+    color: darkblue;
+    justify-content: center;
 }
-
-  #pic2{
-    margin-left:16%;
-  }
-  
-  #pic3{
-    margin-left:0%;
-  }
-  
-  #pic4{
-    margin-left:6%;
-  }
-  
-      .Product_Picture div h1{
-        font-size: 50px;
-        color: darkblue;
-        
-      }
   
       .ProductGroup{
     position:relative;
@@ -166,10 +153,9 @@
     "ProductDetailstitle"
     "Product_Picture"  ;
     grid-gap:20px;
-    margin-top: 20px;
     background-color: white;
-    margin-bottom:20px;
   }
+  
 
   .Inquirepic{
     position: fixed;
@@ -177,15 +163,12 @@
     background-color: white;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-    width: 75%;
-    height: 80%;
     left: 50%;
     top: 50%;
     z-index: 999999;
     display: grid;
 grid-template-areas: "Selectitem"
   "inquiryitem";
-
   }
 
   .Inquirepic.active {
@@ -206,7 +189,7 @@ grid-template-areas: "Selectitem"
 
 #overlay.active {
   opacity: 1;
-  pointer-events: all;
+  pointer-events: auto;
 }
 
 body.overlay-active{
@@ -215,9 +198,12 @@ overflow: hidden;
 
   .Selectitem{
     color: darkblue;
-    margin-left: 24%;
     grid-area: Selectitem;
-    font-size: 40px;
+  }
+  
+    .Selectitem h1{
+      display: flex;
+    justify-content: center;
   }
 
   .inquiryitem{
@@ -225,285 +211,608 @@ overflow: hidden;
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
-        overflow-x:auto;
-      overflow-y: hidden;
   }
 
   .inquiryitem h1{
     color:black;
-    margin-left: 5%;
-    text-align:-webkit-center;
   }
 
   .Inquire1{
     grid-area: Inquire1;
     cursor: pointer;
-    margin-left: 3%;
+  }
+  
+  .Inquire1 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .Inquire2{
     grid-area: Inquire2;
     cursor: pointer;
-    margin-left: 9%;
+  }
+  
+    .Inquire2 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .Inquire3{
     grid-area: Inquire3;
     cursor: pointer;
-    margin-left: 9%;
+  }
+  
+    .Inquire3 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .Inquire4{
     grid-area: Inquire4;
     cursor: pointer;
-    margin-left: 9%
   }
   
+    .Inquire4 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
 
   .Inquire5{
     grid-area: Inquire5;
     cursor: pointer;
-    margin-left: 3%;
   }
+  
+    .Inquire5 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }  
 
   .Inquire6{
     grid-area: Inquire6;
     cursor: pointer;
-    margin-left: 9%;
   }
-
-  .Inquire7{
+  
+    .Inquire6 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+    .Inquire7{
     grid-area: Inquire7;
     cursor: pointer;
-    margin-left: 9%;
+  }
+  
+    .Inquire7 h1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
 
   #picture1{
-    width: 80%;
+    width: 70%;
     height: 70%;
-   margin-left:20%;
   }
 
   #picture2{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:20%;
   }
 
   #picture3{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:20%;
   }
 
   #picture4{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:20%;
   }
-
-  #picture5{
-    width: 80%;
+  
+    #picture5{
+    width: 70%;
     height: 70%;
-   margin-left:20%;
   }
 
   #picture6{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:20%;
   }
 
   #picture7{
-    width: 80%;
+    width: 70%;
     height: 70%;
-    margin-left:20%;
   }
-  
 
   .arrowdown1{
-    position:fixed;
-    opacity:1;
-    width:15%;
-    height:25%;
-     background-color:darkblue;
-     left:87%;
-     top:50%;
-     transform:translate(-13%,-50%)
+    position: fixed;
+    opacity: 0.60;
+    background-color: darkblue;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
   }
   
   .arrowdown2{
-    position: fixed;
-    font-size:100px;
-    font-family:Sans-serif;
-    font-style:bold;
-    left:30%;
+    font-family: Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    display: none;
-  }
   .arrowdown3{
-    position: fixed;
-    font-size:100px;
-    font-family:Sans-serif;
-    font-style:bold;
-    left:50%;
- 
-    display: block;
+   font-family: Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   
     .arrowdown1.active{
     opacity:0;
   }
-
   
+  @media screen and (max-width: 300px) {
+    .SteelProduct{
+        margin-top: 17%;
+      }
     
-    @media screen and (max-width: 1024px) {
-      .SteelProduct{
-        margin-top: 10%;
-      }
-      
-      .BrandNew{
-          grid-area: BrandNew;
-          color: darkblue;
-          font-size: 100px;
-         margin-left: 0%;
+    .ProductName{
+      font-size:2rem;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 70%, #0f0bee00 60%);
+    }
+  
+  .BrandNew img{
+      width: 80px;
+      height: 40px;
         }
-      
-      .Product img{
-        width: 70%;
-      height: 100%;
-      margin-left: 15%;
-      }
-     
-      .Description h1 b{
-        margin-left: 20%;
-        color: darkblue;
-      }
-      
-      .Description button{
-        height:10%
-      }
-      
-      .Cutsize{
-          grid-area: Cutsize;
-          color: darkblue;
-          font-size: 100px;
-         margin-left: 10%;
-        
-        }
-      .Product2 img{
-        width: 70%;
-      height: 100%;
-      margin-left: 15%;
-      }
-      
-      .Description2 h1 b{
-        margin-left: 24%;
-      }
-        
     
-        
-        .Product_Picture div a img{
-        
-       margin-left:15%;
-        
-        
-      }
-      .Product_Picture div h1{
-        
-        padding-left: 8%;
-      }
-      
-      #pic1{
-        margin-left:7%
-;
-      }
-      
-      #pic2{
-        margin-left:25%
-      }
-      #pic3{
-        margin-left:15%;
-      }
-      #pic4{
-        margin-left:25%;
-      }
-      
-      #measurement1{
-        margin-left:15%;
+
+      .Description h1 b img{
+        width: 60px;
+      height: 40px;
       }
 
-  .Selectitem{
-    margin-left: 15%;
-    
-  }
+
+      .Description button {
+        font-size: 2rem;
+    }
+      .Description button img{
+        width: 50px;
+      height: 30px;
+      }
 
       .Inquirepic{
-        height: 40%;
+        height: 50%;
       }
-      
-  .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2" "Inquire3 Inquire4" "Inquire5 Inquire6"
-      "Inquire7 Inquire8";
-    display:grid;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  
-  .inquiryitem h1{
-    margin-left: 0%;
-  }
 
-  .arrowdown1{
-    width:20%;
-    height:15%;
-    left:50%;
-     top:87%;
-     transform:translate(-50%,13%) 
-  }
-  
-  .arrowdown2{
-    display: block;
-    left: 47%;
-    transform:translate(-53%)
-  }
-  
-  .arrowdown3{
-    display:none;
-  }
-  
-  #picture1{
-    margin-left:10%;
+      .Selectitem h1 {
+        font-size: 13px;
+}
+
+.inquiryitem{
+    grid-template-areas: "Inquire1" "Inquire2" "Inquire3" "Inquire4" "Inquire5" "Inquire6" "Inquire7";
+    grid-gap: 5%;
+    overflow-y: auto;
+}
+
+#picture1{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   #picture2{
-    margin-left:10%;
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   #picture3{
-    margin-left:10%;
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   #picture4{
-    margin-left:10%;
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
-
-  #picture5{
-    margin-left:10%;
+  
+    #picture5{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   #picture6{
-    margin-left:10%;
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   #picture7{
-    margin-left:10%;
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .arrowdown1{
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -10%);
+    width: 20%;
+    height: 11%;
+  }
+
+  .arrowdown2{
+    width: 100%;
+   font-size: 2rem;
   }
   
+  .arrowdown3{
+   opacity: 0;
+  }
 
-  
+
+  }
+
+  @media screen and (min-width: 300px) {
+    .SteelProduct{
+        margin-top: 17%;
       }
+    
+    .ProductName{
+      font-size:2rem;
+       background: linear-gradient(135deg,rgb(34, 7, 241) 70%, #0f0bee00 60%);
+    }
+  
+  .BrandNew img{
+      width: 80px;
+      height: 40px;
+        }
+    
+
+      .Description h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+
+
+      .Description button{
+        font-size: 2rem;
+      }
+      .Description button img{
+        width: 50px;
+      height: 30px;
+      }
+
+      .Inquirepic{
+        height: 50%;
+      }
+
+      .Selectitem h1 {
+        font-size: 13px;
+}
+
+     .inquiryitem{
+    grid-template-areas: "Inquire1"  "Inquire2" "Inquire3" "Inquire4" "Inquire5" "Inquire6"  "Inquire7";
+    grid-gap: 10%;
+    overflow-y: auto;
+}
+
+
+#picture1{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture3{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture4{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture5{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture6{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture7{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .arrowdown1{
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -10%);
+    width: 20%;
+    height: 11%;
+  }
+
+  .arrowdown2{
+    width: 100%;
+   font-size: 2rem;
+  }
+  
+  .arrowdown3{
+   opacity: 0;
+  }
+
+
+}
+  
+  @media screen and (min-width: 400px){
+    .Selectitem h1 {
+        font-size: 16px;
+    }
+  }
+
+
+  @media screen and (min-width: 500px) {
+    
+        .BrandNew{
+      font-size: 2rem;
+    }
+
+    .BrandNew img{
+      width: 90px;
+      height: 50px;
+        }
+
+
+        .Description h1 b img {
+        width: 70px;
+        height: 50px;
+    }
+    .Description h1 b {
+      font-size: 3rem;
+    }
+
+    .Description p {
+    font-size: 20px;
+}
+
+
+
+
+  .Detailstitle{
+    font-size: 20px;
+  }
+    .Detailstitle h1{
+
+    margin:0;
+
+  }
+
+  .Product_Picture div a img {
+    width: 110px;
+    height: 110px;
+}
+
+.Selectitem h1 {
+        font-size: 20px;
+    }
+}
+
+  @media screen and (min-width: 600px) {
+    .SteelProduct{
+        margin-top: 15%;
+      }
+
+      .Product_Picture div a img {
+    width: 130px;
+    height: 130px;
+}
+.Selectitem h1 {
+        font-size: 25px;
+    }
+
+
+  }
+
+  @media screen and (min-width: 700px) {
+    .SteelProduct{
+        margin-top: 13%;
+      }
+
+      .Description p {
+        font-size: 25px;
+    }
+
+
+
+    .ProductGroup{
+      grid-template-rows:auto 20em auto auto 20rem auto auto;
+    }
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+
+
+.Selectitem h1 {
+        font-size: 30px;
+    }
+
+  }
+
+  @media screen and (min-width: 800px){
+
+    
+    .Description button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .Detailstitle {
+        font-size: 30px;
+    }
+
+    .Inquirepic {
+        width: 100%;
+        grid-auto-rows: 20% 80%;
+    }
+
+    .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2 Inquire3 Inquire4 Inquire5 Inquire6 Inquire7";
+        grid-gap:3%;
+        grid-auto-rows: 90%;
+  }
+
+  .Selectitem h1 {
+        font-size: 35px;
+        margin: 0;
+    }
+
+    #picture1 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture2 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture3 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture4 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+        #picture5 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture6 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture7 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+     .arrowdown1{
+      left: 90%;
+        top: 50%;
+        transform: translate(0%, -50%);
+        width: 10%;
+        height: 20%;
+  }
+  
+.arrowdown2{
+  display: none;
+}
+  .arrowdown3{
+   opacity: 1;
+   height: 100%;
+   font-size: 5rem;
+  }
+  }
+
+  @media screen and (min-width: 900px){
+
+    .SteelProduct {
+        margin-top: 11%;
+    }
+    
+
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+.Inquirepic {
+       height: 60%;
+        
+    }
+
+}
+
+@media screen and (min-width: 1000px){
+
+  .SteelProduct {
+        margin-top: 10%;
+      }
+
+      .BrandNew img {
+        width: 164px;
+        height: 60px;
+    }
+
+    .Description p {
+        font-size: 27px;
+    }
+
+
+
+    .Product_Picture div a img {
+        width: 200px;
+        height: 200px;
+    }
+}
       </style>
 
   </head>  
@@ -522,7 +831,9 @@ overflow: hidden;
       
     <div class="ProductGroup">
         <div class="BrandNew">
+          <h1>
           <b><img src="new.png">BrandNew</b>
+          </h1>
         </div>
         <div class="Product">
           <img  src="Logscrew.png">
@@ -538,7 +849,9 @@ overflow: hidden;
       
 <div id="Inquirepic" class="Inquirepic">
   <div class="Selectitem">
+    <h1>
     Select the Inquiry product
+    </h1>
   </div>
 
   <div class="inquiryitem">
@@ -588,7 +901,7 @@ overflow: hidden;
 </div>
      
         <div class="ProductDetailstitle">
-           <div class="Detailstitle"><b>Similar Product</b></div>
+           <div class="Detailstitle"><h1><b>Similar Product</b></h1></div>
         </div>
     
         <div class="Product_Picture">
