@@ -753,7 +753,7 @@ body.overlay-active {
 
 
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 300px) and (max-height:500px) {
 
   #hometitle {
     font-size: 17px;
