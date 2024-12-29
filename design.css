@@ -851,6 +851,12 @@ body.overlay-active {
 
   .contact {
     padding: 0;
+
+}
+
+.contactus {
+  padding: 20px;
+  margin-top: 63px;
 }
 }
 
@@ -932,7 +938,9 @@ body.overlay-active {
     width: 90px;
     height: 130px;
   }
-
+  .contactus {
+    padding: 20px;
+  }
 
 }
 
@@ -1370,9 +1378,7 @@ body.overlay-active {
     color: #eee;
   }
 
-  .contactus {
-    padding: 20px;
-  }
+  
 
   .box {
     grid-template-columns: 1fr;
