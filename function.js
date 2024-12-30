@@ -7,6 +7,14 @@ let prev2 =document.getElementById("prev2");
 let thumbnails= document.querySelectorAll(".thumbnail .item");
 let thumbnails2= document.querySelectorAll(".thumbnail2 .item2");
 
+let thumbnailcontainer= document.querySelector(".thumbnail");
+
+let thumbnailcontainer2= document.querySelector(".thumbnail2")
+
+
+  
+
+
 //config param
 let countitem= items.length;
 let countitem2= items2.length;
@@ -18,6 +26,22 @@ next.onclick=function(){
     if(itemactive >= countitem){
         itemactive=0;
     }
+    
+    const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount;
+  if (screenWidth <= 300) {
+    scrollAmount = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer.scrollLeft += scrollAmount;
+
+    
     showslider();
 }
 
@@ -26,6 +50,22 @@ next2.onclick=function(){
     if(item2active >= countitem2){
         item2active=0;
     }
+    
+    
+        const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount;
+  if (screenWidth <= 300) {
+    scrollAmount = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer2.scrollLeft += scrollAmount;
+    
     showslider2();
 }
 
@@ -36,6 +76,21 @@ prev.onclick=function(){
     if(itemactive < 0){
         itemactive=countitem - 1;
     }
+    
+        const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount;
+  if (screenWidth <= 300) {
+    scrollAmount = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer.scrollLeft -= scrollAmount;
+    
     showslider();
 }
 
@@ -44,6 +99,21 @@ prev2.onclick=function(){
     if(item2active < 0){
         item2active=countitem2 - 1;
     }
+    
+        const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount;
+  if (screenWidth <= 300) {
+    scrollAmount = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer2.scrollLeft -= scrollAmount;
+    
     showslider2();
 }
 
