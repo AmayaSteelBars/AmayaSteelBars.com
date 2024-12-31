@@ -751,7 +751,111 @@ body.overlay-active {
   text-decoration: none;
 }
 
+@media screen and (max-height:767px){
+  #hometitle {
+    font-size: 17px;
+  }
 
+  #menupicture {
+    width: 30px;
+    height: 30px;
+  }
+
+
+
+  .sub-menu {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  #content{
+    margin-bottom: 15%;
+  }
+
+  .SteelProduct {
+    font-size: 20px;
+  }
+
+  .slider {
+    height: 85vh;
+  }
+
+  .slider .list .item .content {
+    width: 170px;
+    top: 7%;
+  }
+
+
+
+  .slider .list .item .content p{
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .slider .list .item .content h2 {
+    font-size: 20px;
+  }
+
+  .sliderbutton {
+    font-size: 20px;
+  }
+
+  .thumbnail {
+    height: 120px;
+  }
+
+  .thumbnail .item {
+    width: 80px;
+    height: 100px;
+  }
+
+  .HardwareProduct {
+    font-size:  20px;
+    background: linear-gradient(135deg, darkblue 91%, #0f0bee00 80%);
+    margin-top: 58px;
+  }
+
+  .slider2 {
+    height: 85vh;
+  }
+
+
+  .slider2 .list2 .item2 .content2 {
+    width: 170px;
+    top: 7%;
+  }
+
+  .slider2 .list2 .item2 .content2 p{
+    margin: 0;
+    font-size: 13px;
+  }
+
+
+  .slider2 .list2 .item2 .content2 h2 {
+    font-size: 20px;
+  }
+
+
+
+  .thumbnail2 {
+    height: 120px;
+  }
+
+  .thumbnail2 .item2 {
+    width: 80px;
+    height: 100px;
+  }
+
+  .contact {
+    padding: 0;
+
+}
+
+.contactus {
+  padding: 20px;
+  margin-top: 63px;
+}
+}
 
 @media screen and (max-width: 300px) {
 
