@@ -7,6 +7,14 @@ let prev2 =document.getElementById("prev2");
 let thumbnails= document.querySelectorAll(".thumbnail .item");
 let thumbnails2= document.querySelectorAll(".thumbnail2 .item2");
 
+let thumbnailcontainer= document.querySelector(".thumbnail");
+
+let thumbnailcontainer2= document.querySelector(".thumbnail2")
+
+
+  
+
+
 //config param
 let countitem= items.length;
 let countitem2= items2.length;
@@ -14,36 +22,119 @@ let itemactive= 0;
 let item2active= 0;
 //event next click
 next.onclick=function(){
-    itemactive=itemactive + 1;
+    
+    
+    const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount;
+  if (screenWidth <= 300) {
+    scrollAmount = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer.scrollLeft += scrollAmount;
+
+  itemactive=itemactive + 1;
     if(itemactive >= countitem){
         itemactive=0;
+        thumbnailcontainer.scrollTo({left:0-scrollAmount})
     }
+    else if (itemactive <= countitem){
+      thumbnailcontainer.scrollTo({left:itemactive*scrollAmount})
+    } 
     showslider();
 }
 
 next2.onclick=function(){
-    item2active=item2active + 1;
+    
+    
+    
+        const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount2;
+  if (screenWidth <= 300) {
+    scrollAmount2 = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount2 = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount2 = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer2.scrollLeft += scrollAmount2;
+
+  item2active=item2active + 1;
     if(item2active >= countitem2){
         item2active=0;
+        thumbnailcontainer2.scrollTo({left:0-scrollAmount2})
     }
+    else if (item2active <= countitem2){
+      thumbnailcontainer2.scrollTo({left:item2active*scrollAmount2})
+    } 
+    
     showslider2();
 }
 
 
 //event prev click
 prev.onclick=function(){
-    itemactive= itemactive -1;
-    if(itemactive < 0){
-        itemactive=countitem - 1;
-    }
+   
+    
+        const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount;
+  if (screenWidth <= 300) {
+    scrollAmount = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer.scrollLeft -= scrollAmount;
+
+  itemactive= itemactive -1;
+  if(itemactive < 0){
+      itemactive=countitem - 1;
+      thumbnailcontainer.scrollTo({left:0+itemactive*scrollAmount})
+  }
+  else if (itemactive <= countitem){
+    thumbnailcontainer.scrollTo({left:itemactive*scrollAmount})
+  } 
+    
     showslider();
 }
 
 prev2.onclick=function(){
-    item2active= item2active -1;
-    if(item2active < 0){
-        item2active=countitem2 - 1;
-    }
+  
+        const screenWidth = window.innerWidth;
+
+// Set scroll amount based on screen size
+  let scrollAmount2;
+  if (screenWidth <= 300) {
+    scrollAmount2 = 80; // Smaller scroll for smaller screens
+  } else if (screenWidth <= 992) {
+    scrollAmount2 = 90; // Medium scroll for medium screens
+  } else {
+    scrollAmount2 = 45; // Larger scroll for larger screens
+  }
+  
+  thumbnailcontainer2.scrollLeft -= scrollAmount2;
+
+  item2active= item2active -1;
+  if(item2active < 0){
+      item2active=countitem2 - 1;
+      thumbnailcontainer2.scrollTo({left:0+item2active*scrollAmount2})
+  }
+  else if (item2active <= countitem2){
+    thumbnailcontainer2.scrollTo({left:item2active*scrollAmount2})
+  } 
+    
     showslider2();
 }
 
