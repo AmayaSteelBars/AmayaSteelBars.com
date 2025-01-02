@@ -427,6 +427,18 @@ nav ul li a {
   color: rgba(0, 0, 0, .25);
 }
 
+.search-content{
+  border-radius: 28px;
+  background-color: white;
+  max-height: 0;
+  overflow-y: auto;
+  transition: max-height 1s;
+}
+
+.search-content.open-menu {
+  max-height: 50vh;
+}
+
 .sub-menu-wrap {
   max-height: 0;
   overflow-y: auto;
