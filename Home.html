@@ -54,7 +54,7 @@
 search
 </span>
 
-<input class="search-input" type="search" placeholder="Search the item you needed"/>
+<input class="search-input"type="search" placeholder="Search the item you needed" onclick="toggleMenu2()"/>
               </div>
               <div class="search-content"></div>
               <div class="product">
@@ -2160,7 +2160,11 @@ We offer brand new metal products and metal scrap at competitive prices, caterin
         document.body.classList.toggle('overlay-active');
         
       }
-      
+            function toggleMenu2(){
+
+        search-content.classList.toggle("open-menu");
+    
+            }
 document.querySelector(".menuoverlay").addEventListener("click",function(){
   
   if(menuoverlay.classList.contains("active")){
