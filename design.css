@@ -433,9 +433,13 @@ nav ul li a {
   max-height: 0;
   overflow-y: auto;
   transition: max-height 1s;
+  width: 90%;
+  padding: 14px;
+  color: black;
+  list-style-type: none;
 }
 
-.search-content.open-menu {
+.search-content.open-search {
   max-height: 50vh;
 }
 
