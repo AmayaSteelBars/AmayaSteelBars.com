@@ -432,9 +432,8 @@ nav ul li a {
   background-color: white;
   max-height: 0;
   overflow-y: auto;
-  transition: max-height 1s;
+  transition: max-height 0.5s;
   width: 90%;
-  padding: 14px;
   color: black;
   list-style-type: none;
 }

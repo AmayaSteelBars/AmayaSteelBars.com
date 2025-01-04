@@ -54,7 +54,7 @@
 search
 </span>
 
-<input class="search-input"type="search" placeholder="Search the item you needed"  onclick="toggleMenu2()" />
+<input class="search-input"type="search" placeholder="Search the item you needed"  onfocus="toggleMenu2()" onKeydown="toggleMenu2()" />
               </div>
               <div class="search-content">
                 <li>anglebar</li>
@@ -2168,6 +2168,12 @@ We offer brand new metal products and metal scrap at competitive prices, caterin
               searchcontent.classList.add("open-search");
     
             }
+
+            document.querySelector(".homecontent").addEventListener("click",function(){
+              if(searchcontent.classList.contains("open-search")){
+                searchcontent.classList.remove("open-search");
+              }
+            })
 document.querySelector(".menuoverlay").addEventListener("click",function(){
   
   if(menuoverlay.classList.contains("active")){
@@ -2178,9 +2184,9 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
         
         document.body.classList.remove('overlay-active');
         
-        
   }
       })
+
 
       const searchinput =document.querySelector(".search-input");
       const data =["Anglebar","Flatbar"]
