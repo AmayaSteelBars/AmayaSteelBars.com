@@ -411,6 +411,13 @@ nav ul li a {
   box-shadow:0 0 2px rgba(0, 0, 0, .75);
 }
 
+.searchbar button{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
 .search-input{
   font-size: 16px;
   font-family: "Lexend",sans-serif;

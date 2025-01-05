@@ -50,14 +50,14 @@
               
               <div class="searchbar">
                 
-                <span class="search-icon material-symbols-outlined">
+                <button><span class="search-icon material-symbols-outlined">
 search
-</span>
+</span></button>
 
-<input class="search-input"type="search" placeholder="Search the item you needed"  onfocus="toggleMenu2()" onKeydown="toggleMenu2()" />
+<input class="search-input"type="search" placeholder="Search the item you needed" autocomplete="off" onKeydown="toggleMenu2()" />
               </div>
               <div class="search-content">
-                <li>anglebar</li>
+                
               </div>
               <div class="product">
               <div class="steel">
@@ -2163,8 +2163,22 @@ We offer brand new metal products and metal scrap at competitive prices, caterin
         
       }
       let searchcontent=document.querySelector('.search-content')
+      let searchinput =document.querySelector(".search-input");
             function toggleMenu2(){
+const query = searchinput.value.toLowerCase();
 
+const filteredData = data.filter(item=>item.toLowerCase().includes(query));
+
+if(filteredData.length>0){
+  filteredData.forEach(item =>{
+    const li =document.createElement('li')
+    li.textContent = item;
+    searchcontent.appendChild(li);
+  });
+  
+}else{
+  searchcontent.innerHTML = '<li>No results found</li>';
+  }
               searchcontent.classList.add("open-search");
     
             }
@@ -2188,7 +2202,7 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
       })
 
 
-      const searchinput =document.querySelector(".search-input");
+      
       const data =["Anglebar","Flatbar"]
      
     </script>
