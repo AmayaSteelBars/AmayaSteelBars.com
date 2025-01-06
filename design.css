@@ -437,16 +437,25 @@ nav ul li a {
 .search-content{
   border-radius: 28px;
   background-color: white;
-  max-height: 0;
   overflow-y: auto;
   transition: max-height 0.5s;
-  width: 90%;
+  width: 94%;
   color: black;
-  list-style-type: none;
 }
 
-.search-content.open-search {
-  max-height: 50vh;
+.search-content ul{
+  padding: 15px 10px;
+}
+
+.search-content ul li{
+  list-style-type: none;
+  border-radius: 3px;
+  padding:15px 10px;
+  cursor: pointer;
+}
+
+.search-content ul li:hover{
+  background: #e9f3ff;
 }
 
 .sub-menu-wrap {

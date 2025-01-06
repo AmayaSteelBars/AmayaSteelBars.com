@@ -54,7 +54,7 @@
 search
 </span></button>
 
-<input class="search-input"type="search" placeholder="Search the item you needed" autocomplete="off" onKeydown="toggleMenu2()" />
+<input class="search-input"type="search" placeholder="Search the item you needed" autocomplete="off"  />
               </div>
               <div class="search-content">
                 
@@ -2162,6 +2162,7 @@ We offer brand new metal products and metal scrap at competitive prices, caterin
         document.body.classList.toggle('overlay-active');
         
       }
+      /*
       let searchcontent=document.querySelector('.search-content')
       let searchinput =document.querySelector(".search-input");
             function toggleMenu2(){
@@ -2188,6 +2189,8 @@ if(filteredData.length>0){
                 searchcontent.classList.remove("open-search");
               }
             })
+
+            */
 document.querySelector(".menuoverlay").addEventListener("click",function(){
   
   if(menuoverlay.classList.contains("active")){
@@ -2203,7 +2206,7 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
 
 
       
-      const data =["Anglebar","Flatbar"]
+      //const data =["Anglebar","Flatbar"]
      
     </script>
 
@@ -2577,6 +2580,6 @@ export async function getServerSideProps() {
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   
 <script src="function.js"></script>
- 
+ <script src="autocomplete.js"></script>
 </body>
 </html>
