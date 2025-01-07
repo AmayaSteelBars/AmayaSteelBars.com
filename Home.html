@@ -2162,35 +2162,7 @@ We offer brand new metal products and metal scrap at competitive prices, caterin
         document.body.classList.toggle('overlay-active');
         
       }
-      /*
-      let searchcontent=document.querySelector('.search-content')
-      let searchinput =document.querySelector(".search-input");
-            function toggleMenu2(){
-const query = searchinput.value.toLowerCase();
 
-const filteredData = data.filter(item=>item.toLowerCase().includes(query));
-
-if(filteredData.length>0){
-  filteredData.forEach(item =>{
-    const li =document.createElement('li')
-    li.textContent = item;
-    searchcontent.appendChild(li);
-  });
-  
-}else{
-  searchcontent.innerHTML = '<li>No results found</li>';
-  }
-              searchcontent.classList.add("open-search");
-    
-            }
-
-            document.querySelector(".homecontent").addEventListener("click",function(){
-              if(searchcontent.classList.contains("open-search")){
-                searchcontent.classList.remove("open-search");
-              }
-            })
-
-            */
 document.querySelector(".menuoverlay").addEventListener("click",function(){
   
   if(menuoverlay.classList.contains("active")){
@@ -2206,8 +2178,7 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
 
 
       
-      //const data =["Anglebar","Flatbar"]
-     
+
     </script>
 
   <script>
@@ -2301,6 +2272,16 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
             navigateTo(this.getAttribute('href'));
         });
     });
+    
+    document.querySelectorAll('.searchcontentlist').forEach(link => {
+
+        link.addEventListener('click', function(event) {
+
+            event.preventDefault();
+            navigateTo(this.getAttribute('href'));
+        });
+    });
+    
     document.querySelectorAll('.homelink').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();

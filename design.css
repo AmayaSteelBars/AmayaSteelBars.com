@@ -437,14 +437,17 @@ nav ul li a {
 .search-content{
   border-radius: 28px;
   background-color: white;
-  overflow-y: auto;
+  overflow-y: scroll;
   transition: max-height 0.5s;
-  width: 94%;
+  width: 90%;
+  max-height: 300px;
   color: black;
+  display: flex;
 }
 
 .search-content ul{
   padding: 15px 10px;
+  flex: 1;
 }
 
 .search-content ul li{

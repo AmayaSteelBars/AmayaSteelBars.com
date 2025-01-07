@@ -18,11 +18,20 @@ searchinput.onkeyup =function(){
         console.log(result)
     }
   display(result);
+  
+  if(!result.length){
+    searchcontent.innerHTML="";
+  }
 }
 
 function display(result){
     const content= result.map((list)=>{
-        return "<li>" + list + "</li>";
+        return `<li onclick="selectInput(this)" class="searchcontentlist"> <a href="${list}.html"> ${list}</a> </li>`;
     });
     searchcontent.innerHTML = "<ul>" + content.join('') + "</ul>";
+}
+
+function selectInput(list){
+  searchinput.value = list.innerHTML;
+  searchcontent.innerHTML="";
 }
