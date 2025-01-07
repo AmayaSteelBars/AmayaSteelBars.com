@@ -450,6 +450,11 @@ nav ul li a {
   flex: 1;
 }
 
+.searchcontentlist{
+  text-decoration: none;
+  color: black;
+}
+
 .search-content ul li{
   list-style-type: none;
   border-radius: 3px;

@@ -2,7 +2,48 @@ let availablekeyword=[
     "Anglebar",
     "Flatbar",
     "Squarebar",
-    "Roundbar"
+    "Roundbar",
+    "GISquaretube",
+    "GalvanizedPlate",
+    "MildSteelPlate",
+    "BiCpurlins",
+    "GiCpurlins",
+    "BiExpandedMetal",
+    "BiPerforated",
+    "BiPipe",
+    "BiSquaretube",
+    "BoxGutter",
+    "Lflashing",
+    "RegularFlashing",
+    "RidgeRoll",
+    "WallFlashing",
+    "CarryingChannel",
+    "MetalFurring",
+    "MetalStud",
+    "WallAngle",
+    "SteelDeck",
+    "Channel",
+    "CheckeredPlate",
+    "ChickenWire",
+    "ColorSheet",
+    "SlottedAngle",
+    "CycloneWire",
+    "Deformedbar",
+    "GiCorrugated",
+    "Longspanribtype",
+    "LongspanCorrugated",
+    "GiPipe",
+    "ZBar",
+    "IBar",
+    "Tbar",
+    "Phenolic",
+    "Plywood",
+    "FicemBoard",
+    "Shafting",
+    "ThreadedBar",
+    "StainlessSheet",
+    "BarbedWire",
+    "Wideflange"
 ];
 
 const searchcontent = document.querySelector(".search-content");
@@ -18,6 +59,16 @@ searchinput.onkeyup =function(){
         console.log(result)
     }
   display(result);
+
+
+  document.querySelectorAll('.searchcontentlist').forEach(link => {
+
+    link.addEventListener('click', function(event) {
+
+        event.preventDefault();
+        navigateTo(this.getAttribute('href'));
+    });
+});
   
   if(!result.length){
     searchcontent.innerHTML="";
@@ -26,7 +77,7 @@ searchinput.onkeyup =function(){
 
 function display(result){
     const content= result.map((list)=>{
-        return `<li onclick="selectInput(this)" class="searchcontentlist"> <a href="${list}.html"> ${list}</a> </li>`;
+        return `<a href="${list}.html" class="searchcontentlist"><li onclick="selectInput(this)" >  ${list} </li></a>`;
     });
     searchcontent.innerHTML = "<ul>" + content.join('') + "</ul>";
 }

@@ -2329,6 +2329,11 @@ function playOnInteraction() {
                 link.style.pointerEvents = 'none'; // Disable clicks
             });
 
+            document.querySelectorAll('.searchcontentlist').forEach(link => {
+                link.style.pointerEvents = 'none'; // Disable clicks
+            });
+
+
             document.querySelectorAll('.homelink').forEach(link => {
                 link.style.pointerEvents = 'none'; // Disable clicks
             });
@@ -2344,6 +2349,10 @@ function playOnInteraction() {
 
         function enableNavigation() {
           document.querySelectorAll('.sub-menu-link').forEach(link => {
+                link.style.pointerEvents = 'auto'; // Enable clicks
+            });
+
+            document.querySelectorAll('.searchcontentlist').forEach(link => {
                 link.style.pointerEvents = 'auto'; // Enable clicks
             });
 
@@ -2478,6 +2487,13 @@ function navigateTo(page, addToHistory = true) {
         
         // Attach debounced click event listeners to navigation links
        document.querySelectorAll('.sub-menu-link').forEach(link => {
+            link.addEventListener('click', debounce(function(event) {
+                event.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }, 300)); // 300ms debounce time
+        });
+
+        document.querySelectorAll('.searchcontentlist').forEach(link => {
             link.addEventListener('click', debounce(function(event) {
                 event.preventDefault();
                 navigateTo(this.getAttribute('href'));
