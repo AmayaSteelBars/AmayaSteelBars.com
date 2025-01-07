@@ -1055,6 +1055,10 @@ body.overlay-active {
     font-size: 15px;
   }
 
+.search-content ul li{
+    font-size: 15px;
+  }
+
 
   .SteelProduct {
     font-size: 30px;
@@ -1135,6 +1139,9 @@ body.overlay-active {
     font-size: 20px;
   }
 
+  .search-content ul li{
+    font-size: 20px;
+  }
 
   .SteelProduct {
     font-size: 30px;
@@ -1293,6 +1300,10 @@ body.overlay-active {
   }
 
   .sub-menu-link {
+    font-size: 25px;
+  }
+
+  .search-content ul li{
     font-size: 25px;
   }
 
