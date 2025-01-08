@@ -433,6 +433,9 @@ nav ul li a {
 .search-icon{
   color: rgba(0, 0, 0, .25);
 }
+.mic-icon{
+  color: black;
+}
 
 .search-content{
   border-radius: 28px;
