@@ -395,6 +395,77 @@ nav ul li a {
   text-decoration: none;
 }
 
+.searchbar{
+  --padding:14px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  border-radius:28px;
+  padding: var(--padding);
+  background-color: #f6f6f6;
+  width: 90%;
+  transition: box-shadow 0.25s;
+}
+
+.searchbar:focus-within{
+  box-shadow:0 0 2px rgba(0, 0, 0, .75);
+}
+
+.searchbar button{
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.search-input{
+  font-size: 16px;
+  font-family: "Lexend",sans-serif;
+  color: #333333;
+  margin-left: var(--padding);
+  outline: none;
+  border: none;
+  background: transparent;
+  flex:1;
+}
+
+.search-input::placeholder,
+.search-icon{
+  color: rgba(0, 0, 0, .25);
+}
+
+.search-content{
+  border-radius: 28px;
+  background-color: white;
+  overflow-y: scroll;
+  transition: max-height 0.5s;
+  width: 90%;
+  max-height: 300px;
+  color: black;
+  display: flex;
+}
+
+.search-content ul{
+  padding: 15px 10px;
+  flex: 1;
+}
+
+.searchcontentlist{
+  text-decoration: none;
+  color: black;
+}
+
+.search-content ul li{
+  list-style-type: none;
+  border-radius: 3px;
+  padding:15px 10px;
+  cursor: pointer;
+}
+
+.search-content ul li:hover{
+  background: #e9f3ff;
+}
+
 .sub-menu-wrap {
   max-height: 0;
   overflow-y: auto;
@@ -984,6 +1055,10 @@ body.overlay-active {
     font-size: 15px;
   }
 
+.search-content ul li{
+    font-size: 15px;
+  }
+
 
   .SteelProduct {
     font-size: 30px;
@@ -1064,6 +1139,9 @@ body.overlay-active {
     font-size: 20px;
   }
 
+  .search-content ul li{
+    font-size: 20px;
+  }
 
   .SteelProduct {
     font-size: 30px;
@@ -1222,6 +1300,10 @@ body.overlay-active {
   }
 
   .sub-menu-link {
+    font-size: 25px;
+  }
+
+  .search-content ul li{
     font-size: 25px;
   }
 

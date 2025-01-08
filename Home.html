@@ -6,6 +6,7 @@
 <meta property="og:description" content="Explore our wide range of high-quality metals, tailored to meet your business needs.">
 <meta property="og:image" content="Logo.jpg">
 <meta property="og:url" content="http://www.AmayaSteelBars.com">
+
 <head>
   <title>AmayaSteelBars</title>
 
@@ -24,6 +25,8 @@
  
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
   <link rel="stylesheet" href="design.css">
     
@@ -44,6 +47,18 @@
 
           <div class="sub-menu-wrap" id="submenu">
             <div class="sub-menu">
+              
+              <div class="searchbar">
+                
+                <button><span class="search-icon material-symbols-outlined">
+search
+</span></button>
+
+<input class="search-input"type="search" placeholder="Search the item you needed" autocomplete="off"  />
+              </div>
+              <div class="search-content">
+                
+              </div>
               <div class="product">
               <div class="steel">
               <h1>Steel Products</h1>
@@ -2147,7 +2162,7 @@ We offer brand new metal products and metal scrap at competitive prices, caterin
         document.body.classList.toggle('overlay-active');
         
       }
-      
+
 document.querySelector(".menuoverlay").addEventListener("click",function(){
   
   if(menuoverlay.classList.contains("active")){
@@ -2158,9 +2173,12 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
         
         document.body.classList.remove('overlay-active');
         
-        
   }
       })
+
+
+      
+
     </script>
 
   <script>
@@ -2254,6 +2272,16 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
             navigateTo(this.getAttribute('href'));
         });
     });
+    
+    document.querySelectorAll('.searchcontentlist').forEach(link => {
+
+        link.addEventListener('click', function(event) {
+
+            event.preventDefault();
+            navigateTo(this.getAttribute('href'));
+        });
+    });
+    
     document.querySelectorAll('.homelink').forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
@@ -2301,6 +2329,11 @@ function playOnInteraction() {
                 link.style.pointerEvents = 'none'; // Disable clicks
             });
 
+            document.querySelectorAll('.searchcontentlist').forEach(link => {
+                link.style.pointerEvents = 'none'; // Disable clicks
+            });
+
+
             document.querySelectorAll('.homelink').forEach(link => {
                 link.style.pointerEvents = 'none'; // Disable clicks
             });
@@ -2316,6 +2349,10 @@ function playOnInteraction() {
 
         function enableNavigation() {
           document.querySelectorAll('.sub-menu-link').forEach(link => {
+                link.style.pointerEvents = 'auto'; // Enable clicks
+            });
+
+            document.querySelectorAll('.searchcontentlist').forEach(link => {
                 link.style.pointerEvents = 'auto'; // Enable clicks
             });
 
@@ -2456,6 +2493,13 @@ function navigateTo(page, addToHistory = true) {
             }, 300)); // 300ms debounce time
         });
 
+        document.querySelectorAll('.searchcontentlist').forEach(link => {
+            link.addEventListener('click', debounce(function(event) {
+                event.preventDefault();
+                navigateTo(this.getAttribute('href'));
+            }, 300)); // 300ms debounce time
+        });
+
 
         document.querySelectorAll('.homelink').forEach(link => {
             link.addEventListener('click', debounce(function(event) {
@@ -2533,6 +2577,6 @@ export async function getServerSideProps() {
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   
 <script src="function.js"></script>
- 
+ <script src="autocomplete.js"></script>
 </body>
 </html>
