@@ -2181,19 +2181,19 @@ document.querySelector(".menuoverlay").addEventListener("click",function(){
 
       const micbutton =document.getElementById("micbutton");
       const micicon=document.querySelector(".mic-icon")
-      const searchinput =document.querySelector(".search-input");
-      const speechrecognition = window.speechrecognition || window.webkitSpeechRecognition;
+      const searchdiv =document.querySelector(".search-input");
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-      const recognition = new speechrecognition();
+      const recognition = new SpeechRecognition();
       recognition.interimResults=true;
       recognition.continuous = true;
       let listening =false;
       recognition.onresult = (event)=>{
         let transcript = "";
-        for (let i = event.resultIndex;i< event.results.length;i++){
-          transcript +=event.results[i][0].transcript;
+        for (let i = event.resultIndex;i< event.results.length; i++){
+          transcript += event.results[i][0].transcript;
         }
-        searchinput.innerHTML=transcript;
+        searchdiv.value=transcript;
       }
       recognition.onerror=(event)=>{
         console.error("Speech recognition error",event)
