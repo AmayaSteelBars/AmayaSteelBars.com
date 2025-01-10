@@ -41,6 +41,7 @@ let availablekeyword=[
     "FicemBoard",
     "Shafting",
     "ThreadedBar",
+    "SteelMatting",
     "StainlessSheet",
     "BarbedWire",
     "Wideflange",
@@ -120,9 +121,35 @@ searchinput.onkeyup =function(){
   }
 }
 
+function triggerSearch() {
+    let result = [];
+    let input =searchinput.value;
+    if(input.length){
+        result = availablekeyword.filter((keyword)=>{
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        })
+        console.log(result)
+    }
+  display(result);
+
+
+  document.querySelectorAll('.searchcontentlist').forEach(link => {
+
+    link.addEventListener('click', function(event) {
+
+        event.preventDefault();
+        navigateTo(this.getAttribute('href'));
+    });
+});
+  
+  if(!result.length){
+    searchcontent.innerHTML="";
+  }
+}
+
 function display(result){
     const content= result.map((list)=>{
-        return `<a href="${list}.html" class="searchcontentlist"><li onclick="selectInput(this)" >  ${list} </li></a>`;
+        return `<a href="${list}.html" class="searchcontentlist"><li onclick="selectInput(this)" >${list}</li></a>`;
     });
     searchcontent.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
