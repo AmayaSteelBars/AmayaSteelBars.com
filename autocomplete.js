@@ -1,9 +1,9 @@
 let availablekeyword=[
-    "Anglebar",
-    "Flatbar",
-    "Squarebar",
-    "Roundbar",
-    "GISquaretube",
+    "AngleBar",
+    "FlatBar",
+    "SquareBar",
+    "RoundBar",
+    "GiSquareTube",
     "GalvanizedPlate",
     "MildSteelPlate",
     "BiCpurlins",
@@ -11,9 +11,9 @@ let availablekeyword=[
     "BiExpandedMetal",
     "BiPerforated",
     "BiPipe",
-    "BiSquaretube",
+    "BiSquareTube",
     "BoxGutter",
-    "Lflashing",
+    "lFlashing",
     "RegularFlashing",
     "RidgeRoll",
     "WallFlashing",
@@ -30,66 +30,72 @@ let availablekeyword=[
     "CycloneWire",
     "Deformedbar",
     "GiCorrugated",
-    "Longspanribtype",
-    "LongspanCorrugated",
+    "LongSpanRibType",
+    "LongSpanCorrugated",
     "GiPipe",
-    "ZBar",
-    "IBar",
-    "Tbar",
+    "zBar",
+    "iBar",
+    "tBar",
     "Phenolic",
     "Plywood",
     "FicemBoard",
     "Shafting",
     "ThreadedBar",
+    "SteelMatting",
     "StainlessSheet",
     "BarbedWire",
-    "Wideflange",
-    "Arrowpoint",
+    "WideFlange",
+    "ArrowPoint",
     "BlindRivets",
     "Bolt&Nut",
-    "Wallclip",
-    "Commonnails",
-    "Concretenails",
-    "Cornerplate",
-    "Slottedanglefoot",
-    "Cuttingdisc",
-    "Grindingdisc",
-    "Flapdisc",
-    "Sandpaper",
-    "Sandflex",
+    "WallClip",
+    "CommonNails",
+    "ConcreteNails",
+    "CornerPlate",
+    "SlottedAngleFoot",
+    "CuttingDisc",
+    "GrindingDisc",
+    "FlapDisc",
+    "SandPaper",
+    "SandFlex",
     "Cylindrical",
-    "Drillbit",
-    "Dynabolt",
-    "Logscrew",
-    "Expansionshield",
-    "Epoxyprimer",
-    "Redoxide",
-    "Metaltextscrew",
-    "Textscrewadapter",
-    "Roofingnail",
-    "Woodtextscrew",
-    "Insulationfoam",
-    "Giwire",
-    "Blackscrew",
-    "Windowhandle",
-    "Windowhinges",
-    "Paintthinner",
-    "Lacquerthinner",
-    "Paintbrush",
-    "Miniroller",
-    "Pillowblock",
-    "Pioneerelastoseal",
+    "DrillBit",
+    "DynaBolt",
+    "LogScrew",
+    "ExpansionShield",
+    "EpoxyPrimer",
+    "RedOxide",
+    "MetalTextScrew",
+    "TextScrewAdapter",
+    "RoofingNail",
+    "WoodTextScrew",
+    "InsulationFoam",
+    "GiWire",
+    "BlackScrew",
+    "WindowHandle",
+    "WindowHinges",
+    "PaintThinner",
+    "LacquerThinner",
+    "PaintBrush",
+    "MiniRoller",
+    "PillowBlock",
+    "PioneerElastoseal",
     "Vulcaseal",
-    "Chalkstone",
-    "Steelbrush",
-    "Swivelclamp",
-    "Weldingglass",
-    "Weldingrod",
-    "Slidingdoortrack",
-    "Slidingdoortrackroller",
-    "Bielbow",
+    "ChalkStone",
+    "SteelBrush",
+    "SwivelClamp",
+    "WeldingGlass",
+    "WeldingRod",
+    "SlidingDoorTrack",
+    "SlidingDoorTrackRoller",
+    "BiElbow",
     "Tox"
 ];
+
+let searchablekeywords = availablekeyword.flatMap(keyword=>{
+  const spacekeyword = keyword.replace(/([a-z])([A-Z])/g, "$1 $2");
+  return [keyword.toLowerCase(),spacekeyword.toLowerCase()];
+});
 
 const searchcontent = document.querySelector(".search-content");
 const searchinput = document.querySelector(".search-input");
@@ -98,7 +104,33 @@ searchinput.onkeyup =function(){
     let result = [];
     let input =searchinput.value;
     if(input.length){
-        result = availablekeyword.filter((keyword)=>{
+        result = searchablekeywords.filter((keyword)=>{
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        })
+        console.log(result)
+    }
+  display(result);
+
+
+  document.querySelectorAll('.searchcontentlist').forEach(link => {
+
+    link.addEventListener('click', function(event) {
+
+        event.preventDefault();
+        navigateTo(this.getAttribute('href'));
+    });
+});
+  
+  if(!result.length){
+    searchcontent.innerHTML="";
+  }
+}
+
+function triggerSearch() {
+    let result = [];
+    let input =searchinput.value;
+    if(input.length){
+        result = searchablekeywords.filter((keyword)=>{
             return keyword.toLowerCase().includes(input.toLowerCase());
         })
         console.log(result)
@@ -122,7 +154,10 @@ searchinput.onkeyup =function(){
 
 function display(result){
     const content= result.map((list)=>{
-        return `<a href="${list}.html" class="searchcontentlist"><li onclick="selectInput(this)" >  ${list} </li></a>`;
+      
+      const formattedlist=list.replace(/\s+/g,'')
+      
+        return `<a href="${formattedlist}.html" class="searchcontentlist"><li onclick="selectInput(this)" >${list}</li></a>`;
     });
     searchcontent.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
