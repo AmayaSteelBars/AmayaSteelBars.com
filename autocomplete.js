@@ -156,8 +156,10 @@ function display(result){
     const content= result.map((list)=>{
       
       const formattedlist=list.replace(/\s+/g,'')
+     const capitalizedFormattedList = formattedlist.charAt(0).toUpperCase() + formattedlist.slice(1);
+
       
-        return `<a href="${formattedlist}.html" class="searchcontentlist"><li onclick="selectInput(this)" >${list}</li></a>`;
+        return `<a href="${capitalizedFormattedList}.html" class="searchcontentlist"><li onclick="selectInput(this)" >${list}</li></a>`;
     });
     searchcontent.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
