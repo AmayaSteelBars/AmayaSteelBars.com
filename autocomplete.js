@@ -47,7 +47,7 @@ let availablekeyword=[
     "WideFlange",
     "ArrowPoint",
     "BlindRivets",
-    "Bolt&Nut",
+    "BoltAndNut",
     "WallClip",
     "CommonNails",
     "ConcreteNails",
