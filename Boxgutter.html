@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AmayaSteelBarTrading</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ 
+  <style>
+  .SteelProduct{
+        margin-top: 0%;
+      }
+    
+           .ProductName{
+          color:white;
+          font-size:2rem;
+          font-family:"Montserrat",Sans-serif;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+        }
+  
+        .BrandNew{
+          grid-area: BrandNew;
+          color: darkblue;
+         display: flex;
+         justify-content: center;
+        }
+  
+        .BrandNew img{
+          width: 245px;
+      height: 100px;
+        }
+        
+    .BrandNew h1{
+      margin: 0;
+    }
+  
+      .Product{
+        grid-area: Product;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Product img{
+        width: 100%;
+      height: 100%;
+      }
+  
+      .ProductDetailstitle{
+        grid-area: ProductDetailstitle;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      }
+  
+      .Detailstitle{
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .Description{
+        grid-area: Description;
+      color: dodgerblue;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      }
+        .Description h1{
+          margin: 0;
+        }
+      .Description h1 b{
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+        
+      }
+      .Description h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description p{
+        padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+      }
+
+      
+      .Description button{
+        color: white;
+      background: darkblue;
+      font-size: 2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      justify-items: center;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Description button img{
+        width: 75px;
+      height: 56px;
+      }
+  
+      .Description button:hover{
+        color: grey;
+      }
+  
+  
+      .Cutsize{
+          grid-area: Cutsize;
+          color: darkblue;
+        display: flex;
+        justify-content: center;
+        }
+  
+        .Cutsize h1{
+          margin: 0;
+        }
+  
+        .Cutsize img{
+          width: 245px;
+         height: 100px;
+        }
+  
+      .Product2{
+        grid-area: Product2;
+      }
+  
+      .Product2 img{
+        width: 100%;
+      height: 100%;
+      
+      }
+     
+   
+      .Description2{
+        grid-area: Description2;
+      color: dodgerblue;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+     
+      }
+  .Description2 h1{
+    margin: 0;
+  }
+      .Description2 h1 b{
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Description2 h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description2 p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
+      }
+      
+    
+      .Description2 button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      justify-items: center;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Description2 button img{
+        width: 75px;
+      height: 56px;
+       
+      }
+  
+      .Description2 button:hover{
+        color: grey;
+      }
+  
+  
+      .Product3new{
+          grid-area: Product3new;
+          color: darkblue;
+          display: flex;
+         justify-content: center;
+        }
+
+        .Product3new img{
+          width: 245px;
+         height: 100px;
+        }
+
+
+        .Product3new h1{
+      margin: 0;
+    }
+
+        .Product3{
+        grid-area: Product3;
+        display: flex;
+        justify-content: center;
+      }
+
+
+      .Product3 img{
+        width: 100%;
+      height: 100%;
+      }
+
+      .Description3{
+        grid-area: Description3;
+        color: dodgerblue;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      }
+
+      .Description3 h1 b{
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+      }
+
+      .Description3 h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+
+
+      .Description3 p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
+      }
+
+      .Description3 button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      justify-items: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .Description3 button img{
+        width: 75px;
+      height: 56px;
+    }
+
+    .Description3 button:hover{
+        color: grey;
+      }
+
+  
+      .Product_Picture{
+        grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
+        display: grid;
+        grid-gap:3%;
+        overflow-x:auto;
+      padding-left: 10px;
+      padding-right:10px;
+      padding-bottom:30px;
+      }
+  
+     .Product_Picture div a img{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+  
+      .Product_Picture div h1 {
+    display: flex;
+    font-size: 2rem;
+    color: darkblue;
+    justify-content: center;
+}
+  
+      .ProductGroup{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas: 
+    "BrandNew"
+    "Product"
+    "Description"
+    "Cutsize"
+    "Product2"
+    "Description2"
+    "Product3new"
+    "Product3"
+    "Description3"
+    "ProductDetailstitle"
+    "Product_Picture"  ;
+    grid-gap:20px;
+    background-color: white;
+  }
+  
+  @media screen and (max-width: 300px) {
+    .ProductName{
+          background: linear-gradient(135deg,rgb(34, 7, 241) 60%, #0f0bee00 40%);
+        }
+    
+    .SteelProduct{
+        margin-top: 17%;
+      }
+    
+    .ProductName{
+      font-size:2rem;
+    }
+  
+  .BrandNew img{
+      width: 80px;
+      height: 40px;
+        }
+    
+
+      .Description h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+
+
+      .Description button {
+        font-size: 2rem;
+    }
+      .Description button img{
+        width: 50px;
+      height: 30px;
+      }
+
+
+      .Cutsize img {
+        width: 80px;
+      height: 40px;
+}
+
+
+.Description2 h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+      .Description2 button {
+        font-size: 2rem;
+    }
+            .Description2 button img{
+        width: 50px;
+      height: 30px;
+      }
+
+
+
+
+      .Product3new img {
+        width: 80px;
+      height: 40px;
+}
+
+
+.Description3 h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+      .Description3 button {
+        font-size: 2rem;
+    }
+            .Description3 button img{
+        width: 50px;
+      height: 30px;
+      }
+  }
+
+  @media screen and (min-width: 300px) {
+    .ProductName{
+          background: linear-gradient(135deg,rgb(34, 7, 241) 60%, #0f0bee00 40%);
+        }
+
+    .SteelProduct{
+        margin-top: 17%;
+      }
+    
+    .ProductName{
+      font-size:2rem;
+    }
+  
+  .BrandNew img{
+      width: 80px;
+      height: 40px;
+        }
+    
+
+      .Description h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+
+
+      .Description button{
+        font-size: 2rem;
+      }
+      .Description button img{
+        width: 50px;
+      height: 30px;
+      }
+
+     
+      .Cutsize img {
+        width: 80px;
+      height: 40px;
+}
+
+
+.Description2 h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+     .Description2 button{
+        font-size: 2rem;
+      }
+            .Description2 button img{
+        width: 50px;
+      height: 30px;
+      }
+
+
+      .Product3new img {
+        width: 80px;
+      height: 40px;
+}
+
+
+.Description3 h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+     .Description3 button{
+        font-size: 2rem;
+      }
+            .Description3 button img{
+        width: 50px;
+      height: 30px;
+      }
+  }
+  
+
+
+  @media screen and (min-width: 500px) {
+
+    .ProductName{
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+        }
+    
+        .BrandNew{
+      font-size: 2rem;
+    }
+
+    .BrandNew img{
+      width: 90px;
+      height: 50px;
+        }
+
+
+        .Description h1 b img {
+        width: 70px;
+        height: 50px;
+    }
+    .Description h1 b {
+      font-size: 3rem;
+    }
+
+    .Description p {
+    font-size: 20px;
+}
+
+
+.Description2 h1 b {
+  font-size: 3rem;
+}
+
+.Description2 p{
+  font-size: 20px;
+}
+
+.Cutsize{
+        font-size: 2rem;
+      }
+
+      .Cutsize img {
+        width: 90px;
+      height: 50px;
+
+  }
+
+  .Product3new{
+    font-size: 2rem;
+  }
+
+  .Product3new img {
+        width: 90px;
+      height: 50px;
+
+  }
+
+
+  .Detailstitle{
+    font-size: 20px;
+  }
+    .Detailstitle h1{
+
+    margin:0;
+
+  }
+
+  .Product_Picture div a img {
+    width: 110px;
+    height: 110px;
+}
+}
+
+  @media screen and (min-width: 600px) {
+    .SteelProduct{
+        margin-top: 15%;
+      }
+
+      .Product_Picture div a img {
+    width: 130px;
+    height: 130px;
+}
+  }
+
+  @media screen and (min-width: 700px) {
+    .SteelProduct{
+        margin-top: 13%;
+      }
+
+      .Description p {
+        font-size: 25px;
+    }
+
+    .Description2 p {
+        font-size: 25px;
+    }
+
+    .Description3 p {
+        font-size: 25px;
+    }
+
+    .ProductGroup{
+      grid-template-rows:auto 20em auto auto 20rem auto auto 20rem auto auto auto;
+    }
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+  }
+
+  @media screen and (min-width: 800px){
+
+
+    .Description button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Description2 button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .Description3 button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Detailstitle {
+        font-size: 30px;
+    }
+
+  }
+
+  @media screen and (min-width: 900px){
+
+    .SteelProduct {
+        margin-top: 11%;
+    }
+    
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+
+}
+
+@media screen and (min-width: 1000px){
+
+  .SteelProduct {
+        margin-top: 10%;
+      }
+
+      .BrandNew img {
+        width: 164px;
+        height: 60px;
+    }
+
+    .Description p {
+        font-size: 27px;
+    }
+
+    .Cutsize img {
+      width: 164px;
+        height: 60px;
+    }
+
+
+    .Product3new img {
+      width: 164px;
+        height: 60px;
+    }
+
+    .Product_Picture div a img {
+        width: 200px;
+        height: 200px;
+    }
+}
+    
+      </style>
+
+  </head>  
+    
+  <body>
+    
+  
+    <div class="SteelProduct">
+      <b>Steel Products</b>
+      </div>
+    
+    
+      <div class="ProductName">
+        <b>BoxGutter</b>
+        </div>
+      
+    <div class="ProductGroup">
+        <div class="BrandNew">
+          <h1>
+          <b><img src="new.png">BrandNew</b>
+        </h1>
+        </div>
+        <div class="Product">
+          <img  src="BoxGutterGalvanized.png">
+        </div>
+    
+        <div class="Description">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p>A Box Gutter Galvanized is a type of gutter that has a rectangular shape and is made from steel coated with zinc. This zinc coating helps prevent rust and corrosion, making the gutter more durable. These gutters are great for handling large amounts of rainwater and are commonly used in both homes and commercial buildings.</p>
+          <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
+          <p>16inches x 8ft</p>
+          <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+     
+        <div class="Cutsize">
+          <h1>
+          <b><img src="new.png">BrandNew</b>
+        </h1>
+        </div>
+        <div class="Product2">
+          <img  src="BoxGutterGreen.png">
+        </div>
+    
+        <div class="Description2">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p>BoxGutterGreen is a box-shaped gutter made from metal sheets that are coated in green. This coating not only gives the gutter a green color but also provides additional protection against the elements, making it more durable.</p>
+          <h1><b id="measurement2"><img src="measurement.png">Measurement</b></h1>
+          <p>16inches x 8ft</p>
+          <button id="OldProduct"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+    
+
+        <div class="Product3new">
+          <h1>
+          <b><img src="new.png">BrandNew</b>
+        </h1>
+        </div>
+        <div class="Product3">
+          <img  src="BoxGutterStainless.png">
+        </div>
+    
+        <div class="Description3">
+          <h1><b><img src="Information.png">Description</b></h1>
+          <p> BoxGutterStainless is a box-shaped gutter made from stainless steel. Stainless steel is very durable and resistant to rust and corrosion, making it a great choice for gutters. These gutters can handle a lot of rainwater and are often used in both homes and commercial buildings. They also have a sleek, modern look that can match various architectural styles.</p>
+          <h1><b id="measurement3"><img src="measurement.png">Measurement</b></h1>
+          <p>16ft x 8ft</p>
+          <button id="OldProduct2"><img src="inquiry.png">Add to Inquiry</button>
+        </div>
+      
+    
+        <div class="ProductDetailstitle">
+           <div class="Detailstitle"><h1><b>Similar Product</b></h1></div>
+        </div>
+    
+        <div class="Product_Picture">
+          <div>
+          <a href="Lflashing.html" class="similarproduct"><img id="pic1" src="Lflashing.png" alt="https://i.ibb.co/QDG8QHm/Lflashing.jpg" >
+          <h1>Lflashing</h1></a>
+        </div>
+    
+        <div>
+          <a href="RegularFlashing.html" class="similarproduct"><img id="pic2" src="RegularFlashing.png" alt="https://i.ibb.co/mNzFNTs/Regular-Flashing.jpg" >
+          <h1>RegularFlashing</h1></a>
+        </div>
+    
+        <div>
+          <a href="Ridgeroll.html" class="similarproduct"><img id="pic3" src="Ridgeroll.png" alt="https://i.ibb.co/CPVSwcY/Ridgeroll.jpg" >
+          <h1>Ridgeroll</h1></a>
+        </div>
+    
+        <div>
+          <a href="WallFlashing.html" class="similarproduct"><img id="pic4" src="WallFlashing.png" alt="https://i.ibb.co/3WbsGM8/Wall-Flashing.jpg" >
+          <h1>WallFlashing</h1></a>
+        </div>
+    
+        </div>
+      </div>
+  
+    
+    
+    <script>
+                 function promptFunction() {
+        const storage = [];
+        const textarea = document.getElementById("Inquiry");
+        document.getElementById('NewProduct').addEventListener('click', function() {
+      let FirstInput = prompt("Please enter the size:");
+      let SecondInput = prompt("Please enter the thickness:");
+  
+      if (FirstInput !== null && SecondInput !== null) {
+          const newText = `BoxGutterGalvanized ${FirstInput}  (${SecondInput}) x 8ft`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+      })
+  
+      document.getElementById('OldProduct').addEventListener('click', function() {
+      let FirstInput = prompt("Please enter the size:");
+      let SecondInput = prompt("Please enter the thickness:");
+  
+      if (FirstInput !== null && SecondInput !== null) {
+          const newText = `BoxGutterGreen ${FirstInput} (${SecondInput}) x 8ft`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+          if (textarea.value.trim()) {
+              storage.push(textarea.value.trim());
+          }
+  
+          storage.push(newText);
+          textarea.value = storage.join('\n');
+  
+          saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+  })
+                   
+      document.getElementById('OldProduct2').addEventListener('click', function() {
+      let FirstInput = prompt("Please enter the size:");
+      let SecondInput = prompt("Please enter the thickness:");
+  
+      if (FirstInput !== null && SecondInput !== null) {
+          const newText = `BoxGutterStainless ${FirstInput} (${SecondInput}) x 8ft`;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+          if (textarea.value.trim()) {
+              storage.push(textarea.value.trim());
+          }
+  
+          storage.push(newText);
+          textarea.value = storage.join('\n');
+  
+          saveInput();
+      } else {
+          alert("❌No input provided.");
+      }
+  });
+                   
+  }
+            </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<link rel="stylesheet" href="design.css">
+
+</body>
+</html>

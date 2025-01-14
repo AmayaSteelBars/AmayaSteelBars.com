@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>AmayaSteelBarTrading</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+  <style>
+  
+        .SteelProduct{
+        margin-top: 0%;
+      }
+    
+           .ProductName{
+          color:white;
+          font-size:2rem;
+          font-family:"Montserrat",Sans-serif;
+          background: linear-gradient(135deg,rgb(34, 7, 241) 40%, #0f0bee00 50%);
+        }
+  
+
+  
+  
+      .Cutsize{
+          grid-area: Cutsize;
+          color: darkblue;
+        display: flex;
+        justify-content: center;
+        }
+  
+        .Cutsize h1{
+          margin: 0;
+        }
+  
+        .Cutsize img{
+          width: 245px;
+         height: 100px;
+        }
+  
+      .Product2{
+        grid-area: Product2;
+      }
+  
+      .Product2 img{
+        width: 100%;
+      height: 100%;
+      
+      }
+     
+   
+      .Description2{
+        grid-area: Description2;
+      color: dodgerblue;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+     
+      }
+  .Description2 h1{
+    margin: 0;
+  }
+      .Description2 h1 b{
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Description2 h1 b img{
+        width: 96px;
+      height: 77px;
+      }
+  
+      .Description2 p{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
+      }
+      
+    
+      .Description2 button{
+        color: white;
+      background: darkblue;
+      font-size: 70px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family:  "Montserrat", sans-serif;;
+      width: 100%;
+      justify-items: center;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Description2 button img{
+        width: 75px;
+      height: 56px;
+       
+      }
+  
+      .Description2 button:hover{
+        color: grey;
+      }
+  
+      .ProductDetailstitle{
+        grid-area: ProductDetailstitle;
+      border-style: solid;
+      border-width: 0px 0px 3px 0px;
+      border-color: #090909;
+      }
+  
+      .Detailstitle{
+        color: darkblue;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .Product_Picture{
+        grid-template-areas: "Product_Picture Product_Picture Product_Picture Product_Picture";
+        display: grid;
+        grid-gap:3%;
+        overflow-x:auto;
+      padding-left: 10px;
+      padding-right:10px;
+      padding-bottom:30px;
+      }
+  
+     .Product_Picture div a img{
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+  
+      .Product_Picture div h1 {
+    display: flex;
+    font-size: 2rem;
+    color: darkblue;
+    justify-content: center;
+}
+  
+      .ProductGroup{
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto ;
+    grid-template-areas: 
+    "Cutsize"
+    "Product2"
+    "Description2"
+    "ProductDetailstitle"
+    "Product_Picture"  ;
+    grid-gap:20px;
+    background-color: white;
+  }
+  
+  @media screen and (max-width: 300px) {
+    
+             
+    
+    .SteelProduct{
+        margin-top: 17%;
+      }
+    
+    .ProductName{
+      font-size:2rem;
+      background: linear-gradient(135deg,rgb(34, 7, 241) 60%, #0f0bee00 70%);
+    }
+  
+
+
+      .Cutsize img {
+    width: 60px;
+    height: 40px;
+}
+
+
+.Description2 h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+      .Description2 button {
+        font-size: 2rem;
+    }
+            .Description2 button img{
+        width: 50px;
+      height: 30px;
+      }
+  }
+
+  @media screen and (min-width: 300px) {
+    .SteelProduct{
+        margin-top: 17%;
+      }
+    
+    .ProductName{
+      font-size:2rem;
+      background: linear-gradient(135deg,rgb(34, 7, 241) 60%, #0f0bee00 70%);
+    }
+
+     
+      .Cutsize img {
+    width: 60px;
+    height: 40px;
+}
+
+
+.Description2 h1 b img{
+        width: 60px;
+      height: 40px;
+      }
+     .Description2 button{
+        font-size: 2rem;
+      }
+            .Description2 button img{
+        width: 50px;
+      height: 30px;
+      }
+  }
+  
+
+
+  @media screen and (min-width: 500px) {
+    
+        .BrandNew{
+      font-size: 2rem;
+    }
+
+
+
+.Description2 h1 b {
+  font-size: 3rem;
+}
+
+.Description2 p{
+  font-size: 20px;
+}
+
+.Cutsize{
+        font-size: 2rem;
+      }
+
+      .Cutsize img {
+    width: 70px;
+    height: 50px;
+
+  }
+
+  .Detailstitle{
+    font-size: 20px;
+  }
+    .Detailstitle h1{
+
+    margin:0;
+
+  }
+
+  .Product_Picture div a img {
+    width: 110px;
+    height: 110px;
+}
+}
+
+  @media screen and (min-width: 600px) {
+    .SteelProduct{
+        margin-top: 15%;
+      }
+
+      .Product_Picture div a img {
+    width: 130px;
+    height: 130px;
+}
+  }
+
+  @media screen and (min-width: 700px) {
+    .SteelProduct{
+        margin-top: 13%;
+      }
+
+    .Description2 p {
+        font-size: 25px;
+    }
+
+    .ProductGroup{
+      grid-template-rows:auto 20em auto auto 20rem auto auto;
+    }
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+  }
+
+  @media screen and (min-width: 800px){
+
+    .Description2 button {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .Detailstitle {
+        font-size: 30px;
+    }
+
+  }
+
+  @media screen and (min-width: 900px){
+
+    .SteelProduct {
+        margin-top: 11%;
+    }
+
+    .Product_Picture div a img {
+    width: 150px;
+    height: 150px;
+}
+
+}
+
+@media screen and (min-width: 1000px){
+
+  .SteelProduct {
+        margin-top: 10%;
+      }
+
+
+    .Cutsize img {
+        width: 110px;
+        height: 70px;
+    }
+
+    .Product_Picture div a img {
+        width: 200px;
+        height: 200px;
+    }
+}
+      </style>
+</head>  
+  
+<body>
+ 
+  <div class="SteelProduct">
+    <b>Steel Products</b>
+    </div>
+  
+  
+    <div class="ProductName">
+      <b>StainlessSheet</b>
+      </div>
+    
+  <div class="ProductGroup">
+      
+   
+      <div class="Cutsize">
+        <h1><b><img src="cut.png">Cut size</b>
+      </h1></div>
+      <div class="Product2">
+        <img  src="StainlessSheet.png">
+      </div>
+  
+      <div class="Description2">
+        <h1><b><img src="Information.png">Description</b></h1>
+        <p>A stainless sheet, or stainless steel sheet, is a flat piece of stainless steel that is typically available in various thicknesses and dimensions. Stainless steel sheets are known for their excellent corrosion resistance, strength, and aesthetic appeal. They are widely used in various industries, including construction, automotive, aerospace, and manufacturing, for applications such as countertops, appliances, architectural cladding, and more. The sheets come in different finishes, such as brushed, polished, and matte, to suit different functional and decorative needs.Its competitive pricing is based on a per-kilogram basis.</p>
+        <h1><b id="measurement2"><img src="measurement.png">Measurement</b></h1>
+        <p>3ft x 4ft</p>
+        <button id="OldProduct"><img src="inquiry.png">Add to Inquiry</button>
+      </div>
+  
+    
+  
+      <div class="ProductDetailstitle">
+         <div class="Detailstitle"><h1><b>Similar Product</b></h1></div>
+      </div>
+  
+      <div class="Product_Picture">
+        <div>
+        <a href="GalvanizedPlate.html" class="similarproduct"><img id="pic1" src="GalvanizedPlate.png" alt="https://i.ibb.co/b7sLNkd/images-3.jpg" >
+        <h1>GalvanizedPlate</h1></a>
+      </div>
+  
+      <div>
+        <a href="ColoredSheet.html" class="similarproduct"><img id="pic2" src="ColoredSheet.png" alt="https://i.ibb.co/q9zvZL9/Colored-Sheet.webp" >
+        <h1>ColoredSheet</h1></a>
+      </div>
+  
+      <div>
+        <a href="MildSteelPlate.html" class="similarproduct"><img id="pic3" src="msplate.png" alt="https://i.ibb.co/BChXPb0/ms-plate.jpg" >
+        <h1>MildSteelPlate</h1></a>
+      </div>
+  
+      <div>
+        <a href="CheckeredPlate.html" class="similarproduct"><img id="pic4" src="CheckeredPlate.png" alt="https://i.ibb.co/8Dxg1yb/Checkeredplate.jpg" >
+        <h1>CheckeredPlate</h1></a>
+      </div>
+  
+      </div>
+    </div>
+    
+  
+
+  
+  
+  <script>
+               function promptFunction() {
+      const storage = [];
+      const textarea = document.getElementById("Inquiry");
+      
+
+    document.getElementById('OldProduct').addEventListener('click', function() {
+    let FirstInput = prompt("Please enter the thickness:");
+    
+    
+      
+    if (FirstInput !== null) {
+        const newText = `StainlessSheet ${FirstInput} x 3ft x 4ft`;
+        alert("✅Successfully added: " + newText);
+
+        storage.length = 0;
+
+        if (textarea.value.trim()) {
+            storage.push(textarea.value.trim());
+        }
+
+        storage.push(newText);
+        textarea.value = storage.join('\n');
+
+        saveInput();
+    } else {
+        alert("❌No input provided.");
+    }
+});
+}
+          </script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<link rel="stylesheet" href="design.css">
+
+
+</body>
+</html>
