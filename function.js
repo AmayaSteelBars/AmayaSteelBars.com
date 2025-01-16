@@ -197,4 +197,52 @@ thumbnails2.forEach((thumbnail2,index)=>{
 })
 
 
+//camera detection
+document.getElementById("camera-button").addEventListener("click", () => {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+  input.onchange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      processImage(file);
+    }
+  };
+  input.click();
+});
+
+function processImage(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    const base64Image = reader.result.split(',')[1];
+    analyzeImage(base64Image);
+  };
+  reader.readAsDataURL(file);
+}
+
+function analyzeImage(base64Image) {
+  fetch(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyBe8pGCScPoBWs3L_Z4i8B5aQFVlw1okDM`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      requests: [
+        {
+          image: { content: base64Image },
+          features: [{ type: 'LABEL_DETECTION', maxResults: 5 }]
+        }
+      ]
+    })
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    const labels = data.responses[0].labelAnnotations;
+    const highestConfidenceLabel = labels[0]?.description;
+    if (highestConfidenceLabel) {
+      document.querySelector(".search-input").value = highestConfidenceLabel;
+    } else {
+      alert("No results found");
+    }
+  })
+  .catch((error) => console.error("error analyzing image:", error));
+}
 
