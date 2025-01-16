@@ -399,23 +399,23 @@
     
         <div class="Product_Picture">
           <div>
-          <a href="GiPipe.html" class="similarproduct"><img id="pic1" src="Gipipe.png" alt="https://i.ibb.co/yn2cymn/Gipipe.webp" >
-          <h1>GiPipe</h1></a>
+          <a href="Ibeam.html" class="similarproduct"><img id="pic1" src="Ibeam.png" alt="https://i.ibb.co/2nNcm5C/Ibeam.jpg" >
+          <h1>IBeam</h1></a>
         </div>
     
         <div>
-          <a href="SteelMatting.html" class="similarproduct"><img id="pic2" src="SteelMatting.png" alt="https://i.ibb.co/sjHny2X/Steel-Matting.jpg" >
-          <h1>SteelMatting</h1></a>
+          <a href="Channel.html" class="similarproduct"><img id="pic2" src="channelbar.png" alt="https://i.ibb.co/VtXHsn9/channelbar.jpg" >
+          <h1>ChannelBar</h1></a>
         </div>
     
         <div>
-          <a href="GiCorrugated.html" class="similarproduct"><img id="pic3" src="GiCorrugated.png" alt="https://i.ibb.co/NrQ14Pz/Gi-Corrugated.jpg" >
-          <h1>GiCorrugated</h1></a>
+          <a href="Deformedbar.html" class="similarproduct"><img id="pic3" src="DeformedBar.png" alt="https://i.ibb.co/9V5qstZ/Deformed-Bar.jpg" >
+          <h1>DeformedBar</h1></a>
         </div>
     
         <div>
-          <a href="CycloneWire.html" class="similarproduct"><img id="pic4" src="CycloneWire.png" alt="https://i.ibb.co/6J2Mft2/Cyclone-Wire.jpg" >
-          <h1>CycloneWire</h1></a>
+          <a href="Squarebar.html" class="similarproduct"><img id="pic4" src="squarebar.png" alt="https://i.ibb.co/0Y8vLQ3/squarebar.jpg" >
+          <h1>SquareBar</h1></a>
         </div>
     
         </div>
@@ -428,12 +428,16 @@
         const storage = [];
         const textarea = document.getElementById("Inquiry");
         document.getElementById('NewProduct').addEventListener('click', function() {
-      let FirstInput = prompt("Please enter the length(55meter,85meter,105meter):");
+      let FirstInput = prompt("Please enter the Flange Width:");
       
-      
+let SecondInput = prompt("Please enter the Web depth:");
+
+let ThirdInput = prompt("Please enter the Weight per unit length:");
+
+let FourthInput = prompt("Please enter the length:");
   
-      if (FirstInput !== null) {
-          const newText = `BarbedWire ${FirstInput}`;
+      if (FirstInput !== null && SecondInput !== null && ThirdInput !== null) {
+          const newText = `WideFlange WW${FirstInput} x WD${SecondInput}(${ThirdInput}) x ${FourthInput}`;
           alert("✅Successfully added: " + newText);
   
           storage.length = 0;
@@ -452,28 +456,7 @@
       })
   
       
-document.getElementById('OldProduct').addEventListener('click', function() {
-        
-      let FirstInput = prompt("Please enter the diameter:");
-  
-      if (FirstInput !== null ) {
-          const newText = `Shafting ${FirstInput} x 3ftup`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-          if (textarea.value.trim()) {
-              storage.push(textarea.value.trim());
-          }
-  
-          storage.push(newText);
-          textarea.value = storage.join('\n');
-  
-          saveInput();
-      } else {
-          alert("❌No input provided.");
-      }
-  });
+
                    
   }
             </script>

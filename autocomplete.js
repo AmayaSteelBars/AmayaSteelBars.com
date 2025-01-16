@@ -45,6 +45,7 @@ let availablekeyword=[
     "StainlessSheet",
     "BarbedWire",
     "WideFlange",
+    "iBeam",
     "ArrowPoint",
     "BlindRivets",
     "BoltAndNut",
