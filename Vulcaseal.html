@@ -764,38 +764,181 @@ opacity: 0;
         </div>
       </div>
   
+      <div id="overlay"></div>
     
-    
-    <script>
-                 function promptFunction() {
-        const storage = [];
-        const textarea = document.getElementById("Inquiry");
-        document.getElementById('NewProduct').addEventListener('click', function() {
-      let FirstInput = 1;
-      
-      
-  
-      if (FirstInput !== null) {
-          const newText = `Vulcaseal 1/4 Liter`;
-          alert("✅Successfully added: " + newText);
-  
-          storage.length = 0;
-  
-      if (textarea.value.trim()) {
-      storage.push(textarea.value.trim());
-  }
-  
-  storage.push(newText);
-  textarea.value = storage.join('\n');
-  
-  saveInput();
-      } else {
-          alert("❌No input provided.");
-      }
-      })
-                   
-  }
-            </script>
+      <script>
+        function promptFunction() {
+const storage = [];
+const textarea = document.getElementById("Inquiry");
+
+
+
+document.getElementById('NewProduct').addEventListener('click', function() {
+ var Inquirepic = document.querySelector(".Inquirepic");
+ var overlay = document.getElementById("overlay")
+ if (Inquirepic.classList.contains('Inquirepic')) {
+   Inquirepic.classList.add('active');
+   overlay.classList.add('active');
+
+   document.body.classList.add('overlay-active');
+ }
+ else{
+   Inquirepic.classList.remove('active');
+   overlay.classList.remove('active');
+
+   document.body.classList.remove('overlay-active');
+ }
+
+})
+
+
+document.getElementById('overlay').addEventListener('click', function() {
+var Inquirepic = document.querySelector(".Inquirepic");
+ var overlay = document.getElementById("overlay")
+ if (Inquirepic.classList.contains('active')) {
+   Inquirepic.classList.remove('active');
+   overlay.classList.remove('active');
+
+   document.body.classList.remove('overlay-active');
+ }
+ else{
+   Inquirepic.classList.add('active');
+   overlay.classList.add('active');
+
+   document.body.classList.add('overlay-active');
+   }
+})
+
+document.querySelector('.Inquire1').addEventListener('click', function() {
+
+var Inquirepic = document.querySelector(".Inquirepic");
+ var overlay = document.getElementById("overlay")
+
+ let FirstInput = 1;
+
+
+if (FirstInput !== null) {
+ const newText = `Vulcaseal1/4Liter`;
+ alert("✅Successfully added: " + newText);
+
+ storage.length = 0;
+
+if (textarea.value.trim()) {
+storage.push(textarea.value.trim());
+}
+
+storage.push(newText);
+textarea.value = storage.join('\n');
+
+saveInput();
+
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+   overlay.classList.remove('active');
+
+   document.body.classList.remove('overlay-active');
+ }
+else{
+   Inquirepic.classList.add('active');
+   overlay.classList.add('active');
+
+   document.body.classList.add('overlay-active');
+   }
+} else {
+ alert("❌No input provided.");
+}
+
+})
+
+document.querySelector('.Inquire2').addEventListener('click', function() {
+
+var Inquirepic = document.querySelector(".Inquirepic");
+ var overlay = document.getElementById("overlay")
+ let FirstInput = 1;
+
+
+
+if (FirstInput !== null) {
+ const newText = `Vulcaseal1Liter`;
+ alert("✅Successfully added: " + newText);
+
+ storage.length = 0;
+
+if (textarea.value.trim()) {
+storage.push(textarea.value.trim());
+}
+
+storage.push(newText);
+textarea.value = storage.join('\n');
+
+saveInput();
+
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+   overlay.classList.remove('active');
+
+   document.body.classList.remove('overlay-active');
+ }
+else{
+   Inquirepic.classList.add('active');
+   overlay.classList.add('active');
+
+   document.body.classList.add('overlay-active');
+   }
+
+} else {
+ alert("❌No input provided.");
+}
+
+})
+
+
+document.querySelector('.inquiryitem').addEventListener("scroll", function() {
+var arrowdown1 = document.querySelector(".arrowdown1");
+
+const container =document.querySelector('.inquiryitem');
+
+const isHorizontal =window.matchMedia('(min-width:1024px)').matches;
+
+let isScrolling;
+
+
+//for overflow-X&y
+let scrollPosition= isHorizontal?container.scrollLeft:container.scrollTop;
+let clientSize =isHorizontal?container.clientWidth:container.clientHeight;
+let scrollSize =isHorizontal?container.scrollWidth:container.scrollHeight;
+
+
+const treshold = 0.05 * scrollSize;
+
+
+
+if (scrollPosition === 0) {
+arrowdown1.classList.remove('active');
+}
+else if (scrollPosition + clientSize >= scrollSize - treshold) {
+arrowdown1.classList.add('active');
+}
+
+else {
+arrowdown1.classList.add('active');
+}
+
+
+clearTimeout(isScrolling);
+
+isScrolling = setTimeout(() => {
+if (scrollPosition !== 0 && scrollPosition + clientSize < scrollSize - treshold) {
+   arrowdown1.classList.remove('active');
+}
+
+}, 10);
+});
+
+
+}
+   </script>
+
 
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

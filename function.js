@@ -225,7 +225,7 @@ function processImage(file) {
 }
 
 function analyzeImage(base64Image) {
-  fetch(`https://vision.googleapis.com/v1/images:annotate?key=AIzaSyBe8pGCScPoBWs3L_Z4i8B5aQFVlw1okDM`, {
+  fetch('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyBe8pGCScPoBWs3L_Z4i8B5aQFVlw1okDM', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
