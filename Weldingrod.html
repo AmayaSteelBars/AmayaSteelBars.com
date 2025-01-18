@@ -206,7 +206,7 @@ overflow: hidden;
   }
 
   .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3";
         display: grid;
         grid-gap:3%;
         grid-area: inquiryitem;
@@ -242,6 +242,18 @@ overflow: hidden;
     padding-right: 15%;
   }
 
+  .Inquire3{
+    grid-area: Inquire3;
+    cursor: pointer;
+  }
+  
+    .Inquire3 h1{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
  
   
 
@@ -256,6 +268,10 @@ overflow: hidden;
     height: 70%;
   }
 
+  #picture3{
+    width: 70%;
+    height: 70%;
+  }
  
   .arrowdown1{
     position: fixed;
@@ -325,7 +341,7 @@ overflow: hidden;
 }
 
 .inquiryitem{
-    grid-template-areas: "Inquire1" "Inquire2" ;
+    grid-template-areas: "Inquire1" "Inquire2" "Inquire3" ;
     grid-gap: 5%;
     overflow-y: auto;
 }
@@ -339,6 +355,10 @@ overflow: hidden;
   font-size: 20px;
 }
 
+.Inquire3 h1 {
+  font-size: 20px;
+}
+
 
 
 #picture1{
@@ -349,6 +369,13 @@ overflow: hidden;
   }
 
   #picture2{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture3{
     width: 70%;
     height: 70%;
     padding-left: 15%;
@@ -402,7 +429,7 @@ overflow: hidden;
 
     
 .inquiryitem{
-    grid-template-areas: "Inquire1" "Inquire2" ;
+    grid-template-areas: "Inquire1" "Inquire2" "Inquire3";
     grid-gap: 5%;
     overflow-y: auto;
 }
@@ -416,6 +443,10 @@ overflow: hidden;
   font-size: 20px;
 }
 
+.Inquire3 h1 {
+  font-size: 20px;
+}
+
 
 #picture1{
     width: 70%;
@@ -425,6 +456,13 @@ overflow: hidden;
   }
 
   #picture2{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  
+    #picture3{
     width: 70%;
     height: 70%;
     padding-left: 15%;
@@ -499,6 +537,9 @@ overflow: hidden;
         font-size: 25px;
     }
 
+    .Inquire3 h1 {
+        font-size: 25px;
+    }
     
 }
 
@@ -520,6 +561,10 @@ overflow: hidden;
     }
 
     .Inquire2 h1 {
+        font-size: 30px;
+    }
+    
+        .Inquire3 h1 {
         font-size: 30px;
     }
 
@@ -557,6 +602,10 @@ overflow: hidden;
     }
 
     .Inquire2 h1 {
+        font-size: 35px;
+    }
+    
+        .Inquire3 h1 {
         font-size: 35px;
     }
 
@@ -604,7 +653,7 @@ overflow: hidden;
     }
 
     .inquiryitem{
-    grid-template-areas: "Inquire1 Inquire2 ";
+    grid-template-areas: "Inquire1 Inquire2 Inquire3";
         grid-gap:3%;
         grid-auto-rows: 90%;
   }
@@ -621,6 +670,11 @@ overflow: hidden;
     }
 
     #picture2 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+        #picture3 {
         width: 100%;
         padding-left: 0;
         padding-right: 0;
@@ -703,7 +757,7 @@ opacity: 0;
           <h1><b><img src="Information.png">Description</b></h1>
           <p>A welding rod is a piece of metal or alloy that is used in the welding process to join two pieces of metal together. It serves as a filler material that melts and fuses with the base metals, creating a strong bond once it solidifies. Welding rods come in different types, depending on the welding process and materials being joined.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>3/32 inch ,1/8inch</p>
+          <p>3/32 inch ,1/8inch(Fujiweld,GoldenBridge,Nihonweld)</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
@@ -725,6 +779,10 @@ opacity: 0;
   <h1>Fujiweld</h1>
 </div>
 
+<div class="Inquire3">
+  <img id="picture3" src="Weldingrodnihonweld.png">
+  <h1>Nihonweld</h1>
+</div>
 
 
 <div class="arrowdown1"><div class="arrowdown2">
@@ -898,6 +956,47 @@ else{
     
       })
 
+document.querySelector('.Inquire3').addEventListener('click', function() {
+        
+var Inquirepic = document.querySelector(".Inquirepic");
+          var overlay = document.getElementById("overlay")
+          let FirstInput = prompt("Please enter the weight of the Nihonweld(1kg /2kg etc , 1 Box =10kg):");;
+      
+      
+  
+      if (FirstInput !== null) {
+          const newText = `Welding rod Nihonweld ${FirstInput} `;
+          alert("✅Successfully added: " + newText);
+  
+          storage.length = 0;
+  
+      if (textarea.value.trim()) {
+      storage.push(textarea.value.trim());
+  }
+  
+  storage.push(newText);
+  textarea.value = storage.join('\n');
+  
+  saveInput();
+  
+if (Inquirepic.classList.contains('active')) {
+Inquirepic.classList.remove('active');
+            overlay.classList.remove('active');
+
+            document.body.classList.remove('overlay-active');
+          }
+else{
+            Inquirepic.classList.add('active');
+            overlay.classList.add('active');
+
+            document.body.classList.add('overlay-active');
+            }
+  
+      } else {
+          alert("❌No input provided.");
+      }
+    
+      })
       
       document.querySelector('.inquiryitem').addEventListener("scroll", function() {
     var arrowdown1 = document.querySelector(".arrowdown1");
