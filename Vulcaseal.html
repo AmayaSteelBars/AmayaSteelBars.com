@@ -9,8 +9,7 @@
 
  
   <style>
-  
-    .SteelProduct{
+   .SteelProduct{
         margin-top: 0%;
       }
     
@@ -157,7 +156,134 @@
   }
   
 
+  .Inquirepic{
+    position: fixed;
+    border-radius: 10px;
+    background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+    left: 50%;
+    top: 50%;
+    z-index: 999999;
+    display: grid;
+grid-template-areas: "Selectitem"
+  "inquiryitem";
+  }
+
+  .Inquirepic.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+  #overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.overlay-active{
+overflow: hidden;
+}
+
+  .Selectitem{
+    color: darkblue;
+    grid-area: Selectitem;
+  }
   
+    .Selectitem h1{
+      display: flex;
+    justify-content: center;
+  }
+
+  .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2";
+        display: grid;
+        grid-gap:3%;
+        grid-area: inquiryitem;
+  }
+
+  .inquiryitem h1{
+    color:black;
+  }
+
+  .Inquire1{
+    grid-area: Inquire1;
+    cursor: pointer;
+  }
+  
+  .Inquire1 h1 {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .Inquire2{
+    grid-area: Inquire2;
+    cursor: pointer;
+  }
+  
+    .Inquire2 h1{
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+ 
+  
+
+
+  #picture1{
+    width: 70%;
+    height: 70%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+  }
+
+ 
+  .arrowdown1{
+    position: fixed;
+    opacity: 0.60;
+    background-color: darkblue;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .arrowdown2{
+    font-family: Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrowdown3{
+   font-family: Sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+    .arrowdown1.active{
+    opacity:0;
+  }
   
   @media screen and (max-width: 300px) {
     .SteelProduct{
@@ -189,7 +315,49 @@
       height: 30px;
       }
 
-      
+      .Inquirepic{
+        height: 50%;
+        grid-auto-rows: 0fr 1fr;
+      }
+
+      .Selectitem h1 {
+        font-size: 13px;
+}
+
+.inquiryitem{
+    grid-template-areas: "Inquire1" "Inquire2" ;
+    grid-gap: 5%;
+    overflow-y: auto;
+}
+
+
+.Inquire1 h1 {
+  font-size: 20px;
+}
+
+.Inquire2 h1 {
+  font-size: 20px;
+}
+
+
+
+#picture1{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .arrowdown1{
+    opacity: 0;
+  }
 
   }
 
@@ -223,12 +391,59 @@
       height: 30px;
       }
 
-    
+      .Inquirepic{
+        height: 50%;
+        grid-auto-rows: 0fr 1fr;
+      }
 
-  
+      .Selectitem h1 {
+        font-size: 13px;
+}
+
+    
+.inquiryitem{
+    grid-template-areas: "Inquire1" "Inquire2" ;
+    grid-gap: 5%;
+    overflow-y: auto;
+}
+
+
+.Inquire1 h1 {
+  font-size: 20px;
+}
+
+.Inquire2 h1 {
+  font-size: 20px;
+}
+
+
+#picture1{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  #picture2{
+    width: 70%;
+    height: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+
+  .arrowdown1{
+    opacity: 0;
+  }
+
 
 }
   
+  @media screen and (min-width: 400px){
+    .Selectitem h1 {
+        font-size: 16px;
+    }
+  }
 
 
   @media screen and (min-width: 500px) {
@@ -272,7 +487,19 @@
     height: 110px;
 }
 
+.Selectitem h1 {
+        font-size: 20px;
+    }
 
+    .Inquire1 h1 {
+        font-size: 25px;
+    }
+
+    .Inquire2 h1 {
+        font-size: 25px;
+    }
+
+    
 }
 
   @media screen and (min-width: 600px) {
@@ -284,7 +511,20 @@
     width: 130px;
     height: 130px;
 }
+.Selectitem h1 {
+        font-size: 25px;
+    }
+
+    .Inquire1 h1 {
+        font-size: 30px;
+    }
+
+    .Inquire2 h1 {
+        font-size: 30px;
+    }
+
    
+
   }
 
   @media screen and (min-width: 700px) {
@@ -308,6 +548,39 @@
 }
 
 
+.Selectitem h1 {
+        font-size: 30px;
+    }
+
+    .Inquire1 h1 {
+        font-size: 35px;
+    }
+
+    .Inquire2 h1 {
+        font-size: 35px;
+    }
+
+  
+    .arrowdown1{
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -10%);
+    width: 20%;
+    height: 11%;
+    opacity: 0.6;
+  }
+
+  .arrowdown2{
+    width: 100%;
+   font-size: 2rem;
+  }
+  
+  .arrowdown3{
+   opacity: 0;
+  }
+
+    
+
   }
 
   @media screen and (min-width: 800px){
@@ -325,6 +598,38 @@
         font-size: 30px;
     }
 
+    .Inquirepic {
+        width: 100%;
+        grid-auto-rows: 20% 80%;
+    }
+
+    .inquiryitem{
+    grid-template-areas: "Inquire1 Inquire2 ";
+        grid-gap:3%;
+        grid-auto-rows: 90%;
+  }
+
+  .Selectitem h1 {
+        font-size: 35px;
+        margin: 0;
+    }
+
+    #picture1 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #picture2 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+.arrowdown1{
+opacity: 0;
+}
+
   }
 
   @media screen and (min-width: 900px){
@@ -339,6 +644,10 @@
     width: 150px;
     height: 150px;
 }
+.Inquirepic {
+       height: 60%;
+        
+    }
 
 }
 
@@ -394,12 +703,39 @@
           <h1><b><img src="Information.png">Description</b></h1>
           <p>Vulcaseal is a popular elastomeric sealant used for sealing, patching, and filling leaks, cracks, holes, and gaps in various materials. It's a one-component sealant that's easy to apply and spread over surfaces like corrugated metal roofing, gutters, downspouts, and plumbing pipes. Vulcaseal is known for its durability and flexibility, making it ideal for both household and construction applications.</p>
           <h1><b id="measurement1"><img src="measurement.png">Measurement</b></h1>
-          <p>1/4 Liter</p>
+          <p>1/4 Liter,1Liter</p>
           <button id="NewProduct"><img src="inquiry.png">Add to Inquiry</button>
         </div>
       
+<div id="Inquirepic" class="Inquirepic">
+  <div class="Selectitem">
+    <h1>
+    Select the Inquiry product
+  </h1>
+  </div>
 
+  <div class="inquiryitem">
+<div class="Inquire1">
+  <img id="picture1" src="Vulcaseal14.png">
+  <h1>Vulcaseal1/4Liter</h1>
+</div>
+
+<div class="Inquire2">
+  <img id="picture2" src="Vulcaseal1.png">
+  <h1>Vulcaseal1Liter</h1>
+</div>
+
+<div class="arrowdown1"><div class="arrowdown2">
+  V</div>
+  <div class="arrowdown3">></div>
+</div>
      
+     
+     </div>
+
+
+
+</div>
         <div class="ProductDetailstitle">
            <div class="Detailstitle"><h1><b>Similar Product</b></h1></div>
         </div>
