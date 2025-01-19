@@ -197,4 +197,66 @@ thumbnails2.forEach((thumbnail2,index)=>{
 })
 
 
+//camera detection
+document.getElementById("camera-button").addEventListener("click", () => {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+  input.onchange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      processImage(file);
+    }
+  };
+  input.click();
+});
 
+function processImage(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+  const base64Image = reader.result?.split(',')[1];
+  if (base64Image) {
+    analyzeImage(base64Image);
+  } else {
+    console.error("Failed to read image data");
+  }
+};
+  reader.readAsDataURL(file);
+}
+
+function analyzeImage(base64Image) {
+  fetch('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyBe8pGCScPoBWs3L_Z4i8B5aQFVlw1okDM', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      requests: [
+        {
+          image: { content: base64Image },
+          features: [{ type: 'LABEL_DETECTION', maxResults: 5 }]
+        }
+      ]
+    })
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    const responses = data.responses || [];
+if (responses.length > 0 && responses[0].labelAnnotations) {
+  const labels = responses[0].labelAnnotations;
+  const highestConfidenceLabel = labels[0]?.description;
+  document.querySelector(".search-input").value = highestConfidenceLabel || "No label detected";
+} else {
+  alert("No labels detected in the image.");
+}
+    const highestConfidenceLabel = labels[0]?.description;
+    if (highestConfidenceLabel) {
+      document.querySelector(".search-input").value = highestConfidenceLabel;
+    } else {
+      alert("No results found");
+    }
+  })
+  .catch((error) => console.error("error analyzing image:", error));
+}
+
+console.log("File uploaded:", file);
+console.log("Base64 image:", base64Image);
+console.log("API Response:", data);
