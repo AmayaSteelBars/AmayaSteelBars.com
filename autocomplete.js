@@ -90,7 +90,9 @@ let availablekeyword=[
     "SlidingDoorTrack",
     "SlidingDoorTrackRoller",
     "BiElbow",
-    "Tox"
+    "Tox",
+    "SiliconSealant",
+    "CaulkingGun"
 ];
 
 let searchablekeywords = availablekeyword.flatMap(keyword=>{
