@@ -198,7 +198,8 @@ thumbnails2.forEach((thumbnail2,index)=>{
 
 
 //camera detection
-document.getElementById("camera-button").addEventListener("click", () => {
+
+/*document.getElementById("camera-button").addEventListener("click", () => {
   const input = document.createElement("input");
   input.type = "file";
   input.accept = "image/*";
@@ -259,4 +260,5 @@ if (responses.length > 0 && responses[0].labelAnnotations) {
 
 console.log("File uploaded:", file);
 console.log("Base64 image:", base64Image);
-console.log("API Response:", data);
+console.log("API Response:", data); */
+
